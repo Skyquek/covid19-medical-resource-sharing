@@ -1,5 +1,0 @@
-admin(hospital) 
--register
--management, contact with hospital
-
-report page
