@@ -238,7 +238,10 @@ span.psw {
 			</div>
 		</div>
     </div>
-
+	<label style="text-align:center">
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+	<p style="text-align:center">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="container container-fluid" style="background-color:#f1f1f1">
     <button class="signupbtn" type="submit" style="margin-left:280px">Sign Up</button>
     </div>
