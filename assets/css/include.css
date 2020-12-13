@@ -1,38 +1,40 @@
 body{
-background-color:#2C3539;
+	background-color:#2C3539;
 }
 .jumbotron {
-background-image: url("../../assets/img/virus-4835301_1920.jpg");
-opacity:0.9;
-height:250px;
+	background-image: url("../../assets/img/virus-4835301_1920.jpg");
+	opacity:0.9;
+	height:250px;
 }
 .jumbotron1 {
-background-color:gray;
+	background-color:gray;
 }
 .jumbotron2 {
-background-color:#990012;
-height:300px;
+	background-color:#990012;
+	height:300px;
 }
 .navbar{
-background-color:#9F000F;
+	background-color:#9F000F;
 
 }
 .carousel-inner img {
-width: 100%;
-height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .jumbotron3{
-background-image: url("../../assets/img/WASHING-HANDS.jpg")
+	background-image: url("../../assets/img/WASHING-HANDS.jpg")
 }
 .column {
-float: left;
-width: 33.33%;
+	float: left;
+	width: 33.33%;
 }
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
 hr {
 	border: 1px solid #f1f1f1;
 	margin-bottom: 25px;
-	}
+}
 
 /* Set a style for all buttons */
 button {
