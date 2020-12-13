@@ -1,0 +1,83 @@
+body{
+	background-color:#2C3539;
+}
+.jumbotron {
+	background-image: url("../../assets/img/virus-4835301_1920.jpg");
+	opacity:0.9;
+	height:250px;
+}
+.jumbotron1 {
+	background-color:gray;
+}
+.jumbotron2 {
+	background-color:#990012;
+	height:300px;
+}
+.navbar{
+	background-color:#9F000F;
+
+}
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+.jumbotron3{
+	background-image: url("../../assets/img/WASHING-HANDS.jpg")
+}
+.column {
+	float: left;
+	width: 33.33%;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 0px 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+	}
+
+button:hover {
+	opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	padding: 14px 20px;
+	background-color: #f44336;
+	}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+float: left;
+width: 30%;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+	width: 100%;
+}
+}
