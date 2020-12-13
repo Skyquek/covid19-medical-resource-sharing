@@ -10,15 +10,28 @@
 <?php include("includes/navigation.php");?>
 
 <div class="container" id="main-content">
-	<h2>Welcome to my website!</h2>
-	<p>Some content goes here! Let's go with the classic "lorem ipsum."</p>
-
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</p>
+<div class="parallax">
+<div class="text-block text-center">
+    <h4>Covid-19</h4>
+    <p>It is an infectious disease caused by a newly discovered coronavirus</p>
+	</div>
+</div>
+<div style="height:600px;background-color:white;font-size:20px">
+	<div class="text-center" style="margin-top:20px">
+	<h1>Medical Resourse Sharing</h1>
+	<p>What is Medical Resourse Sharing?</p>
+	</div>
+</div>
+<div class="parallax" style="background-image:url(PROD-Hospital.jpg)"></div>
+	<div style="height:200px;background-color:white;font-size:20px">
+	<div class="text-center" style="margin-top:20px">
+	<h1>Let share the resources</h1>
+	</div>
+	</div>
+<div class="jumbotron2" style="margin-bottom:-10px;height:200px text-align: right">
+  <h1 style="font-size:130px;color:white;font-weight:bold;margin-left:60px">Get Started</h1>
+  <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.html">Register</a></button>
+</div>
 </div>
 
 <?php include("includes/footer.php");?>

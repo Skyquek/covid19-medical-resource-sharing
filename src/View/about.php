@@ -13,12 +13,7 @@
 <body>
 
 <?php include("includes/navigation.php");?>
-
-<div class="jumbotron text-center" style="margin-bottom:0px;margin-top:0px">
-<h1 style="font-size:50px;color:white">Contribute to help other</h1>
-<p style="font-size:15px;color:white">Help us provide resources for the fight against Covid-19</p> 
-</div>
-<nav class="navbar justify-content-end" style="background-color:gray;height:20px"></nav><br>
+<?php include("includes/header.php");?><br>
 <div class="text-center"> <h1 style="color:white">About Us</h1><p style="color:white"> Our Team is formed by 4 student who <p>
 
 <img src="../../assets/img/logo.png" class="rounded" alt="Cinque Terre">

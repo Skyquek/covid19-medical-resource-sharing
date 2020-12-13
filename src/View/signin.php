@@ -10,17 +10,11 @@
 	<link rel="stylesheet" href="../../assets/css/include.css">
 </head>
 
-<body>
+<body style="background-color:white">
 
 <?php include("includes/navigation.php");?>
-
 <?php include("includes/header.php");?>
-<div class="text-center"> 
-	<h1 style="color:white">Donate</h1>
-</div>
-
-
-
+<?php include("includes/login.php");?>
 <?php include("includes/footer.php");?>
 
 </body>

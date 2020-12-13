@@ -5,20 +5,20 @@
 <nav class="navbar navbar-expand-sm navbar-dark justify-content-center sticky-top" style="margin-top:0px" data-spy="affix" >
 	<ul class="navbar-nav">
 		<li class="nav-item home" style="color:white">
-		<a class="nav-link" href="home.html" >Home</a>
+		<a class="nav-link" href="home.php" >Home</a>
 		</li>
 	<li class="nav-item about" style="color:white">
-		<a class="nav-link" href="about us.html" >About Us</a>
+		<a class="nav-link" href="about.php" >About Us</a>
 	</li>
 	<li class="nav-item donation" style="color:white">
-		<a class="nav-link" href="donation.html">Donation</a>
+		<a class="nav-link" href="donation.php">Donation</a>
 	</li>
 	<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
 				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="signin.html">Sign In</a>
-					<a class="dropdown-item" href="register.html">Sign Up</a>
-					<a class="dropdown-item" href="forget.html">Forget Password</a>
+					<a class="dropdown-item" href="signin.php">Sign In</a>
+					<a class="dropdown-item" href="register.php">Sign Up</a>
+					<a class="dropdown-item" href="forget.php">Forget Password</a>
 				</div>
 		</li>  
 	</ul>
