@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="../../assets/css/include.css">
+	<link rel="stylesheet" href="../../../assets/css/include.css">
 </head>
  <script>var modal = document.getElementById('id01');
 
@@ -91,8 +91,8 @@ span.psw {
   }
 }</style>
 <body style="background-color:white">
-<?php include("includes/navigation.php");?>
-<?php include("includes/header.php");?>
+<?php include("../includes/navigation.php");?>
+<?php include("../includes/header.php");?>
 <h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
 <p class="text-center">By making a much needed donation you will join us to comfirm  and find the solutions we need to our most important environmental issues.</p>
 <p></p>
@@ -101,11 +101,11 @@ span.psw {
 <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
     </div>
-<?php include("includes/registerformdonate.php");?>
+<?php include("../includes/registerformdonate.php");?>
 </div>
 
 
-<?php include("includes/footer.php");?>
+<?php include("../includes/footer.php");?>
 
 </body>
 </html>

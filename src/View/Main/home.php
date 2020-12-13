@@ -7,12 +7,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="../../assets/css/include.css">
+	<link rel="stylesheet" href="../../../assets/css/include.css">
 </head>
 
 <body>
-<?php include("includes/navigation.php");?>
-<?php include("includes/header.php");?>
+<?php include("../includes/navigation.php");?>
+<?php include("../includes/header.php");?>
 <div class="parallax">
 <div class="text-block text-center">
     <h4>Covid-19</h4>
@@ -25,7 +25,7 @@
 <p></p>
 </div>
 </div>
-<div class="parallax" style="background-image:url(../../assets/img/PROD-Hospital.jpg)"></div>
+<div class="parallax" style="background-image:url(../../../assets/img/PROD-Hospital.jpg)"></div>
 <div style="height:200px;background-color:white;font-size:20px">
 <div class="text-center" style="margin-top:20px">
 <h1>Let share the resources</h1>
@@ -36,7 +36,7 @@
   <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.html">Register</a></button>
 </div>
 
-<?php include("includes/footer.php");?>
+<?php include("../includes/footer.php");?>
 
 </body>
 </html>

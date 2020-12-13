@@ -15,9 +15,9 @@
   </div>
 </nav>
 <div class="sidenav">
-  <a href="notification.html">Noticfication</a>
-  <a href="requestment.html">Requestment</a>
-  <a href="completed.html">Completed Task</a>
-  <a href="data.html">Analysis</a>
+  <a href="notification.php">Noticfication</a>
+  <a href="requestment.php">Requestment</a>
+  <a href="completed.php">Completed Task</a>
+  <a href="data.php">Analysis</a>
   <a href="#">Log Out</a>
 </div>

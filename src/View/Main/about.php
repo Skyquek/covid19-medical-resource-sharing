@@ -7,16 +7,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="../../assets/css/include.css">
+	<link rel="stylesheet" href="../../../assets/css/include.css">
 </head>
 
 <body>
 
-<?php include("includes/navigation.php");?>
-<?php include("includes/header.php");?><br>
+<?php include("../includes/navigation.php");?>
+<?php include("../includes/header.php");?><br>
 <div class="text-center"> <h1 style="color:white">About Us</h1><p style="color:white"> Our Team is formed by 4 student who <p>
 
-<img src="../../assets/img/logo.png" class="rounded" alt="Cinque Terre">
+<img src="../../../assets/img/logo.png" class="rounded" alt="Cinque Terre">
 <div class="container">
 	<div class="row">
 		<div class="col-lg-6" style="margin-left:140px">
@@ -59,7 +59,7 @@
 
 </div>
 
-<?php include("includes/footer.php");?>
+<?php include("../includes/footer.php");?>
 
 </body>
 </html>
