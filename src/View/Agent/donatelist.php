@@ -16,6 +16,7 @@
 
 <div class="main">
 <div class="container p-3 my-3 border">
+<h1>Donate List</h1>
 
 
 </div>
