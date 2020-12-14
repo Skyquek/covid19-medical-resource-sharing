@@ -11,15 +11,10 @@
 </head>
 
 <body style="background-color:white">
+
 <?php include("includes/navigation.php");?>
 <?php include("includes/header.php");?>
-<h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
-<p class="text-center">By making a much needed donation you will join us to comfirm  and find the solutions we need to our most important environmental issues.</p>
-<p></p>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-left:900px">Donate</button><br>
-<p></p>
-
-
+<?php include("includes/forgetpw.php");?>
 <?php include("includes/footer.php");?>
 
 </body>
