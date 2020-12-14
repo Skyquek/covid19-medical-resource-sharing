@@ -16,8 +16,7 @@
 
 <div class="main">
 <div class="container p-3 my-3 border">
-<h1>CORONA VIRUS DISEASE 19</h1>
-<h1>(COVID-19)</h1>
+<h1>Notification</h1>
 
 </div>
  </body></html>

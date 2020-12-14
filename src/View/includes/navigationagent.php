@@ -14,7 +14,7 @@
 <a class ="nav-link"  style="color:white;float:right;" href ="notification.php"> Notification</a>
 </li>
 <li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href ="donationlist.php"> Donation </a>
+<a class ="nav-link"  style="color:white;float:right;" href ="donatelist.php"> Donation </a>
 </li>
 <li class ="nav-item">
 <a class ="nav-link"   style="color:white;float:right;"href ="request.php"> Request </a>
