@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="margin-top:0px" data-spy="affix" >
-	<a class="navbar-brand" href="adminhome.html">
+	<a class="navbar-brand" href="home.php">
     <img src="logo.png" alt="Logo" style="width:120px;">
 	</a>
 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
