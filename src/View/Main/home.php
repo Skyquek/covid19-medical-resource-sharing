@@ -33,7 +33,7 @@
 </div>
 <div class="jumbotron2" style="margin-bottom:-10px;height:200px text-align: right">
   <h1 style="font-size:130px;color:white;font-weight:bold;margin-left:60px">Get Started</h1>
-  <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.html">Register</a></button>
+  <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.php">Register</a></button>
 </div>
 
 <?php include("../includes/footer.php");?>

@@ -11,5 +11,7 @@
 </head>
 <body>
 <?php include("../includes/navigationadmin.php");?>
+<?php include("../includes/adminhome.php");?>
+
 </body>
 </html>
