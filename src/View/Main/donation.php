@@ -91,8 +91,8 @@ span.psw {
   }
 }</style>
 <body style="background-color:white">
-<?php include("../includes/navigation.php");?>
-<?php include("../includes/header.php");?>
+<?php include("../includes/main/navigation.php");?>
+<?php include("../includes/main/header.php");?>
 <h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
 <p class="text-center">By making a much needed donation you will join us to comfirm  and find the solutions we need to our most important environmental issues.</p>
 <p></p>
@@ -101,11 +101,11 @@ span.psw {
 <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
     </div>
-<?php include("../includes/registerformdonate.php");?>
+<?php include("../includes/main/registerformdonate.php");?>
 </div>
 
 
-<?php include("../includes/footer.php");?>
+<?php include("../includes/main/footer.php");?>
 
 </body>
 </html>

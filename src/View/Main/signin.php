@@ -12,10 +12,10 @@
 
 <body style="background-color:white">
 
-<?php include("../includes/navigation.php");?>
-<?php include("../includes/header.php");?>
-<?php include("../includes/login.php");?>
-<?php include("../includes/footer.php");?>
+<?php include("../includes/main/navigation.php");?>
+<?php include("../includes/main/header.php");?>
+<?php include("../includes/main/login.php");?>
+<?php include("../includes/main/footer.php");?>
 
 </body>
 </html>

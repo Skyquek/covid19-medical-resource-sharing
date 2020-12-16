@@ -11,8 +11,8 @@
 </head>
 
 <body>
-<?php include("../includes/navigation.php");?>
-<?php include("../includes/header.php");?>
+<?php include("../includes/main/navigation.php");?>
+<?php include("../includes/main/header.php");?>
 <div class="parallax">
 <div class="text-block text-center">
     <h4>Covid-19</h4>
@@ -36,7 +36,7 @@
   <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.php">Register</a></button>
 </div>
 
-<?php include("../includes/footer.php");?>
+<?php include("../includes/main/footer.php");?>
 
 </body>
 </html>

@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="../../../assets/css/includeagent1.css">
 </head>
 <body>
- <?php include("../includes/navigationagent.php");?>
+ <?php include("../includes/agent/navigationagent.php");?>
 
 <div class="main">
 <div class="container p-3 my-3 border">
- <?php include("../includes/accountagent.php");?>
+ <?php include("../includes/agent/accountagent.php");?>
 </div>
  </body></html>

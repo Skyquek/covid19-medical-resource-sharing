@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="../../../assets/css/includeadmin.css">
 </head>
 <body>
-<?php include("../includes/navigationadmin.php");?>
-<?php include("../includes/adminhome.php");?>
+<?php include("../includes/admin/navigationadmin.php");?>
+<?php include("../includes/admin/adminhome.php");?>
 
 </body>
 </html>
