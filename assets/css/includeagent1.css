@@ -1,13 +1,9 @@
 	.navbar{
 	background-color:#FF8040;
 	}
-	.button{
-	background-color:black;
-	}
 	.container{
 	height:860px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	text-align: center;
 	}
 	@media (min-width: 1200px) {
   .container{
@@ -40,10 +36,26 @@
 .container1{
 height:700px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-text-align: center;
 }
 .form-control{
 height:700px;
 }
 
+.container2{
+height:700px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align:center;
+}
 
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 0px 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+	}
+button:hover {
+	opacity:1;
+}
