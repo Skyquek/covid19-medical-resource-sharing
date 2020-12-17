@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>COVID CHATBOT</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-  <script>var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}</script>
-  <style>
-	.jumbotron {
-	background-image: url("virus-4835301_1920.jpg");
-	opacity:0.9;
-	height:250px;
-	}
-	.jumbotron1 {
-	background-color:gray;
-	}
-	.jumbotron2 {
-	background-color:#990012;
-	height:300px;
-	}
-	.navbar{
-	background-color:#9F000F;
-	
-	}
-	.carousel-inner img {
-    width: 100%;
-    height: 100%;
-	}
-	.jumbotron3{
-	background-image: url("WASHING-HANDS.jpg")
-	}
-	.column {
+<style>	.column {
 	float: left;
 	width: 33.33%;
 	}
@@ -63,7 +20,7 @@ window.onclick = function(event) {
 	}
 /* Full-width input fields */
 * {box-sizing: border-box}
-	input[type=text], input[type=phone], input[type=address],input[type=mail]{
+	input[type=text],input[type=name], input[type=phone], input[type=address],input[type=mail]{
 		width: 70%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -79,7 +36,7 @@ window.onclick = function(event) {
 		border: none;
 		background: #f1f1f1;
 		}
-	input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=mail]:focus {
+	input[type=name]:focus,input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=mail]:focus {
 		background-color: #ddd;
 		outline: none;
 		}
@@ -131,7 +88,7 @@ window.onclick = function(event) {
 /* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
-  margin: 24px 0 12px 0;
+  margin: -10px 0 12px 0;
   position: relative;
 }
 
@@ -208,46 +165,9 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
-}
-  </style>
-</head>
-<body>
-<div class="alert alert-warning alert-dismissible fade show text-center"style="color:black;margin-bottom:0px">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong>Warning!</strong> visit <a href="http://covid-19.moh.gov.my/" class="alert-link">Kementerian Kesihatan Malaysia</a> to get latetest information
-</div>
- <nav class="navbar navbar-expand-sm navbar-dark justify-content-center sticky-top" style="margin-top:0px" data-spy="affix" >
-	<ul class="navbar-nav">
-		<li class="nav-item " style="color:white">
-        <a class="nav-link" href="home.html" >Home</a>
-		</li>
-	  <li class="nav-item" style="color:white">
-        <a class="nav-link " href="about us.html" >About Us</a>
-      </li>
-	  <li class="nav-item" style="color:white">
-        <a class="nav-link" href="donation.html">Donation</a>
-      </li>
-       <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
-				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="signin.html">Sign In</a>
-					<a class="dropdown-item" href="register.html">Sign Up</a>
-					<a class="dropdown-item" href="forget.html">Forget Password</a>
-				</div>
-		</li>  
-	</ul>
-</nav>
-<div class="jumbotron text-center" style="margin-bottom:0px;margin-top:0px">
-  <h1 style="font-size:50px;color:white">Contribute to help other</h1>
-  <p style="font-size:15px;color:white">Help us provide resources for the fight against Covid-19</p> 
-</div>
-<nav class="navbar justify-content-end" style="background-color:gray;height:20px"></nav><br>
-<div><h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
-<p class="text-center">By making a much needed donation you will join us to comfirm  and find the solutions we need to our most important environmental issues.</p>
-<p></p>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-left:900px">Donate</button>
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
+}</style>
+ 
+ <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
     </div>
@@ -269,6 +189,9 @@ span.psw {
 				<option value="Lb">Labuan</option>
 				</select>
 				</div>
+				<br>
+				<label for="name"><b>Name</b></label><br>
+				<input type="name" placeholder="Enter Name" name="name" required>
 				<br>
 				<label for="phone"><b>Contact</b></label><br>
 				<input type="phone" placeholder="Enter Phone Number" name="phone" required>
@@ -304,41 +227,23 @@ span.psw {
 				<br>
 				<label for="Code"><b>Code</b></label><br>
 				<input type="address" placeholder="Enter Code" name="code" required>
-				<br>
+				</div>
+			<div class="col-lg-6">
+			<label for="psw"><b>Password</b></label><br>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+			</div>
+			<div class="col-lg-6">
+			<label for="psw-repeat"><b>Comfirmed Password</b></label><br>
+			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 			</div>
 		</div>
     </div>
-
+	<label style="text-align:center">
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+	<p style="text-align:center">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="container container-fluid" style="background-color:#f1f1f1">
     <button class="signupbtn" type="submit" style="margin-left:280px">Sign Up</button>
     </div>
   </form>
 </div>
-
-</div><br>
-<div class="jumbotron3" style="margin-bottom:-10px;height:280px text-align: right">
-  <h1 style="font-size:130px;color:white;font-weight:bold;margin-left:60px">Please Wash</h1>
-  <p style="font-size:50px;color:white;font-weight:bold;margin-left:60px">Your Hand</p>
-</div>
-<div class="container-fluid p-2 my-1 border text-center">
-<h2 style="font-size:50px;margin-left:10px">Any Question?</h2>
-<button type="button" class="btn btn-outline-danger">Send Us Feedback</button></h2>
-</div>
-<div class="jumbotron1" style="margin-bottom:0px;height:180px">
-  <div class="container container-fluid text-left" >         
-  <table class="table table-borderless ">
-      <tr>
-        <th style="color:white">Contact Us</th>
-      </tr>
-    <tbody>
-        <td style="color:white">Phone: xxx-xxxxxxx<br>Mobile: xxx-xxxxxxx<br>Email: zhongheng98@hotmail.com<br>Web: </td>
-		<td>
-    </tbody>
-  </table>
-</div>
-</div>
-<div class="jumbotron2 text-center" style="margin-bottom:0px;height:30px">
-  <p style="font-size:10px;color:white">Copyright 2018 ASHIC | All Rights Reserved | xxxxxx</p> 
-</div>
-</body>
-</body>

@@ -1,5 +1,3 @@
-</div>
-<br>
 <div class="jumbotron3" style="margin-bottom:-10px;height:280px text-align: right">
 	<h1 style="font-size:130px;color:white;font-weight:bold;margin-left:60px">Please Wash</h1>
 	<p style="font-size:50px;color:white;font-weight:bold;margin-left:60px">Your Hand</p>
