@@ -12,8 +12,8 @@
 
 <body>
 
-<?php include("../includes/navigation.php");?>
-<?php include("../includes/header.php");?><br>
+<?php include("../includes/main/navigation.php");?>
+<?php include("../includes/main/header.php");?><br>
 <div class="text-center"> <h1 style="color:white">About Us</h1><p style="color:white"> Our Team is formed by 4 student who <p>
 
 <img src="../../../assets/img/logo.png" class="rounded" alt="Cinque Terre">
@@ -59,7 +59,7 @@
 
 </div>
 
-<?php include("../includes/footer.php");?>
+<?php include("../includes/main/footer.php");?>
 
 </body>
 </html>
