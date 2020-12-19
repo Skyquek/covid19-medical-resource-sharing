@@ -237,7 +237,7 @@ input[type=submit] {
 			</div>
 
 			<div class="col-lg-12">
-				<div id="error-box" class="alert alert-danger"  style="display: none;">
+				<div id="error-box" class="alert alert-danger alert-dismissible"  style="display: none;">
 					<p>This alert box could indicate a dangerous or potentially negative action.</p>
 				</div>
 			</div>
