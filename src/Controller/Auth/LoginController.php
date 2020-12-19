@@ -7,8 +7,8 @@
 $response["status"] = "success";
 $response["message"] = "user found";
 // else
-$response["status"] = "error";
-$response["message"] = "user not found";
+// $response["status"] = "error";
+// $response["message"] = "user not found";
 
 echo json_encode($response);
 
