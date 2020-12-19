@@ -147,7 +147,7 @@ input[type=submit] {
 }
 </style>
 
-<form action="../../Controller/RegisterController.php" method="post" onsubmit="return registerValidation()" style="border:1px solid #ccc">
+<form action="../../Controller/Auth/RegisterController.php" method="post" onsubmit="return registerValidation()" style="border:1px solid #ccc">
   <br><div class="container">
     <h1>Sign up with Mail</h1>
     <p>Please fill in this form to sign up.</p>

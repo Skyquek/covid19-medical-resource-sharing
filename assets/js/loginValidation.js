@@ -6,7 +6,7 @@ errorBox.style.display = "none";
 $(function() {
     $("form#loginForm").submit(function() {
         $.ajax({
-            url: "../../Controller/LoginController.php",
+            url: "../../Controller/Auth/LoginController.php",
             type: "POST",
             data: {
                 loginid: loginID.value,
