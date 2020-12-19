@@ -1,10 +1,10 @@
-<style>	.column {
+<style>
+.column {
 	float: left;
 	width: 33.33%;
 	}
-	body {font-family: Arial, Helvetica, sans-serif;}
 	.form-group{
-		width: 70%;
+	width: 70%;
 		padding: 3px;
 		margin: 5px 0 22px 0;
 		display: inline-block;
@@ -18,9 +18,9 @@
 		border: none;
 		background: #f1f1f1;
 	}
-/* Full-width input fields */
+	body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
-	input[type=text],input[type=name], input[type=phone], input[type=address],input[type=mail]{
+	input[type=text], input[type=phone], input[type=address],input[type=mail]{
 		width: 70%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -36,7 +36,7 @@
 		border: none;
 		background: #f1f1f1;
 		}
-	input[type=name]:focus,input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=mail]:focus {
+	input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=mail]:focus {
 		background-color: #ddd;
 		outline: none;
 		}
@@ -75,7 +75,7 @@
 
 /* Add padding to container elements */
 .container {
-  padding: 10px;
+  padding: 16px;
 }
 
 /* Clear floats */
@@ -85,96 +85,74 @@
   display: table;
 }
 
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: -10px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 45%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close1 {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
+/* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
+  .cancelbtn, .signupbtn {
      width: 100%;
   }
-}</style>
- 
- <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
-    </div>
-	<h1 class="text-center">Sign up with Mail</h1>
-    <p class="text-center">Please fill in this form to sign up.</p>
-    <div class="container">
-		<div class="row" style="margin-left:100px">
+}
+
+/* Password Strength Checker ***************************/
+/* Style all input fields */
+input {
+ 	padding: 12px;
+  	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+</style>
+
+<form action="/action_page.php" style="border:1px solid #ccc">
+  <br><div class="container">
+    <h1>Sign up with Mail</h1>
+    <p>Please fill in this form to sign up.</p>
+    <hr>
+		<div class="row">
 			<div class="col-lg-6">
 				<label for="organization"><b>Organization Type</b></label><br>
 				<div class="form-group">
@@ -257,8 +235,8 @@ span.psw {
 			</div>
 		</div>
 	<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-    <div class="container container-fluid" style="background-color:#f1f1f1">
-    <button class="signupbtn" type="submit" style="margin-left:280px">Sign Up</button>
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
     </div>
-  </form>
-</div>
+  </div><br>
+</form>
