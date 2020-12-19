@@ -4,6 +4,8 @@ var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 
+// Variable Checking
+
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
   document.getElementById("message").style.display = "block";
@@ -54,4 +56,10 @@ myInput.onkeyup = function() {
     length.classList.remove("valid");
     length.classList.add("invalid");
   }
+}
+
+function registerValidation() 
+{
+  alert("Hi");
+  return false;
 }
