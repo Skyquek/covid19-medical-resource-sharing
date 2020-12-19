@@ -15,8 +15,8 @@
 <?php include("../includes/main/header.php");?>
 <div class="parallax"><br><br><br><br><br><br><br><br>
 	<div class="container" style="background-color:black;opacity:80%;color:white;text-align:center"> <br>
-			<h4>Covid-19</h4>
-			<p>It is an infectious disease caused by a newly discovered coronavirus</p>
+		<h4>Covid-19</h4>
+		<p>It is an infectious disease caused by a newly discovered coronavirus</p>
 	</div>
  </div>
 <div style="height:600px;background-color:white;font-size:20px">

@@ -15,7 +15,8 @@
  <?php include("../includes/navigationagent.php");?>
 
 <div class="main">
-<div class="container p-3 my-3 border">
- <?php include("../includes/accountagent.php");?>
-</div>
- </body></html>
+  <div class="container p-3 my-3 border">
+  <?php include("../includes/accountagent.php");?>
+  </div>
+</body>
+</html>

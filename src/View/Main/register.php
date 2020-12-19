@@ -18,6 +18,5 @@
 <?php include("../includes/main/registerform.php");?>
 <?php include("../includes/main/footer.php");?>
 
-<script src="../../../assets/js/registerValidation.js"></script>
 </body>
 </html>
