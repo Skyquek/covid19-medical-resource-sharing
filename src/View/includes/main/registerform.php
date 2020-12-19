@@ -215,8 +215,8 @@ input[type=submit] {
 			</div>
 			
 			<div class="col-lg-6">
-				<label for="psw-repeat"><b>Comfirmed Password</b></label><br>
-				<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				<label for="psw-repeat"><b>Confirmed Password</b></label><br>
+				<input id="psw-repeat" type="password" placeholder="Repeat Password" name="psw-repeat" required>
 			</div>
 
 			<div class="col-lg-12">
@@ -226,6 +226,12 @@ input[type=submit] {
 					<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
 					<p id="number" class="invalid">A <b>number</b></p>
 					<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="alert alert-danger">
+					<strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
 				</div>
 			</div>
 
