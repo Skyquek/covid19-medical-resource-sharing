@@ -71,11 +71,8 @@ function registerValidation()
     // Check if the remember password match the password fields
     if(password.value == remPassword.value)
     {
-      // Check other field is empty
-      
-
-      // Debugging
-      return false;
+      // All requirements pass
+      return true;
     }
     else
     {

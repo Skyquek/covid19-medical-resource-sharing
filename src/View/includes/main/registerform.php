@@ -20,7 +20,7 @@
 	}
 	body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
-	input[type=text], input[type=phone], input[type=address],input[type=mail]{
+	input[type=text], input[type=tel], input[type=address],input[type=email]{
 		width: 70%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -156,7 +156,8 @@ input[type=submit] {
 			<div class="col-lg-6">
 				<label for="organization"><b>Organization Type</b></label><br>
 				<div class="form-group">
-					<select class="form-control" name="organization">
+					<select class="form-control" name="organization" required>
+						<option value="">Select Organization</option>
 						<option value="ngo">NGO</option>
 						<option value="industry">Industry</option>
 						<option value="government">Government</option>
@@ -168,44 +169,50 @@ input[type=submit] {
 				<br>
 
 				<label for="name"><b>Organization Name</b></label><br>
-				<input type="text" placeholder="Enter Name" name="name" required>
+				<input type="text" placeholder="Enter Organization Name" name="name" required>
+				<br>
+
+				<label for="mail"><b>Email</b></label><br>
+				<input type="email" placeholder="Enter email" name="mail" required>
 				<br>
 				
 				<label for="phone"><b>Phone Number</b></label><br>
-				<input type="phone" placeholder="Enter Phone Number" name="phone" required>
+				<!--<input type="phone" placeholder="Enter Phone Number" name="phone" required>-->
+				<input type="tel" id="phone" name="phone" placeholder="10 digits number (Ex. 6011123456798)" pattern="[0-9]{8,12}" required>
 				<br>
 				
-				<label for="mail"><b>E-Mail</b></label><br>
-				<input type="mail" placeholder="Enter Mail" name="mail" required>
-				<br>				
+								
 			</div>
+
 			<div class="col-lg-6">
 				<label for="address"><b>Address</b></label><br>
 				<input type="address" placeholder="Enter Address" name="address" required>
 				<br>
+				
 				<label for="State"><b>State</b></label><br>
 				<div class="form-group">
-				<select class="form-control" name="state">
-				<option value="">State</option>
-				<option value="PK">Perak</option>
-				<option value="PH">Pahang</option>
-				<option value="PL">Perlis</option>
-				<option value="SL">Selangor</option>
-				<option value="KL">Kuala Lumpur</option>
-				<option value="SR">Sarawak</option>
-				<option value="SB">Sabah</option>
-				<option value="JH">Johor</option>
-				<option value="NS">Negeri Sembilan</option>
-				<option value="KD">Kedah</option>
-				<option value="MK">Melaka</option>
-				<option value="TR">Terengganu</option>
-				<option value="KT">Kelantan</option>
-				<option value="Lb">Labuan</option>
-				</select>
+					<select class="form-control" name="state" required>
+						<option value="">State</option>
+						<option value="PK">Perak</option>
+						<option value="PH">Pahang</option>
+						<option value="PL">Perlis</option>
+						<option value="SL">Selangor</option>
+						<option value="KL">Kuala Lumpur</option>
+						<option value="SR">Sarawak</option>
+						<option value="SB">Sabah</option>
+						<option value="JH">Johor</option>
+						<option value="NS">Negeri Sembilan</option>
+						<option value="KD">Kedah</option>
+						<option value="MK">Melaka</option>
+						<option value="TR">Terengganu</option>
+						<option value="KT">Kelantan</option>
+						<option value="Lb">Labuan</option>
+					</select>
 				</div>
+				
 				<br>
-				<label for="Code"><b>Code</b></label><br>
-				<input type="address" placeholder="Enter Code" name="code" required>
+				<label for="code"><b>Postal Code</b></label><br>
+				<input type="text" pattern="[0-9]{5}" placeholder="5 digit post code (Ex. 15200)" name="code" required>
 				<br>
 			</div>
 
@@ -230,15 +237,16 @@ input[type=submit] {
 			</div>
 
 			<div class="col-lg-12">
-				<div class="alert alert-danger">
-					<strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+				<div id="error-box" class="alert alert-danger"  style="display: none;">
+					<p>This alert box could indicate a dangerous or potentially negative action.</p>
 				</div>
 			</div>
 
-			<div class="col-lg-12">
+			<!--<div class="col-lg-12">
 				<label for="remember">Remember Me</label>
       			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-			</div>
+			</div>-->
+
 		</div>
 	
 	<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>

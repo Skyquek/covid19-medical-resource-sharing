@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <div class="alert alert-warning alert-dismissible fade show text-center"style="color:black;margin-bottom:0px">
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
 	<strong>Warning!</strong> visit <a href="http://covid-19.moh.gov.my/" class="alert-link">Kementerian Kesihatan Malaysia</a> to get latetest information
