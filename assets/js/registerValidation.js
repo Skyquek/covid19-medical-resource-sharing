@@ -1,5 +1,6 @@
 var password = document.getElementById("psw");
 var remPassword = document.getElementById("psw-repeat");
+var errorBox = document.getElementById("error-box");
 
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
@@ -62,23 +63,33 @@ password.onkeyup = function() {
 
 function registerValidation() 
 {
+  errorBox.style.display = "none";
+
   // Check if password is strong enough
   if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
   {
     // Check if the remember password match the password fields
     if(password.value == remPassword.value)
     {
+      // Check other field is empty
+      
+
       // Debugging
       return false;
     }
     else
     {
-      
+      errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Confirm Password not match.";
+      errorBox.style.display = "block";
+
       return false;
     }
   }
   else
   {
+    errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Password not secure enough.";
+    errorBox.style.display = "block";
+
     return false;
   }
 }
