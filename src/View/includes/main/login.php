@@ -89,10 +89,10 @@
 
 <form id="loginForm" style="border:1px solid #ccc">
   <br><div class="container">
-    <h1>Login with email or phone number</h1>
+    <h1>Login with email</h1>
     <hr>
-		<label for="mail"><b>Email or phone number</b></label><br>
-		<input id="loginID" type="email" placeholder="Email address or phone number" name="mail" required>
+		<label for="mail"><b>Email</b></label><br>
+		<input id="loginID" type="email" placeholder="Email address" name="mail" required>
 		<br>				
 		
 		<label for="psw"><b>Password</b></label><br>
