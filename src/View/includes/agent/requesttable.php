@@ -13,15 +13,26 @@
 		<div class="col-sm-2">
 			<div class="container1 p-3 my-3 border">
 				<div class="form-group">
-                <label>Item Request</label>
-                    <select multiple="" class="form-control">
-                    <option>mask</option>
-                    <option>hand sanitizer</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                    </select>
-				</div>
+                        <label>Item needed</label>
+                        <select multiple class="custom-select"	style="height:620px" >
+                          <option>N95 Mask</option>
+						  <option>Surgery Mask</option>
+						  <option>Oxygen Mask</option>
+						  <option>Aorosol Mask</option>
+						  <option>Hand Sanitizer</option>
+                          <option>First aid kit</option>
+                          <option>Plaster</option>
+                          <option>Cotton wool</option>
+						  <option>Stethoscope</option>
+                          <option>Face Sheild</option>
+						  <option>Rubber Gloves</option>
+						  <option>Scissor</option>
+						  <option>Tape</option>
+						  <option>Thermometer</option>
+						  <option>Strecher</option>
+						  <option>Compression bandage</option>
+                        </select>
+                 </div>
             </div>
 		</div>
 		</div>
