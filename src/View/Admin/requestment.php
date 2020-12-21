@@ -13,13 +13,7 @@
 <?php include("../includes/admin/navigationadmin.php");?>
 <div class="main">
 	<h1 style="text-align:center">Requestment</h1>
-	<div class="container p-3 my-4 border">
-	<div class="row">
-	<div class="col-sm-6">
-	<div class="container1 p-3 my-4 border"><h6>hen</h6></div>
-	</div>
-	</div>
-	</div>
+	<?php include("../includes/admin/requestlist.php");?>
 	
 	
 </div>

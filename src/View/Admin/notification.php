@@ -13,6 +13,7 @@
 <?php include("../includes/admin/navigationadmin.php");?>
 <div class="main">
 <h1 style="text-align:center">Notification</h1>
+<?php include("../includes/admin/notification.php");?>
 </div>
 </body>
 </html>
