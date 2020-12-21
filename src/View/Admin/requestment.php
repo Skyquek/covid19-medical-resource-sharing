@@ -12,7 +12,7 @@
 <body>
 <?php include("../includes/admin/navigationadmin.php");?>
 <div class="main">
-	<h1 style="text-align:center">Requestment</h1>
+	<h1 style="text-align:center">Requestment</h1><br>
 	<?php include("../includes/admin/requestlist.php");?>
 	
 	
