@@ -66,6 +66,7 @@ width: 30%;
 /* Add padding to container elements */
 .container {
 padding: 16px;
+width:100%;
 }
 
 /* Clear floats */

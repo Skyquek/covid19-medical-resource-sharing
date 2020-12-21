@@ -15,9 +15,9 @@
  <?php include("../includes/agent/navigationagent.php");?>
 
 <div class="main">
-<div class="container p-3 my-3 border">
+<div class="container p-3 my-3">
 <h1>CORONA Diease 19</h1>
-<h4>(COVID-19)</h4>
-
+<h4>(COVID-19) Status</h4>
+<?php include("../includes/agent/home.php");?>
 </div>
  </body></html>

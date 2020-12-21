@@ -12,7 +12,7 @@
 <body>
 <?php include("../includes/admin/navigationadmin.php");?>
 <div class="main">
-	<h1>Notification</h1>
+<h1 style="text-align:center">Notification</h1>
 </div>
 </body>
 </html>
