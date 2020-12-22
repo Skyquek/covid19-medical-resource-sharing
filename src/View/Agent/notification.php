@@ -17,6 +17,7 @@
 <div class="main">
 <div class="container p-3 my-3 border">
 <h1>Notification</h1>
+ <?php include("../includes/agent/notification.php");?>
 
 </div>
  </body></html>
