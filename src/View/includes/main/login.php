@@ -105,6 +105,7 @@
 		<br>
 
 		<div id="error-box" class="alert alert-danger alert-dismissible"  style="display: none;">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<p>This alert box could indicate a dangerous or potentially negative action.</p>
 		</div>
 

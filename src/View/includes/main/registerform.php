@@ -238,10 +238,11 @@ input[type=submit] {
 
 			<div class="col-lg-12">
 				<div id="error-box" class="alert alert-danger alert-dismissible"  style="display: none;">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 					<p>This alert box could indicate a dangerous or potentially negative action.</p>
 				</div>
 			</div>
-
+			
 			<!--<div class="col-lg-12">
 				<label for="remember">Remember Me</label>
       			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
