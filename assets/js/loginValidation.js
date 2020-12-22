@@ -25,7 +25,7 @@ $(function() {
                     }
                     else
                     {
-                        errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Please Check your login ID and Password!";
+                        errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Please Check your login ID and Password!";
                         errorBox.style.display = "block";
                     }
                 },
@@ -37,7 +37,7 @@ $(function() {
         }
         else 
         {
-            errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Please Check your email format!";
+            errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Please Check your email format!";
             errorBox.style.display = "block";
         }
 

@@ -76,7 +76,7 @@ function registerValidation()
     }
     else
     {
-      errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Confirm Password not match.";
+      errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Confirm Password not match.";
       errorBox.style.display = "block";
 
       return false;
@@ -84,7 +84,7 @@ function registerValidation()
   }
   else
   {
-    errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Password not secure enough.";
+    errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Password not secure enough.";
     errorBox.style.display = "block";
 
     return false;

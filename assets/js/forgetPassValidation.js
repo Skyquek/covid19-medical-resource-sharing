@@ -22,13 +22,13 @@ $(function() {
                     if(data.status == 'success')
                     {
                         errorBox.style.display = "none";
-                        successBox.innerHTML = "<i class='fa fa-check'></i>" + " Please check your email inbox.";
+                        successBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-check'></i>" + " Please check your email inbox.";
                         successBox.style.display = "block";
                     }
                     else
                     {
                         successBox.style.display = "none";
-                        errorBox.innerHTML = "<i class='fa fa-times'></i>" + " We can't seem to find any user associate with this email.";
+                        errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " We can't seem to find any user associate with this email.";
                         errorBox.style.display = "block";
                     }
                 },
@@ -41,7 +41,7 @@ $(function() {
         else
         { 
             successBox.style.display = "none";
-            errorBox.innerHTML = "<i class='fa fa-times'></i>" + " Please Check your Email Format!";
+            errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Please Check your Email Format!";
             errorBox.style.display = "block";
             return false;
         } 
