@@ -80,7 +80,8 @@
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div>
 		<br>
-				<button type="button" class="btn btn-outline-secondary" style="width:100px" >View</button>
+		<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
+		<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button>
         </div>       
     </div>
 	<div class="col-sm-6">
@@ -105,7 +106,7 @@
 			<div class="progress-bar" style="width:100%">100%</div>
 		</div>
 		<br>
-				<button type="button" class="btn btn-outline-secondary" style="width:100px" >View</button>
+				<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right"" >View</button>
         </div>       
     </div>
 	<div class="col-sm-6">

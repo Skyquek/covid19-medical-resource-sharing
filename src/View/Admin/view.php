@@ -11,9 +11,7 @@
 </head>
 <body>
 <?php include("../includes/admin/navigationadmin.php");?>
-<div class="main">
-<h1 style="text-align:center">Medical Supplies</h1>
-<?php include("../includes/admin/medical.php");?>
-</div>
+<?php include("../includes/admin/view.php");?>
+
 </body>
 </html>
