@@ -1,92 +1,132 @@
-<div class="col-md-3">
-            <!-- DIRECT CHAT PRIMARY -->
-            <div class="card card-prirary cardutline direct-chat direct-chat-primary">
-              <div class="card-header">
-                <h3 class="card-title">Chat Bot</h3>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
-                <div class="card-tools">
-                  <span data-toggle="tooltip" title="3 New Messages" class="badge bg-primary">3</span>
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
-                    <i class="fas fa-comments"></i></button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
-                  </button>
-                </div>
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: orange;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 290px;
+}
+
+.card{
+	height:auto;
+	width:auto;
+	
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  heigth:500px;
+  width: 300px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  max-height:600px;
+  background-color: white;
+  height:500px;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  height: 40px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: orange;
+  color: white;
+  font-size:12px;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+  height:38px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+
+<button class="open-button" onclick="openForm()">Your Sweet Heart  <i class='fas fa-comment'></i></button>
+
+<div class="chat-popup " id="myForm">
+  <form action="/action_page.php" class="form-container border">
+    <div class="card ">
+			  <div class="card-header" style="height:40px;margin-top:0px">
+				<h6 class="card-title" style="float:left">Sweet Heart</h6>
+                 <i class='far fa-window-minimize'onclick="closeForm()" style="float:right"></i>
               </div>
               <!-- /.card-header -->
               <div class="card-body" style="display: block;">
                 <!-- Conversations are loaded here -->
                 <div class="direct-chat-messages">
-                  <!-- Message. Default to the left -->
-                  <div class="direct-chat-msg">
-                    <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-left">Alexander Pierce</span>
-                      <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
-                    </div>
-                    <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="Message User Image">
-                    <!-- /.direct-chat-img -->
-                    <div class="direct-chat-text">
-                      Is this template really for free? That's unbelievable!
-                    </div>
-                    <!-- /.direct-chat-text -->
-                  </div>
-                  <!-- /.direct-chat-msg -->
 
-                  <!-- Message to the right -->
-                  <div class="direct-chat-msg right">
-                    <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-right">Sarah Bullock</span>
-                      <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
-                    </div>
-                    <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="Message User Image">
-                    <!-- /.direct-chat-img -->
-                    <div class="direct-chat-text">
-                      You better believe it!
-                    </div>
-                    <!-- /.direct-chat-text -->
-                  </div>
-                  <!-- /.direct-chat-msg -->
                 </div>
-                <!--/.direct-chat-messages-->
-
-                <!-- Contacts are loaded here -->
-                <div class="direct-chat-contacts">
-                  <ul class="contacts-list">
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            Count Dracula
-                            <small class="contacts-list-date float-right">2/28/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">How have you been? I was...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
-                    <!-- End Contact Item -->
-                  </ul>
-                  <!-- /.contatcts-list -->
-                </div>
-                <!-- /.direct-chat-pane -->
+           
+           
               </div>
-              <!-- /.card-body -->
-              <div class="card-footer" style="display: block;">
+              <div class="card-footer" style="display: block;margin-bottom:-510px">
                 <form action="#" method="post">
                   <div class="input-group">
                     <input type="text" name="message" placeholder="Type Message ..." class="form-control">
                     <span class="input-group-append">
-                      <button type="submit" class="btn btn-primary">Send</button>
+                      <button type="submit" class="btn btn-warning">Send</button>
                     </span>
                   </div>
                 </form>
               </div>
-              <!-- /.card-footer-->
-            </div>
-            <!--/.direct-chat -->
-          </div>
+
+     </div>
+
+   
+   
+  </form>
+</div>

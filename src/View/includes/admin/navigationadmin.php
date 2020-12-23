@@ -15,7 +15,9 @@
   </div>
 </nav>
 <div class="sidenav">
+  <a href="home.php">Home</a>
   <a href="notification.php">Noticfication</a>
+  <a href="medical.php">Medical Supplies</a>
   <a href="requestment.php">Requestment</a>
   <a href="completed.php">Completed Task</a>
   <a href="data.php">Analysis</a>

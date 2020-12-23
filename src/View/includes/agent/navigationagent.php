@@ -8,6 +8,9 @@
 <div class ="collapse navbar-collapse"  id ="colNav">
 <ul class ="navbar-nav">
 <li class ="nav-item">
+<a class ="nav-link"  style="color:white;float:right;" href ="home.php"> Home</a>
+</li>
+<li class ="nav-item">
 <a class ="nav-link"  style="color:white;float:right;" href="account.php"> Account </a>
 </li>
 <li class ="nav-item">
