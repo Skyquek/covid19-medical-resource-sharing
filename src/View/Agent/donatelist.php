@@ -39,6 +39,26 @@
 	  color: white;
 	  text-align: center;
 	}
+	
+	.button
+	{
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+	
+	.button1 
+	{
+		background-color: #f44336;
+	}
+	
 </style>
   
 </head>
@@ -54,11 +74,15 @@
     <th>Name</th>
     <th>Address</th>
     <th>Request Item</th>
+	<th>Action</th>
   </tr>
   <tr>
     <td>Dr. Mellisa</td>
     <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
     <td>PPE</td>
+	<td><button class="button" onclick="alert('Thank you for respond')">Respond</button>
+	<button class="button button1">Cancel</button>
+	</td>
   </tr>
 </table>
 </div>
