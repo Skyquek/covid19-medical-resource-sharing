@@ -36,7 +36,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="n95" type="number" class="form-control text-center" value="0">
+								<input name="n95" type="number" min="0" class="form-control text-center" value="0" onchange='autoChg(this)'>
 							</td>
 							<td class="actions" data-th="">
 									<button id="n95" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>						
@@ -59,7 +59,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name='surgery_mask' type="number" class="form-control text-center" value="0">
+								<input name='surgery_mask' type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id='surgery_mask' class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
@@ -82,7 +82,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name='surgery_mask'  id="oxygen_mask" type="number" class="form-control text-center" value="0">
+								<input name='surgery_mask'  id="oxygen_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id="oxygen_mask" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
@@ -105,7 +105,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="aorosol_mask" type="number" class="form-control text-center" value="0">
+								<input name="aorosol_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id="aorosol_mask" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
@@ -129,7 +129,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="hand_sanitizer" type="number" class="form-control text-center" value="0">
+								<input name="hand_sanitizer" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id="hand_sanitizer" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
@@ -153,7 +153,7 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="first_aid_kit" type="number" class="form-control text-center" value="0">
+								<input name="first_aid_kit" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id="first_aid_kit" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
@@ -177,10 +177,10 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="plaster" type="number" class="form-control text-center" value="0">
+								<input name="plaster" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="plaster" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+								<button id="plaster" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -201,11 +201,10 @@
 								</div>
 							</td>
 							<td data-th="Quantity">
-								<input name="cotton_wool" type="number" class="form-control text-center" value="0">
+								<input name="cotton_wool" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="cotton_wool" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
-																	
+									<button id="cotton_wool" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>								
 							</td>
 						</tr>
 
@@ -219,35 +218,6 @@
 
 
 		<div class="col-sm-2"></div>
-
-		<!--
-			<div class="col-sm-2">
-				<div class="container1 p-3 my-3 border">
-					<div class="form-group">
-						<label>Item needed</label>
-						<select multiple class="custom-select"	style="height:620px" >
-							<option>N95 Mask</option>
-							<option>Surgery Mask</option>
-							<option>Oxygen Mask</option>
-							<option>Aorosol Mask</option>
-							<option>Hand Sanitizer</option>
-							<option>First aid kit</option>
-							<option>Plaster</option>
-							<option>Cotton wool</option>
-							<option>Stethoscope</option>
-							<option>Face Sheild</option>
-							<option>Rubber Gloves</option>
-							<option>Scissor</option>
-							<option>Tape</option>
-							<option>Thermometer</option>
-							<option>Strecher</option>
-							<option>Compression bandage</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		-->
-
 	</div>
 
 
