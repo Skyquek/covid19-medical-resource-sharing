@@ -67,29 +67,26 @@
 
 <div class="main">
 <div class="container p-3 my-3 border">
-<h1>Donate List</h1>
+<h1>Request List</h1>
 
 <table id="donatelist"></b>
   <tr>
-    <th>Contributor</th>
-    <th>Contributor Address</th>
-    <th>Donate Item</th>
-    <th>Quantity</th>
-    <th>Receiver</th>
-    <th>Receiver Address</th>
-	
+    <th>Requester Name</th>
+    <th>Address</th>
+    <th>Request Item</th>
+	<th>Quantity</th>
+	<th>Action</th>
   </tr>
   <tr>
-    <td>Dr. Mellisa</td>
-    <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
-    <td>PPE</td>
-    <td>25pcs</td>
     <td>Dr. Albert</td>
-    <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
-	
+    <td>HOSPITA QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+    <td>PPE</td>
+	<td><input type="number" id="quantity" name="quantity" min="1" max="50000"></td>
+	<td><a href = "donate.php"><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
+	<button class="button button1">Cancel</button>
+	</td>
   </tr>
 </table>
 </div>
 </body>
 </html>
-
