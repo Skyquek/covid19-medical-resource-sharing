@@ -82,7 +82,7 @@
     <td>HOSPITA QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
     <td>PPE</td>
 	<td><input type="number" id="quantity" name="quantity" min="1" max="50000"></td>
-	<td><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
+	<td><a href = "donate.php"><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
 	<button class="button button1">Cancel</button>
 	</td>
   </tr>
