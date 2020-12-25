@@ -81,7 +81,7 @@
     <td>Dr. Albert</td>
     <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
     <td>N95 Mask</td>
-	<td>100></td>
+	<td>100</td>
 	<td><a href = "donate.php"><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
 	<button class="button button1">Cancel</button>
 	</td>
