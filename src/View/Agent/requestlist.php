@@ -71,15 +71,15 @@
 
 <table id="donatelist"></b>
   <tr>
-    <th>Name</th>
+    <th>Requester Name</th>
     <th>Address</th>
     <th>Request Item</th>
 	<th>Quantity</th>
 	<th>Action</th>
   </tr>
   <tr>
-    <td>Dr. Mellisa</td>
-    <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
+    <td>Dr. Albert</td>
+    <td>HOSPITA QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
     <td>PPE</td>
 	<td><input type="number" id="quantity" name="quantity" min="1" max="50000"></td>
 	<td><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
