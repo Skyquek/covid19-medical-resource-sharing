@@ -74,22 +74,23 @@
     <th>Contributor</th>
     <th>Contributor Address</th>
     <th>Donate Item</th>
-    <th>Quantity</th>
-    <th>Receiver</th>
-    <th>Receiver Address</th>
+	<th>Quantity</th>
+	<th>Receiver</th>
+	<th>Receiver Address</th>
 	
   </tr>
   <tr>
     <td>Dr. Mellisa</td>
     <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
-    <td>PPE</td>
-    <td>25pcs</td>
-    <td>Dr. Albert</td>
-    <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+    <td>N95 Mask</td>
+	<td>100</td>
+	<td>Dr. Albert</td>
+	<td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
 	
   </tr>
 </table>
 </div>
 </body>
 </html>
+
 
