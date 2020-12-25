@@ -11,11 +11,13 @@
 				</div>
 
 				<hr>
-
+				
+				<form method="post">
 				<table id="cart" class="table table-hover table-condensed">
 					<thead>	
 						<tr>
-							<th style="width:80%">Item Description</th>
+							<th style="width:75%">Item Description</th>
+							<th style="width: 5%">Category</th>
 							<th style="width:5%">Quantity</th>
 							<th style="width:20%"></th>
 						</tr>
@@ -23,7 +25,7 @@
 
 					<tbody>
 						<tr>
-							<td data-th="Item Name">
+							<td data-th="Item Description">
 								<div class="row">
 									<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="n95 mask" class="img-responsive"/></div>
 									<div class="col-sm-10">
@@ -34,6 +36,9 @@
 										</p>
 									</div>
 								</div>
+							</td>
+							<td>
+								<p>Medical Supplies</p>
 							</td>
 							<td data-th="Quantity">
 								<input name="n95" type="number" min="0" class="form-control text-center" value="0" onchange='autoChg(this)'>
@@ -58,6 +63,9 @@
 									</div>
 								</div>
 							</td>
+							<td>
+								<p>Medical Supplies</p>
+							</td>
 							<td data-th="Quantity">
 								<input name='surgery_mask' type="number" min="0" class="form-control text-center" value="0">
 							</td>
@@ -81,6 +89,9 @@
 									</div>
 								</div>
 							</td>
+							<td>
+								<p>Medical Supplies</p>
+							</td>
 							<td data-th="Quantity">
 								<input name='surgery_mask'  id="oxygen_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
@@ -103,6 +114,9 @@
 										</p>
 									</div>
 								</div>
+							</td>
+							<td>
+								<p>Medical Supplies</p>
 							</td>
 							<td data-th="Quantity">
 								<input name="aorosol_mask" type="number" min="0" class="form-control text-center" value="0">
@@ -128,6 +142,9 @@
 									</div>
 								</div>
 							</td>
+							<td>
+								<p>Medical Supplies</p>
+							</td>
 							<td data-th="Quantity">
 								<input name="hand_sanitizer" type="number" min="0" class="form-control text-center" value="0">
 							</td>
@@ -151,6 +168,9 @@
 										</p>
 									</div>
 								</div>
+							</td>
+							<td>
+								<p>Medical Supplies</p>
 							</td>
 							<td data-th="Quantity">
 								<input name="first_aid_kit" type="number" min="0" class="form-control text-center" value="0">
@@ -176,6 +196,9 @@
 									</div>
 								</div>
 							</td>
+							<td>
+								<p>Medical Supplies</p>
+							</td>
 							<td data-th="Quantity">
 								<input name="plaster" type="number" min="0" class="form-control text-center" value="0">
 							</td>
@@ -200,6 +223,9 @@
 									</div>
 								</div>
 							</td>
+							<td>
+								<p>Medical Supplies</p>
+							</td>
 							<td data-th="Quantity">
 								<input name="cotton_wool" type="number" min="0" class="form-control text-center" value="0">
 							</td>
@@ -208,11 +234,10 @@
 							</td>
 						</tr>
 
-
-
-
 					</tbody>
 				</table>
+				</form>
+
 			</div>
 		</div>
 
