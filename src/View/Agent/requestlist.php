@@ -71,16 +71,16 @@
 
 <table id="donatelist"></b>
   <tr>
-    <th>Requester Name</th>
-    <th>Address</th>
-    <th>Request Item</th>
+        <th>Requester Name</th>
+        <th>Address</th>
+        <th>Request Item</th>
 	<th>Quantity</th>
 	<th>Action</th>
   </tr>
   <tr>
-    <td>Dr. Albert</td>
-    <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
-    <td>N95 Mask</td>
+        <td>Dr. Albert</td>
+        <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+        <td>N95 Mask</td>
 	<td>100</td>
 	<td><a href = "donate.php"><button class="button" onclick="alert('Are you sure to donate?')">Donate</button>
 	<button class="button button1">Cancel</button>
