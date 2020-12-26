@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="../../../assets/css/admin.css">
-</head>
-<body>
-<?php include("../includes/admin/navigationadmin.php");?>
-<?php include("../includes/admin/view.php");?>
+<br>
+<div class="container border" style="height:800px">
+<a href="requestment.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button></a><br><br>
+<hr>
+<div class="col-sm-12">
 
-</body>
-</html>
+		<p>Contributor: <input type ="text" id="reqcont" name="reqcont"></p></p><br>
+		<p>Address: <input type ="text" id="reqadd" name="reqadd"></p><p><br>
+		<div class="row">
+		<div class="col-sm-6"><p>Item Request: <input type ="text" id="reqitem" name="reqitem"></p></div>	
+		<div class="col-sm-4"><p style="text-align:right">Date: <input type ="text" id="reqdate" name="reqdate"></p></p></div>
+		<div class="col-sm-2"><p style="text-align:right">Amount: <input type ="text" id="reqamount" name="reqamount"></p></p></div>
+		</div>
+        <hr>
+  <p>Receiver: <input type ="text" id="donaterec" name="donaterec"></p></p><br>
+		<p>Address: <input type ="text" id="donateadd" name="donateadd"></p><p><br>
+		<div class="row">
+		<div class="col-sm-6"><p>Item Donate: <input type ="text" id="donateitem" name="donateitem"></p></div>	
+		<div class="col-sm-4"><p style="text-align:right">Date: <input type ="text" id="donatedate" name="donatedate"></p></div>
+		<div class="col-sm-2"><p style="text-align:right">Amount: <input type ="text" id="donateamount" name="donateamount"></p></div>
+		</div></div> 
+<div class="progress" style="margin-bottom:0px">
+		<div class="progress-bar" style="width:70%">70%</div>
+		</div><br>
+		<br>
+</div>
+<br>
