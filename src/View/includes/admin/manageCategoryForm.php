@@ -45,7 +45,7 @@
                 <td>1</td>
                 <td>Medical Supplies</td>
                 <td>
-                    <button class="btn btn-primary update_modal" id="Medical_Supplies" data-toggle="modal" data-target="#updateCategory" onclick="chgName(this)">Modify</button> 
+                    <button class="btn btn-primary update_modal" id="Medical_Supplies" data-toggle="modal" data-target="#updateCategory" onclick="chgName(this)">Update</button> 
                     <button class="btn btn-success" value="Medical Supplies" onclick="listItems(this)"> View Product</button>
                     <button class="btn btn-danger" name="Medical Supplies" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
@@ -56,7 +56,7 @@
                 <td>2</td>
                 <td>Food</td>
                 <td>
-                    <button class="btn btn-primary update_modal" id="Food" data-toggle="modal" data-target="#updateCategory">Modify</button> 
+                    <button class="btn btn-primary update_modal" id="Food" data-toggle="modal" data-target="#updateCategory">Update</button> 
                     <button type='button' class="btn btn-success"> View Product</button>
                     <button type='submit' class="btn btn-danger" name="Food" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
@@ -67,7 +67,7 @@
                 <td>3</td>
                 <td>Drinks</td>
                 <td>
-                    <button class="btn btn-primary update_modal" id="Drinks" onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Modify</button> 
+                    <button class="btn btn-primary update_modal" id="Drinks" onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
                     <button class="btn btn-success"> View Product</button>
                     <button class="btn btn-danger" name="Drinks" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
@@ -78,7 +78,7 @@
                 <td>4</td>
                 <td>Shirts</td>
                 <td>
-                    <button class="btn btn-primary update_modal" id="Shirts"  onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Modify</button> 
+                    <button class="btn btn-primary update_modal" id="Shirts"  onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
                     <button class="btn btn-success"> View Product</button>
                     <button class="btn btn-danger" name="Shirts" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
@@ -89,7 +89,7 @@
                 <td>5</td>
                 <td>Services</td>
                 <td>
-                    <button class="btn btn-primary"  id='Services' onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Modify</button> 
+                    <button class="btn btn-primary"  id='Services' onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
                     <button class="btn btn-success"> View Product</button>
                     <button class="btn btn-danger" name="Services" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
@@ -137,7 +137,7 @@
                             <label for="categoryName">Category Name</label>
                             <input id="updateCategoryName" type="text" class="form-control" >
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </form>
                 </div>
 

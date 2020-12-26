@@ -11,8 +11,7 @@
 </head>
 <body>
 <?php include("../includes/admin/navigationadmin.php");?>
-<div class="main">
-	<h1 style="text-align:center">Data</h1><?php include("../includes/admin/data.php");?>
-</div>
+<?php include("../includes/admin/viewcom.php");?>
+
 </body>
 </html>

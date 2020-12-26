@@ -17,13 +17,13 @@
 <a class ="nav-link"  style="color:white;float:right;" href ="notification.php"> Notification</a>
 </li>
 <li class ="nav-item">
-<a class ="nav-link"   style="color:white;float:right;"href ="request.php"> Request Form</a>
+<a class ="nav-link"  style="color:white;float:right;" href ="myrequest.php">My request</a>
 </li>
 <li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href ="requestlist.php"> Request List </a>
+<a class ="nav-link"  style="color:white;float:right;" href ="donatelist.php"> Donation </a>
 </li>
 <li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href ="donatelist.php"> Donation List </a>
+<a class ="nav-link"   style="color:white;float:right;"href ="request.php"> Request </a>
 </li>
 <li class ="nav-item">
 <a class ="nav-link"   style="color:white;float:right;"href ="#"> Logout </a>

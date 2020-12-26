@@ -4,12 +4,13 @@ textarea {
 }
 </style>
 <button type="submit" class="btn btn-light">Back</button>
+
 <h2 style="text-align:center">Donate</h2>
 	<div class="row">
 		<div class="col-sm-2">
 		</div>
 		<div class="col-sm-6">
-		<div class="container1 p-3 my-3 border">
+		<div class="container1 p-3 my-3 ">
 			<div class="col-sm-6">
 			<h6>Receiver:</h6><br>
 			<h6>Address:</h6><br><br>

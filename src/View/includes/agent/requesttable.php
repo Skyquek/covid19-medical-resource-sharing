@@ -2,16 +2,13 @@
 		<div class="col-sm-2"></div>
 
 		<div class="col-sm-8">
-			<div class="container1 p-3 my-3 border">
+			<div class="container1 p-3 my-3 ">
 				<div class="navbar" style="background-color:gray">	
 					<h5>Add new request </h5>
 					<div class="justify-content-end">
 						<button type="submit" class="btn btn-light">Publish</button>
 					</div>
 				</div>
-
-				<hr>
-				
 				<form method="post">
 				<table id="cart" class="table table-hover table-condensed">
 					<thead>	

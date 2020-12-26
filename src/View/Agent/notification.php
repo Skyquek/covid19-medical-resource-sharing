@@ -15,9 +15,9 @@
  <?php include("../includes/agent/navigationagent.php");?>
 
 <div class="main">
-<div class="container p-3 my-3 border">
+<div class="container p-3 my-3">
 <h1>Notification</h1>
- <?php include("../includes/agent/notification.php");?>
+ <?php include("../includes/agent/notification.php");?><?php include("../includes/agent/chatbot.php");?>
 
 </div>
  </body></html>

@@ -18,6 +18,6 @@
 <div class="container p-3 my-3">
 <h1>CORONA Diease 19</h1>
 <h4>(COVID-19) Status</h4>
-<?php include("../includes/agent/home.php");?>
+<?php include("../includes/agent/home.php");?><?php include("../includes/agent/chatbot.php");?>
 </div>
  </body></html>

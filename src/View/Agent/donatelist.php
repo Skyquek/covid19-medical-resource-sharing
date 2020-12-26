@@ -63,10 +63,10 @@
   
 </head>
 <body>
- <?php include("../includes/agent/navigationagent.php");?>
+ <?php include("../includes/agent/navigationagent.php");?><?php include("../includes/agent/chatbot.php");?>
 
 <div class="main">
-<div class="container p-3 my-3 border">
+<div class="container p-3 my-3">
 <h1>Donate List</h1>
 
 <table id="donatelist"></b>
@@ -74,23 +74,23 @@
     <th>Contributor</th>
     <th>Contributor Address</th>
     <th>Donate Item</th>
-	<th>Quantity</th>
-	<th>Receiver</th>
-	<th>Receiver Address</th>
+    <th>Quantity</th>
+    <th>Receiver</th>
+    <th>Receiver Address</th>
+	<th></th>
 	
   </tr>
   <tr>
     <td>Dr. Mellisa</td>
     <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
-    <td>N95 Mask</td>
-	<td>100</td>
-	<td>Dr. Albert</td>
-	<td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
-	
+    <td>PPE</td>
+    <td>25pcs</td>
+    <td>Dr. Albert</td>
+    <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+	<td><a href="requestlist.php" >View</a></td>
   </tr>
 </table>
 </div>
 </body>
 </html>
-
 
