@@ -141,7 +141,7 @@
 </div>
 </div>
 <br><br>
-<div class="pagination" style="margin-left:700px">
+<div class="pagination" style="margin-left:770px">
   <a href="#">&laquo;</a>
   <a class="active"href="#">1</a>
   <a  href="#">2</a>
