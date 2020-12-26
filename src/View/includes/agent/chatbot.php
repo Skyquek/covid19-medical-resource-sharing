@@ -95,13 +95,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </style>
 
 
-<button class="open-button" onclick="openForm()">Your Sweet Heart  <i class='fas fa-comment'></i></button>
+<button class="open-button" onclick="openForm()">Ask Me Question <i class='fas fa-comment'></i></button>
 
 <div class="chat-popup " id="myForm">
   <form action="/action_page.php" class="form-container border">
     <div class="card ">
 			  <div class="card-header" style="height:40px;margin-top:0px">
-				<h6 class="card-title" style="float:left">Sweet Heart</h6>
+				<h6 class="card-title" style="float:left">AI Chatbot</h6>
                  <i class='far fa-window-minimize'onclick="closeForm()" style="float:right"></i>
               </div>
               <!-- /.card-header -->
