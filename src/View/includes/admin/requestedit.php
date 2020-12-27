@@ -4,25 +4,24 @@
 <button class="btn  btn-outline-secondary" name="Medical Supplies" onclick="delete(this)"style="width:100px;float:right;margin-top:10px" data-toggle="modal" data-target="#delete">Delete</button></a><br><br>
 <hr>
 <div class="col-sm-12">
-		<p>Contributor:</p><br>
-		<p>Address:<p><br>
+		<p>Contributor: <input type ="text" id="cont" name="cont"></p><br>
+		<p>Address: <input type ="text" id="contadd" name="contadd"><p><br>
 		<div class="row">
-		<div class="col-sm-6"><p>Item Request:</p></div>	
-		<div class="col-sm-4"><p style="text-align:right">Date:</p></div>
-		<div class="col-sm-2"><p style="text-align:right">Amount:</p></div>
-		<button class="btn btn-outline-secondary update_modal"  data-toggle="modal" data-target="#update">Update</button></a><br>
+		<div class="col-sm-5"><p>Item Request: <input type ="text" id="contitem" name="contitem"></p></div>	
+		<div class="col-sm-3"><p style="text-align:right">Date: <input type ="text" id="contdate" name="contdate"></p></div>
+		<div class="col-sm-0"><p style="text-align:right">Amount: <input type ="text" id="contamt" name="contamt"></p></div>
+
 		</div>
         <hr>
-		<p>Receiver:</p><br>
-		<p>Address:<p><br>
+		<p>Receiver: <input type ="text" id="reqitem" name="reqitem"></p><br>
+		<p>Address: <input type ="text" id="reqadd" name="reqadd"><p><br>
 		<div class="row">
-		<div class="col-sm-6"><p>Item Donate:</p></div>	
-		<div class="col-sm-4"><p style="text-align:right">Date:</p></div>
-		<div class="col-sm-2"><p style="text-align:right">Amount:</p></div>
+		<div class="col-sm-5"><p>Item Donate: <input type ="text" id="reqitem" name="reqitem"></p></div>	
+		<div class="col-sm-3"><p style="text-align:right">Date: <input type ="text" id="reqdate" name="reqdate"></p></div>
+		<div class="col-sm-0"><p style="text-align:right">Amount: <input type ="text" id="reqamt" name="reqamt"></p></div>
 		</div></div> 
-<div class="progress" style="margin-bottom:0px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div>
+
+		<br><br><button class="btn btn-outline-secondary update_modal"  data-toggle="modal" data-target="#update">Update</button></a><br>
 		<br>
 		<br>
 </div>
@@ -57,7 +56,7 @@
                 <div class="modal-body">
 					
                         
-                    <button type="submit" class="btn btn-danger">Update</button>
+                    <button type="submit" class="btn btn-danger"><a href="requestment.php">Update</button>
                  
                 </div>
             </div>

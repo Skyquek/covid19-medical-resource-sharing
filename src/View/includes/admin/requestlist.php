@@ -18,7 +18,7 @@
 .pagination a:hover:not(.active) {background-color: #ddd;}
 </style>
 
-<div class="row" style="width:1700px">
+<div class="row" style="width:100%">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
@@ -30,14 +30,13 @@
         <div class="progress" style="margin-top:90px">
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button></a>
 		<br>
 </div>   
 </div>
 </div>
 <br>
-<div class="row" style="width:1700px">
+<div class="row" style="width:100%">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
@@ -49,14 +48,13 @@
         <div class="progress" style="margin-top:90px">
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button></a>
 		<br>
 </div>   
 </div>
 </div>
 <br>
-<div class="row" style="width:1700px">
+<div class="row" style="width:100%">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
@@ -68,13 +66,13 @@
         <div class="progress" style="margin-top:90px">
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button></a>
+		<br>
 </div>   
 </div>
 </div>
 <br>
-<div class="row" style="width:1700px">
+<div class="row" style="width:100%">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
@@ -86,13 +84,13 @@
         <div class="progress" style="margin-top:90px">
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button></a>
+		<br>
 </div>   
 </div>
 </div>
 <br>
-<div class="row" style="width:1700px">
+<div class="row" style="width:100%">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
@@ -104,8 +102,8 @@
         <div class="progress" style="margin-top:90px">
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button></a>
+		<br>
 </div>   
 </div>
 </div>
@@ -122,3 +120,4 @@
   <a href="#">&raquo;</a>
 </div>
 <br>
+

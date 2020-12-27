@@ -59,7 +59,7 @@ a:hover p{
 <br>
 <br>
 
-<h3 style="text-align:center">Request List</h3><br>
+<h3 style="text-align:center; font-weight:bold;">Request List</h3><br>
 <div class="container3" style="height:200px">
 <div class="row">
 		<div class="col-md-3">
@@ -69,7 +69,7 @@ a:hover p{
           <p>Senior Garden Elderly Care Centre<p>
         </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ a:hover p{
           <p>SMK Simpang Bekoh<p>
           </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ a:hover p{
           <p>Jabatan Hal Ehwal Kesatuan Sekerja Melaka<p>
           </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@ a:hover p{
 </div>
 <br>
 
-<h3 style="text-align:center">Request Progress</h3><br>
+<h3 style="text-align:center; font-weight: bold;">My Request Progress</h3><br>
 <div class="container3" style="height:200px">
 <div class="row">
 		<div class="col-md-9">

@@ -1,0 +1,245 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<title>Biography</title>
+<div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px; font-family: Impact, Charcoal, sans-serif;">AI. The new way of life.</h1>
+    </div>
+</div>
+
+<img class="profilePhoto" src="img/quek.png" height="200"></img>
+
+<div class="input-color">
+    <span class="color-box">
+        <p class="color-label">Click to Change Background Color: </p>
+        <div class="color-box-white" style="background-color: #ffffff;"></div>
+        <div class="color-box-orange" style="background-color: #FF850A;"></div>
+        <div class="color-box-blue" style="background-color: #1b45c2;"></div>
+        <div class="color-box-green" style="background-color: #1bc271;"></div>
+    </span>
+</div>
+
+<div class="content">
+    <h1>Quek Yao Jing (B031810136)</h1>
+
+    <h2>Personal Details</h2>
+    <table width="100%">
+    <tr>
+        <td>Nationality</td>
+        <td>:</td>
+        <td>Malaysia</td>
+
+        <td>Age</td>
+        <td>:</td>
+        <td>23</td>
+    </tr>
+    
+    <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td>B031810136@student.utem.edu.my</td>
+        
+        <td>Phone Number</td>
+        <td>:</td>
+        <td>+601122289789</td>
+    </tr>
+    
+    <tr>
+        <td>GitHub</td>
+        <td>:</td>
+        <td>https://github.com/Skyquek</td>
+
+        <td>LinkedIn</td>
+        <td>:</td>
+        <td>https://www.linkedin.com/in/yjquek</td>
+    </tr>
+    </table>
+    
+    <h2>Education</h2>
+    <b>Bachelor of Computer Science (Artificial Intelligence)</b>  (November 2018 - 2022)
+    University Teknikal Malaysia Melaka (UTeM)
+    
+    <ul>
+    <li> CGPA: 3.97</li>
+    <li> Malaysian University Englist Test (MUET): band 4</li>
+    <li> Test of English for International Communication (TOEIC): 850/990</li>
+    </ul>
+    
+    <b>Diploma in Information Technology (Information Security)</b> (June 2015 - 2018)
+    Ungku Omar Polytechnic, Ipoh
+    
+    <ul>
+    <li> CGPA: 3.97</li>
+    <li> Android Certified Application Developer recognized by Advance Training Consultants </li>
+    <li> Completed a final-year project entitled <b>'Motion Detection Surveillance System Using OpenCV and Robot Operating System'</b></li>
+    
+    </ul>
+    
+    <h2>About Me</h2>
+    <p>I am a student in Universiti Teknikal Malaysia Melaka (UTeM) which currently persuading a degree in Computer Science (Artificial Intelligence). 
+    I am passionate in artificial intelligence technique such as machine learning, deep learning, fuzzy logic and genetic algorithm. I devote most of my time in learning what is the true form of 
+    artificial intelligence. Besides that, I also learn how to utilized cloud computing platform to run my experimental project which require a lot of computing power.
+    </p>
+    
+    <h2>My Achievements</h2>
+    <p> This is the video of me participating in Malaysia FIRA robotics Cup! Its was so fun and exciting! </p>
+    <video width="300" height="200" controls>
+        <source src="asset/fira.mp4" />
+        Your browser does not support the video element.
+    </video>
+
+    <h2> AI Generated Music Using Generative Adversarial Neural Network(GAN) </h2>
+    <p>I had always love to listen to the music, but I don't have the skills to play any musical instruments.
+    Hence, I use AI to generate myself musics! Below are of of my sample music generated using AI.</p>
+    <audio src="asset/epochs5000.mp3" controls>
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>My Website Playground</h2>
+
+    <table class="playground">
+        <tr>
+            <td>
+                <svg id="svgredcircle" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="redcircle" cx="50" cy="50" r="50" fill="red" />
+                </svg>
+            </td>
+
+            <td>
+                <svg id="svgredstar" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red"/>
+                </svg>
+            </td>
+
+            <td>
+                <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" fill="red" />
+                </svg>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Red Circle</td>
+            <td>Red Star</td>
+            <td>Red Shape</td>
+        </tr>
+
+        <tr>
+            <td>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+            </td>
+
+            <td>
+                <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+            </td>
+            
+            <td>
+                <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Canvas Line</td>
+            <td>Canvas Text</td>
+            <td>Canvas Gradiant</td>
+        </tr>
+    </table>
+
+    <h2>Any Good AI project ideas? Leave a Message to Me!</h2>
+    <form name="submitForm" onsubmit="return validation()">
+        <p>
+            <table>
+                <tr>
+                    <td><label for="name"> Name: </label></td>
+                    <td><input type="text" id="name" name="qName"> <br/></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email"> Email: </label></td>
+                    <td><input type="text" id="email" name="emailname"> <br/></td>
+                </tr>
+
+                <tr>
+                    <td> Idea: </td>
+                    <td>
+                        <textarea rows="4" cols="50" name="comment" id="textarea"></textarea>
+                    </td>
+                </tr>
+
+                <tr id="btnSubmit" style="display: none;">
+                    <td><input type="submit" value="send"></td>
+                    <td><input type="reset"></td>
+                </tr>
+
+                <tr id="captcha">
+                    <td>
+                        <p>Drag the Tensorflow image into the rectangle to prove that you are not robot:</p>
+
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <br>
+                        <img id="drag1" src="img/tensorflow.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+                    </td>
+                </tr>
+            </table>
+        </p>
+    </form>
+
+    <!--JavaScript-->
+    <script src="js/validation.js"></script>
+
+    <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+
+    var c = document.getElementById("myCanvas1");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Hello World", 10, 50);
+
+    var c = document.getElementById("myCanvas2");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+      
+    function drag(ev) {
+        ev.dataTransfer.setData("Text", ev.target.id);
+    }
+      
+    function drop(ev) {
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+        ev.preventDefault();
+
+        alert("You are human! you can submit your request now!");
+        document.getElementById("btnSubmit").style.display = "block";
+        document.getElementById("captcha").style.display = "none";
+    }
+
+    </script>
+
+
+</div>
+</body>
+</html>
