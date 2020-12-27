@@ -24,12 +24,12 @@ window.onclick = function(event) {
 
 <?php include("../includes/main/navigation.php");?>
 <?php include("../includes/main/header.php");?>
-
+<br><br>
 <h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
 <p class="text-center">By making a much needed donation you will join us to confirm and find the solutions we need to our most important environmental issues.</p>
 <p></p>
-<button style="width:auto;margin-left:900px"><a href="register.php" style="color:white">Donate</a></button><br>
-
+<button style="margin-left:800px"><a href="register.php" style="color:white">Donate</a></button><br>
+<br><br>
 <?php include("../includes/main/footer.php");?>
 
 </body>
