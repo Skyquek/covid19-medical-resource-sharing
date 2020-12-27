@@ -6,10 +6,11 @@ class User {
         include("connection.php");
         $sql = "INSERT INTO user (organization_name, password, email, org_type, address, state, postal_code, class) VALUES ('$org_name', '$password', '$email', '$org_type', '$address', '$state', '$postal_code', '$class')";
         if($connection->query($sql) === TRUE) {
-            echo "New Record created successfully";
+            return True;
         }
         else {
             echo "Error: " . $sql . "<br>" . $connection->error;
+            return False;
         }
 
         $connection->close();

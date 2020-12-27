@@ -14,13 +14,48 @@ if($_POST["action"] == "register")
     $password1 = $_POST["psw"];
     $password_repeat = $_POST["psw_repeat"];
 
+    $arrayUser = array(
+        'org_type'  => $org_type,
+        'org_name'  => $org_name,
+        'email'     => $email,
+        'phone'     => $phone,
+        'address'   => $address,
+        'state'     => $state,
+        'postal_code' => $postal_code,
+        'password1' => $password1,
+        'password_repeat' => $password_repeat
+    );
+
     // Check if User Exists
     $checkUser = AuthController::findUser($email);
 
     if($checkUser == True)
     {
-        $response["status"] = "success";
-        $response["message"] = "user created!";
+        if($password1 != $password_repeat)
+        {
+            $response["status"] = "fail";
+            $response["message"] = "Password Not Match!";
+
+            echo json_encode($response);
+            die();
+        }
+        else
+        {
+            // True: No user inside the database yet
+            // $auth = AuthController::createUser($org_type, $org_name, $email, $phone, $address, $state, $postal_code, $password1, $password_repeat);
+            $auth = AuthController::createUser($arrayUser);
+
+            if($auth == True)
+            {
+                $response["status"] = "success";
+                $response["message"] = "user created!";
+            }
+            else 
+            {
+                $response["status"] = "fail";
+                $response["message"] = "user fail to create!";
+            }
+        }
     }
     else
     {
@@ -30,31 +65,45 @@ if($_POST["action"] == "register")
 
 
     echo json_encode($response);
-
-
-    //$auth = AuthController::createUser();
 }
 
 class AuthController {
     // Create a new user
-    public function createUser() 
+    public function createUser($arrayUser) 
     {
         $user = new User();
-        $user->create("Facebook Inc", "dsada", "example@gmail.com", "ngo", "Adsada", "Perak", "17200", "normal");
+        if($user->create(
+            $arrayUser["org_name"], 
+            hash("sha256", $arrayUser["password1"]), 
+            $arrayUser["email"], 
+            $arrayUser["org_type"],
+            $arrayUser["address"],
+            $arrayUser["state"],
+            $arrayUser["postal_code"],
+            'normal'))
+        {
+            return True;
+        }
+        else{
+            return False;
+        }
+
     }
 
     public function findUser($email) 
     {
         $user = new User();
         $result = $user->read($email);
-
-        if($result->num_rows > 0) 
+        
+        if($row = $result->fetch_object()) 
         {
-            return True;
+            // User Existed
+            return False;
         }
         else
         {
-            return False;
+            // User Not Exist
+            return True;
         }
     }
 }
