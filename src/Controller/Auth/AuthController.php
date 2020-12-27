@@ -47,6 +47,9 @@ if($_POST["action"] == "register")
 
             if($auth == True)
             {
+                session_start();
+                $_SESSION['user'] = $arrayUser;
+                
                 $response["status"] = "success";
                 $response["message"] = "user created!";
             }
