@@ -59,7 +59,7 @@ a:hover p{
 <br>
 <br>
 
-<h3 style="text-align:center">Request List</h3><br>
+<h3 style="text-align:center; font-weight:bold;">Request List</h3><br>
 <div class="container3" style="height:200px">
 <div class="row">
 		<div class="col-md-3">
@@ -116,7 +116,7 @@ a:hover p{
 </div>
 <br>
 
-<h3 style="text-align:center">Request Progress</h3><br>
+<h3 style="text-align:center; font-weight: bold;">My Request Progress</h3><br>
 <div class="container3" style="height:200px">
 <div class="row">
 		<div class="col-md-9">
