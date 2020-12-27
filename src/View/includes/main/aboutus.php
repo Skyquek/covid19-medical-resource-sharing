@@ -97,7 +97,7 @@ body {
         <center>
           <h2>Yap Zhong Heng</h2>
           <p class="title">Front-End Designer</p>
-          <p>mike@example.com</p>
+          <p>B03181017@student.utem.edu.my</p>
         </center>
         
         <div class="card-content">
@@ -105,7 +105,7 @@ body {
         </div>
 
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a href="biography/yap/mysite.html" class="button">Contact Profile</a></p>
         </center>
 
       </div>
