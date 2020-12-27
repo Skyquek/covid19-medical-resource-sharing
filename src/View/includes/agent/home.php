@@ -24,11 +24,9 @@ a:hover p{
 }
 </style>
 </head>
-<div class="container1" style="height:600px">
-
-<hr/>
-
+<div class="container1" style="height:800px">
 <div class="row">
+<div class="col-sm-1"></div>
   <div class="col-sm-2">
     <div class="card-body border" style="height:180px;width:230px;margin-top:50px">
         <h4>Total Donation</h4>
@@ -41,20 +39,20 @@ a:hover p{
     </div>
   </div>
 		
-  <div class="col-sm-6">
-    <div class="card-body border" style="height:390px;margin-top:50px">
+  <div class="col-sm-5">
+    <div class="card-body border" style="height:400px;margin-top:50px">
         <canvas id="historyChart"></canvas>
     </div>
   </div>
 
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     <div class="card-body border" style="height:300px; margin-top:50px">
         <canvas id="categoryChart"></canvas>
     </div>
   </div>
 </div>
-
-<hr />
+<br>
+<hr>
 
 <br>
 <br>
@@ -66,7 +64,7 @@ a:hover p{
       <div class="card card-primary" style="height:180px">
         <div class="card-header">
           <h3 class="card-title">Surgical Mask etc</h3>
-          <p>Senior Garden Elderly Care Centre<p>
+          <p style="margin-left:50px" >Senior Garden Elderly Care Centre<p>
         </div>
         <div class="card-body" style="display: block;">
           <a href="donatelist.php" >see more</a>
@@ -78,7 +76,7 @@ a:hover p{
       <div class="card card-primary" style="height:180px">
         <div class="card-header">
           <h3 class="card-title">Hand Sanitizer etc</h3>
-          <p>SMK Simpang Bekoh<p>
+          <p style="margin-left:50px">SMK Simpang Bekoh<p>
           </div>
         <div class="card-body" style="display: block;">
           <a href="donatelist.php" >see more</a>
@@ -91,7 +89,7 @@ a:hover p{
       <div class="card card-primary" style="height:180px">
         <div class="card-header">
           <h3 class="card-title">N95 Face Mask</h3>
-          <p>Jabatan Hal Ehwal Kesatuan Sekerja Melaka<p>
+          <p style="margin-left:50px">Jabatan Hal Ehwal Kesatuan Sekerja Melaka<p>
           </div>
         <div class="card-body" style="display: block;">
           <a href="donatelist.php" >see more</a>
@@ -105,7 +103,7 @@ a:hover p{
       <div class="card card-primary">
         <div class="card-header" style="height:180px">
           <h6 class="card-title" style="margin-top:70px">
-            <p>View all Request</p>
+            <p style="margin-left:50px">View all Request</p>
           </h6>
         </div>
       </div>
@@ -145,7 +143,7 @@ a:hover p{
       <div class="card card-primary">
         <div class="card-header" style="height:180px">
           <h6 class="card-title" style="margin-top:70px">
-          <p>View My Request</p>
+          <p style="margin-left:50px">View My Request</p>
           </h6>
         </div>
       </div>

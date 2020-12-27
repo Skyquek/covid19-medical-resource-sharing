@@ -1,5 +1,5 @@
-<div class="row">
-<div class="row" style="width:900px">
+<div class="row" style="width:100%">
+<div class="row" style="width:800px">
 <div class="col-sm-4"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:400px">
@@ -9,7 +9,7 @@
 </div>   
 </div>
 </div>
-<div class="row" style="width:900px">
+<div class="row" style="width:800px">
 <div class="col-sm-3"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:400px">
@@ -22,28 +22,28 @@
 </div>
 
 <br><br>
-<div class="row">
-<div class="row" style="width:650px">
-<div class="col-sm-4"></div>
-<div class="col-sm-7">
-<div class="card-body border" style="height:300px">
+<div class="row" style="width:100%">
+<div class="row" style="width:600px">
+<div class="col-sm-2"></div>
+<div class="col-sm-6">
+<div class="card-body border" style="height:300px;width:400px">
 		<canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 502px;" width="502" height="250" class="chartjs-render-monitor"></canvas>
 </div>   
 </div>
 </div>
-<div class="row" style="width:650px">
-<div class="col-sm-3"></div>
-<div class="col-sm-7">
-<div class="card-body border" style="height:300px">
+<div class="row" style="width:600px">
+<div class="col-sm-2"></div>
+<div class="col-sm-6">
+<div class="card-body border" style="height:300px;width:400px">
 		
 </div>   
 </div>
 </div>
 
-<div class="row" style="width:650px">
-<div class="col-sm-3"></div>
-<div class="col-sm-7">
-<div class="card-body border" style="height:300px">
+<div class="row" style="width:600px">
+<div class="col-sm-2"></div>
+<div class="col-sm-6">
+<div class="card-body border" style="height:300px;width:400px">
 		
 </div>   
 </div>

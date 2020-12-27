@@ -19,7 +19,7 @@
 </style>
 
 <div class="row" style="width:100%">
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
 		<p>Organization</p>
@@ -37,7 +37,7 @@
 </div>
 <br>
 <div class="row" style="width:100%">
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
 		<p>Organization</p>
@@ -55,7 +55,7 @@
 </div>
 <br>
 <div class="row" style="width:100%">
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
 		<p>Organization</p>
@@ -73,7 +73,7 @@
 </div>
 <br>
 <div class="row" style="width:100%">
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
 		<p>Organization</p>
@@ -91,7 +91,7 @@
 </div>
 <br>
 <div class="row" style="width:100%">
-<div class="col-sm-3"></div>
+<div class="col-sm-2"></div>
 <div class="col-sm-8">
 <div class="card-body border" style="height:300px">
 		<p>Organization</p>
@@ -109,7 +109,7 @@
 </div>
 <br>
 <br>
-<div class="pagination" style="margin-left:770px">
+<div class="pagination" style="margin-left:670px">
   <a href="#">&laquo;</a>
   <a class="active"href="#">1</a>
   <a  href="#">2</a>

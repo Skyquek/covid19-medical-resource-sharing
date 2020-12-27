@@ -4,8 +4,9 @@
 	width:100px;
 }
 </style>
+
 <h2 style="text-align:center">Account</h2>
-	<div class="row">
+	<div class="row" style="width:100%">
 		<div class="col-sm-3">
 		</div>
 		<div class="col-sm-6">
@@ -24,6 +25,6 @@
 		
 		</div>
 		</div>
-		<div class="col-sm-2">
+		<div class="col-sm-1">
 		</div>
-		</div>
+	</div>
