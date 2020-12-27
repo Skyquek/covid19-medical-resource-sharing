@@ -3,8 +3,7 @@ include('../../Model/User.php');
 
 if($_POST["action"] == "register")
 {
-    echo 'ppppppp';
-    exit;
+
     $org_type = $_POST["org_type"];
     $org_name = $_POST["organization_name"];
     $email = $_POST["email"];
@@ -15,10 +14,8 @@ if($_POST["action"] == "register")
     $password1 = $_POST["psw"];
     $password_repeat = $_POST["psw_repeat"];
 
-
     // Check if User Exists
     $checkUser = AuthController::findUser($email);
-    
 
     if($checkUser == True)
     {
@@ -35,18 +32,6 @@ if($_POST["action"] == "register")
     echo json_encode($response);
 
 
-    
-    // if($password1 != $password_repeat)
-    // {
-    //     echo "return error";
-    //     location.href("login.php?info=1");
-    // }
-
-    // if(isset($_GET["info"]){
-    //     alert(not match);
-    // })
-
-
     //$auth = AuthController::createUser();
 }
 
@@ -58,7 +43,7 @@ class AuthController {
         $user->create("Facebook Inc", "dsada", "example@gmail.com", "ngo", "Adsada", "Perak", "17200", "normal");
     }
 
-    public function findUser() 
+    public function findUser($email) 
     {
         $user = new User();
         $result = $user->read($email);

@@ -62,8 +62,41 @@ password.onkeyup = function() {
 }
 
 
-$("form#registerForm").submit(function() {
+
+// function registerValidation() 
+// {
+//   errorBox.style.display = "none";
+
+//   // Check if password is strong enough
+//   if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
+//   {
+//     // Check if the remember password match the password fields
+//     if(password.value == remPassword.value)
+//     {
+
+//       return false;
+//     }
+//     else
+//     {
+//       errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Confirm Password not match.";
+//       errorBox.style.display = "block";
+
+//       return false;
+//     }
+//   }
+//   else
+//   {
+//     errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Password not secure enough.";
+//     errorBox.style.display = "block";
+
+//     return false;
+//   }
+// }
+
+
+$("#registerForm").submit(function(e) {
     errorBox.style.display = "none";
+    e.preventDefault();
 
     // Check if password is strong enough
     if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
@@ -76,38 +109,38 @@ $("form#registerForm").submit(function() {
           url: "../../Controller/Auth/AuthController.php",
           type: "POST",
           data: {
-              action: "register",
-              org_type: document.getElementByName("org_type").value,
-              organization_name: document.getElementByName("organization_name").value,
-              email: document.getElementByName("email").value,
-              phone: document.getElementByName("phone").value,
-              address: document.getElementByName("address").value,
-              state: document.getElementByName("state").value,
-              postal_code: document.getElementByName("postal_code").value,
-              psw: document.getElementByName("psw").value,
-              psw_repeat: document.getElementByName("psw-repeat").value
+              action: 'register',
+              org_type: document.getElementsByName("org_type")[0].value,
+              organization_name: document.getElementsByName("organization_name")[0].value,
+              email: document.getElementsByName("email")[0].value,
+              phone: document.getElementsByName("phone")[0].value,
+              address: document.getElementsByName("address")[0].value,
+              state: document.getElementsByName("state")[0].value,
+              postal_code: document.getElementsByName("postal_code")[0].value,
+              psw: document.getElementsByName("psw")[0].value,
+              psw_repeat: document.getElementsByName("psw_repeat")[0].value,
           },
           dataType: "json",
           success: function(data) {
-              alert(data);
-              if(data.status == 'success')
-              {
-                  errorBox.style.display = "none";
-                  successBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-check'></i>" + data.message;
-                  successBox.style.display = "block";
-              }
-              else
-              {
-                  successBox.style.display = "none";
-                  errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + data.message;
-                  errorBox.style.display = "block";
-              }
+            if(data.status == 'success')
+            {
+                alert(data.status);
+                window.location.replace('../agent');
+            }
+            else
+            {
+                alert(data.status);
+                // // successBox.style.display = "none";
+                errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i> " + data.message;
+                errorBox.style.display = "block";
+            }
           },
-          error: function(error) {
-              alert(error);
+          error: function (data) {
+            console.log('An error occurred.');
+            console.log(data);
           }
         });
-        //return false;
+        
       }
       else
       {

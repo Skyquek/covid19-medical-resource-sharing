@@ -147,7 +147,7 @@ input[type=submit] {
 }
 </style>
 
-<form id="registerForm" style="border:1px solid #ccc">
+<form id="registerForm" method="post" style="border:1px solid #ccc">
   <br><div class="container">
     <h1>Sign up with Mail</h1>
     <p>Please fill in this form to sign up.</p>
@@ -223,7 +223,7 @@ input[type=submit] {
 			
 			<div class="col-lg-6">
 				<label for="psw-repeat"><b>Confirmed Password</b></label><br>
-				<input id="psw-repeat" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				<input id="psw-repeat" type="password" placeholder="Repeat Password" name="psw_repeat" required>
 			</div>
 
 			<div class="col-lg-12">
@@ -248,7 +248,7 @@ input[type=submit] {
 	<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     
 	<div class="clearfix">
-      <button type="submit" class="signupbtn" name="registerBtn">Sign Up</button>
+      <button type="submit" id="registerBtn" class="signupbtn">Sign Up</button>
     </div>
 	
   </div>
