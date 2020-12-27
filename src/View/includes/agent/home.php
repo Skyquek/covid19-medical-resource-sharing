@@ -69,7 +69,7 @@ a:hover p{
           <p>Senior Garden Elderly Care Centre<p>
         </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ a:hover p{
           <p>SMK Simpang Bekoh<p>
           </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@ a:hover p{
           <p>Jabatan Hal Ehwal Kesatuan Sekerja Melaka<p>
           </div>
         <div class="card-body" style="display: block;">
-          <a href="#" >see more</a>
+          <a href="donatelist.php" >see more</a>
         </div>
       </div>
     </div>
