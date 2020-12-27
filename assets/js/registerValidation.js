@@ -61,32 +61,69 @@ password.onkeyup = function() {
   }
 }
 
-function registerValidation() 
-{
-  errorBox.style.display = "none";
 
-  // Check if password is strong enough
-  if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
-  {
-    // Check if the remember password match the password fields
-    if(password.value == remPassword.value)
+$("form#registerForm").submit(function() {
+    errorBox.style.display = "none";
+
+    // Check if password is strong enough
+    if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
     {
-      // All requirements pass
-      return true;
+      // Check if the remember password match the password fields
+      if(password.value == remPassword.value)
+      {
+        // All requirements pass
+        $.ajax({
+          url: "../../Controller/Auth/AuthController.php",
+          type: "POST",
+          data: {
+              action: "register",
+              org_type: document.getElementByName("org_type").value,
+              organization_name: document.getElementByName("organization_name").value,
+              email: document.getElementByName("email").value,
+              phone: document.getElementByName("phone").value,
+              address: document.getElementByName("address").value,
+              state: document.getElementByName("state").value,
+              postal_code: document.getElementByName("postal_code").value,
+              psw: document.getElementByName("psw").value,
+              psw_repeat: document.getElementByName("psw-repeat").value
+          },
+          dataType: "json",
+          success: function(data) {
+              alert(data);
+              if(data.status == 'success')
+              {
+                  errorBox.style.display = "none";
+                  successBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-check'></i>" + data.message;
+                  successBox.style.display = "block";
+              }
+              else
+              {
+                  successBox.style.display = "none";
+                  errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + data.message;
+                  errorBox.style.display = "block";
+              }
+          },
+          error: function(error) {
+              alert(error);
+          }
+        });
+        //return false;
+      }
+      else
+      {
+        errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Confirm Password not match.";
+        errorBox.style.display = "block";
+
+        return false;
+      }
     }
     else
     {
-      errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Confirm Password not match.";
+      errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Password not secure enough.";
       errorBox.style.display = "block";
 
       return false;
     }
-  }
-  else
-  {
-    errorBox.innerHTML = "<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>" + "<i class='fa fa-times'></i>" + " Password not secure enough.";
-    errorBox.style.display = "block";
+});
 
-    return false;
-  }
-}
+

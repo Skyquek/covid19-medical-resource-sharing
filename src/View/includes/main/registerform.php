@@ -147,7 +147,7 @@ input[type=submit] {
 }
 </style>
 
-<form action="../../Controller/Auth/RegisterController.php" method="post" onsubmit="return registerValidation()" style="border:1px solid #ccc">
+<form id="registerForm" style="border:1px solid #ccc">
   <br><div class="container">
     <h1>Sign up with Mail</h1>
     <p>Please fill in this form to sign up.</p>
@@ -156,7 +156,7 @@ input[type=submit] {
 			<div class="col-lg-6">
 				<label for="organization"><b>Organization Type</b></label><br>
 				<div class="form-group">
-					<select class="form-control" name="organization" required>
+					<select class="form-control" name="org_type" required>
 						<option value="">Select Organization</option>
 						<option value="ngo">NGO</option>
 						<option value="industry">Industry</option>
@@ -169,11 +169,11 @@ input[type=submit] {
 				<br>
 
 				<label for="name"><b>Organization Name</b></label><br>
-				<input type="text" placeholder="Enter Organization Name" name="name" required>
+				<input type="text" placeholder="Enter Organization Name" name="organization_name" required>
 				<br>
 
 				<label for="mail"><b>Email</b></label><br>
-				<input type="email" placeholder="Enter email" name="mail" required>
+				<input type="email" placeholder="Enter email" name="email" required>
 				<br>
 				
 				<label for="phone"><b>Phone Number</b></label><br>
@@ -212,7 +212,7 @@ input[type=submit] {
 				
 				<br>
 				<label for="code"><b>Postal Code</b></label><br>
-				<input type="text" pattern="[0-9]{5}" placeholder="5 digit post code (Ex. 15200)" name="code" required>
+				<input type="text" pattern="[0-9]{5}" placeholder="5 digit post code (Ex. 15200)" name="postal_code" required>
 				<br>
 			</div>
 
@@ -242,18 +242,13 @@ input[type=submit] {
 					<p>This alert box could indicate a dangerous or potentially negative action.</p>
 				</div>
 			</div>
-			
-			<!--<div class="col-lg-12">
-				<label for="remember">Remember Me</label>
-      			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-			</div>-->
 
 		</div>
 	
 	<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     
 	<div class="clearfix">
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="submit" class="signupbtn" name="registerBtn">Sign Up</button>
     </div>
 	
   </div>
