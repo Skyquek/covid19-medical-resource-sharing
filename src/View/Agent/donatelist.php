@@ -77,6 +77,7 @@
     <th>Quantity</th>
     <th>Receiver</th>
     <th>Receiver Address</th>
+    <th>Action</th>
 	
   </tr>
   <tr>
@@ -86,9 +87,11 @@
     <td>25pcs</td>
     <td>Dr. Albert</td>
     <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+    <td><a href="requestlist.php" >View</a></td>
   </tr>
 </table>
 </div>
 </body>
 </html>
+
 
