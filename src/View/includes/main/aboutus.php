@@ -114,7 +114,7 @@ body {
   
   <div class="column">
     <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width: 300px; height: 300px;">
+      <img src="../../../assets/img/ashyqin.jpg" alt="Mike" style="width: 300px; height: 300px;">
       <div class="container">
         <br>
         <center>
@@ -129,7 +129,7 @@ body {
         </div>
 
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a href="biography/ashyqin/home.html" class="button">Contact Profile</a></p>
         </center>
       </div>
     </div>
