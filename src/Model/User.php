@@ -65,6 +65,7 @@ class User {
         return $result;
 
     }
+    
 }
 
 ?>

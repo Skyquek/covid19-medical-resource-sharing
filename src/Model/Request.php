@@ -55,9 +55,18 @@ class Request {
     public function read($q="") {
         include("connection.php");
 
-        $sql = "SELECT * FROM request 
+        if($q == ''){
+             $sql = "SELECT * FROM request 
                     RIGHT JOIN user ON user.user_id = request.user_id
                     RIGHT JOIN category ON category.category_id = request.category_id";
+        }
+        else{          
+            $sql = "SELECT * FROM request 
+                    RIGHT JOIN user ON user.user_id = request.user_id
+                    RIGHT JOIN category ON category.category_id = request.category_id
+                    WHERE request.user_id=$q";
+        }
+        
         $result = $connection->query($sql);
         if($result === TRUE) {
             // echo "New Record created successfully";
@@ -69,6 +78,24 @@ class Request {
         
         return $result;
 
+    }
+
+    public function totalDonation($request_id) {
+        include("connection.php");
+
+        $sql = "SELECT SUM(quantity) as sum FROM donate WHERE request_id='$request_id' GROUP BY  request_id";
+        
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
     }
 
     
