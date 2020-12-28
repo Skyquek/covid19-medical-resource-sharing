@@ -1,7 +1,21 @@
+<?php
+session_start();
+
+$id = $_SESSION['user']['id'];
+$organization_name = $_SESSION['user']['organization_name'];
+$email = $_SESSION['user']['email'];
+$org_type = $_SESSION['user']['org_type'];
+$address = $_SESSION['user']['address'];
+$state = $_SESSION['user']['state'];
+$postal_code = $_SESSION['user']['postal_code'];
+$class = $_SESSION['user']['class'];
+$phone = $_SESSION['user']['phone'];
+
+?>
+
 <style>
 .btn{
 	float:right;
-	width:100px;
 }
 </style>
 <h2 style="text-align:center">Account</h2>
@@ -14,12 +28,56 @@
 			<img src="../../../assets/img/1200px-User_font_awesome.svg.png" class="center" alt="It is secret file!!!" width="200"height="200"/>
 		</div><hr>
 		<div class="column">
-		<h6 style="margin-left:15px">Agent:</h6><br>
-		<h6 style="margin-left:15px">Name:</h6><br>
-		<h6 style="margin-left:15px">Address:</h6><br>
-		<h6 style="margin-left:15px">Contract:</h6><br>
-		<h6 style="margin-left:15px">Email:</h6><br><br><br><br><br>
-		<button type="submit" class="btn btn-secondary btn-lg "> Edit </button>
+			<table class="table table-hover table-condensed">
+				<tbody>
+					<tr>
+						<td>
+							<b>Organization Name</b>
+						</td>
+						<td>
+							<?php echo $organization_name; ?></h6>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<b>Organization Type</b>
+						</td>
+						<td>
+							<?php echo ucfirst(str_replace("_", " ", $org_type)); ?></h6>
+						</td>
+					</tr>
+
+					<tr>
+						<td>	
+							<b>Email</b>
+						</td>
+						<td>
+							<?php echo $email; ?>
+						</td>
+					</tr>
+
+					<tr>
+						<td>	
+							<b>Phone</b>
+						</td>
+						<td>
+							<?php echo $phone; ?>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<b>Address</b>
+						</td>
+						<td>
+							<?php echo $address . $postal_code . " " . $state; ?>
+						</td>
+					</tr>
+				</tbody>	
+			</table>
+			<br><br><br><br>
+			<a href="updateAccount.php" class="btn btn-primary btn-lg">Edit Profile</a>
 		</div>
 		
 		</div>

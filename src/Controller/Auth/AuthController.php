@@ -110,6 +110,94 @@ else if($_POST["action"] == "login")
     }
 
 }
+else if($_POST["action"] == "update")
+{
+    session_start();
+
+    $org_type = $_POST["org_type"];
+    $org_name = $_POST["organization_name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $countryState = $_POST["state"];
+    $postal_code = $_POST["postal_code"];
+
+    if(isset($_POST["old_psw"]))
+    {
+        $old_psw = hash("sha256",$_POST["old_psw"]);
+        $password1 = hash("sha256",$_POST["psw"]);
+        $password_repeat = hash("sha256",$_POST["psw_repeat"]);
+
+        $state = True;
+    }
+    else {
+        
+        $old_psw = $_SESSION["user"]["password"];
+        $password1 = $_SESSION["user"]["password"];
+        $password_repeat = $_SESSION["user"]["password"];
+        $state = False;
+    }
+
+    $loginid = $_SESSION["user"]["id"];
+
+    $arrayUser = array(
+        'org_type'  => $org_type,
+        'organization_name'  => $org_name,
+        'email'     => $email,
+        'phone'     => $phone,
+        'address'   => $address,
+        'state'     => $countryState,
+        'postal_code' => $postal_code,
+        'old_psw'   => $old_psw,
+        'password' => $password1,
+        'password_repeat' => $password_repeat
+    );
+
+    // Check if User Exists
+    $checkUser = AuthController::findUser($_POST["action"], $loginid);
+
+    if($state == True) {
+        // Change Password
+        if($old_psw == $checkUser["password"])
+        {
+            // Change User Password
+            // AuthController
+            $result = AuthController::changeDetails($arrayUser);
+            $_SESSION["user"] = AuthController::findUser($_POST["action"], $loginid);
+    
+            $response["status"] = "success";
+            $response["message"] = "Redirect to Profile Dashboard!";
+    
+            echo json_encode($response);
+            die();
+        }
+        else {
+            // Wrong Password
+            $response["status"] = "fail";
+            $response["message"] = "Check your old Password!";
+    
+            echo json_encode($response);
+            die();
+        }
+    }
+    else {
+        // Do not Change Password
+        // Update details
+        // AuthController
+        $result = AuthController::changeDetails($arrayUser);
+        $_SESSION["user"] = AuthController::findUser($_POST["action"], $loginid);
+
+        $response["status"] = "success";
+        $response["message"] = "Redirect to Profile!";
+
+        echo json_encode($response);
+        die();
+
+
+    }
+    
+
+}
 
 class AuthController {
     // Create a new user
@@ -124,7 +212,8 @@ class AuthController {
             $arrayUser["address"],
             $arrayUser["state"],
             $arrayUser["postal_code"],
-            'normal'))
+            'normal',
+            $arrayUser["phone"]))
         {
             return True;
         }
@@ -152,12 +241,12 @@ class AuthController {
                 return True;
             }
         }
-        else if($action == "login")
+        else if($action == "login" || $action == "update")
         {
             if($row = $result->fetch_assoc())
             {
                 $arrayUser = array(
-                    'org_type'          => $row["user_id"],
+                    'id'                => $row["user_id"],
                     'organization_name' => $row["organization_name"],
                     'email'             => $row["email"],
                     'org_type'          => $row["org_type"],
@@ -176,6 +265,26 @@ class AuthController {
                 return False;
             }
         }
+    }
+
+    public function changeDetails($arrayUser)
+    {
+        $user = new User();
+        $result = $user->update(
+            $_SESSION["user"]["id"],
+            $arrayUser["organization_name"], 
+            $arrayUser["password"], 
+            $arrayUser["email"], 
+            $arrayUser["org_type"],
+            $arrayUser["address"],
+            $arrayUser["state"],
+            $arrayUser["postal_code"],
+            'normal',
+            $arrayUser["phone"]
+        );
+
+        return $result;
+
     }
 }
 
