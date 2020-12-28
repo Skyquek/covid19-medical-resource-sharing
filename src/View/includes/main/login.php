@@ -97,12 +97,13 @@
 		
 		<label for="psw"><b>Password</b></label><br>
 		<input id="loginPass" type="password" placeholder="Password" name="psw" required><br>
-		<br>
+		
+		<!-- <br>
 
 		<label>
       		<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
 		</label>
-		<br>
+		<br> -->
 
 		<div id="error-box" class="alert alert-danger alert-dismissible"  style="display: none;">
 			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

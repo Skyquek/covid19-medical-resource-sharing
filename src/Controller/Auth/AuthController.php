@@ -27,7 +27,7 @@ if($_POST["action"] == "register")
     );
 
     // Check if User Exists
-    $checkUser = AuthController::findUser($email);
+    $checkUser = AuthController::findUser($_POST["action"], $email);
 
     if($checkUser == True)
     {
@@ -69,6 +69,47 @@ if($_POST["action"] == "register")
 
     echo json_encode($response);
 }
+else if($_POST["action"] == "login") 
+{
+    $loginid = $_POST["loginid"];
+    $pass = hash('sha256', $_POST["pass"]);
+
+    // Check if User Exists
+    $checkUser = AuthController::findUser($_POST["action"], $loginid);
+
+    if($checkUser != False)
+    {  
+        // User Found in the database, can login now
+        if($pass == $checkUser["password"])
+        {
+            session_start();
+            $_SESSION['user'] = $checkUser;
+    
+            $response["status"] = "success";
+            $response["message"] = "Redirect to agent dashboard!";
+    
+            echo json_encode($response);
+            die();
+        }
+        else {
+            // Wrong Password
+            $response["status"] = "fail";
+            $response["message"] = "Wrong Password!";
+
+            echo json_encode($response);
+            die();
+        }
+    }
+    else
+    {
+        $response["status"] = "fail";
+        $response["message"] = "Please Check your email and password!";
+
+        echo json_encode($response);
+        die();
+    }
+
+}
 
 class AuthController {
     // Create a new user
@@ -93,20 +134,47 @@ class AuthController {
 
     }
 
-    public function findUser($email) 
+    public function findUser($action, $email) 
     {
         $user = new User();
         $result = $user->read($email);
         
-        if($row = $result->fetch_object()) 
+        if($action == 'register')
         {
-            // User Existed
-            return False;
+            if($row = $result->fetch_object()) 
+            {
+                // User Existed
+                return False;
+            }
+            else
+            {
+                // User Not Exist
+                return True;
+            }
         }
-        else
+        else if($action == "login")
         {
-            // User Not Exist
-            return True;
+            if($row = $result->fetch_assoc())
+            {
+                $arrayUser = array(
+                    'org_type'          => $row["user_id"],
+                    'organization_name' => $row["organization_name"],
+                    'email'             => $row["email"],
+                    'org_type'          => $row["org_type"],
+                    'address'           => $row["address"],
+                    'state'             => $row["state"],
+                    'postal_code'       => $row["postal_code"],
+                    'class'             => $row["class"],
+                    'phone'             => $row["phone"],
+                    'password'          => $row["password"]
+                );
+
+                return $arrayUser;
+            }
+            else 
+            {
+                return False;
+            }
         }
     }
 }
