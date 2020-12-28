@@ -118,13 +118,13 @@ body {
       <div class="container">
         <br>
         <center>
-          <h2>Ashiqin</h2>
+          <h2>Ashyqin</h2>
           <p class="title">Data Analyst</p>
-          <p>mike@example.com</p>
+          <p>B031810457@student.utem.edu.my</p>
         </center>
 
         <div class="card-content">
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Ashyqin is in charge of collecting, processing and performing statistical analyses on large dataset and serves as a gatekeeper for an organization’s data so stakeholders can understand data</p>
           
         </div>
 
@@ -143,11 +143,11 @@ body {
         <center>
           <h2>Taufik</h2>
           <p class="title">QA Engineer</p>
-          <p>john@example.com</p>
+          <p>B031810452@student.utem.edu.my</p>
         </center>
 
         <div class="card-content">
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Khalid is responsible for the creation of tests to identify issues with software before the product launch and designing and implementing tests, debugging and defining corrective actions</p>
         </div>
         
         <center>
