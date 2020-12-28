@@ -65,7 +65,7 @@ body {
 </style>
 
 <h2 style="text-align:center;color:white">Our Team</h2><br>
-<div class="row">
+<div class="row" style="width:100%">
 <div class="col-sm-1"></div>
   <div class="column">
     <div class="card">
@@ -137,7 +137,7 @@ body {
   
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width: 300px; height: 300px;">
+      <img src="../../../assets/img/khalid.jfif" alt="John" style="width: 300px; height: 300px;">
       <div class="container">
         <br>
         <center>
@@ -151,7 +151,7 @@ body {
         </div>
         
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a href="biography/khalid/first.page.html" class="button">Contact Profile</a></p>
         </center>
       </div>
     </div>
