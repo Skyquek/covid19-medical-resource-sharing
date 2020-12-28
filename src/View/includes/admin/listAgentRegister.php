@@ -9,62 +9,43 @@
         <thead>
             <tr>
                 <th>Agent Name</th>
+				<th>Status</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td>You Ming</td>
+				<td><select name="status" id="status">
+					<option value="active">Active</option>
+					<option value="deactive">Deactive</option>
+					</select>
+				</td>
             </tr>
 
 
             <tr>
                 <td>Wang</td>
-				</tr>
+				<td><select name="status" id="status">
+					<option value="active">Active</option>
+					<option value="deactive">Deactive</option>
+					</select>
+				</td>
+			</tr>
 
 
             <tr>
                 <td>Fund</td>
+				<td><select name="status" id="status">
+					<option value="active">Active</option>
+					<option value="deactive">Deactive</option>
+					</select>
+				</td>
 			</tr>
 
         </tbody>
     </table>
 	<br>
-	<h3>Wait for Approve</h3>
-	<table class="table table-hover table-condensed">
-        <thead>
-            <tr>
-                <th>Agent Name</th>
-				<th>Action</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Ming</td>
-				<td><button class="btn btn-success" >Accept</button>
-				<button class="btn btn-danger">Reject</button></td>
-            </tr>
-
-
-            <tr>
-                <td>Weng</td>
-				<td><button class="btn btn-success" >Accept</button>
-				<button class="btn btn-danger">Reject</button></td>
-            </tr>
-
-
-            <tr>
-                <td>Jospeh</td>
-				<td><button class="btn btn-success" >Accept</button>
-				<button class="btn btn-danger">Reject</button></td>
-            </tr>
-
-        </tbody>
-    </table>
-
-
-    
 
 
 </div>
