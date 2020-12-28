@@ -6,7 +6,7 @@ function autoChg(target){
 	if(target.value.length == 0)target.value = 0;
 }
 
-var inputNumber = document.getElementsByTagName('input');
+var inputNumber = document.getElementsByTagName('input["type="number"]');
 
 for(i = 0; i < inputNumber.length; i++){
 	inputNumber[i].onkeydown = function(e) {

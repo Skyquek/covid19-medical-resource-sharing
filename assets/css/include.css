@@ -1,11 +1,13 @@
 body{
 	background-color:#2C3539;
 }
+
 .jumbotron {
 	background-image: url("../../assets/img/virus-4835301_1920.jpg");
 	opacity:0.9;
 	height:250px;
 }
+
 .jumbotron1 {
 	background-color:gray;
 }

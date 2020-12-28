@@ -74,8 +74,9 @@ window.onclick = function(event) {
     <a href ="home.php"> Home</a>
     <a href="account.php"> Account </a>
     <a href="myrequest.php">My request</a>
-	<a href ="donatelist.php"> Donation </a>
-	<a href ="request.php"> Request </a>
+	<a href="requestlist.php">Request list</a>
+	<a href ="donatelist.php">Donation list </a>
+	<a href ="request.php"> Make Request </a>
 	<a href ="#"> Logout </a>
 	</div>
 	</div>

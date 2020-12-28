@@ -80,8 +80,7 @@
 			<div class="progress-bar" style="width:70%">70%</div>
 		</div>
 		<br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button>
+		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Update</button>
         </div>       
     </div>
 	<div class="col-sm-6">
