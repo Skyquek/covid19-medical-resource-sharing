@@ -3,13 +3,16 @@
 
 		<div class="col-sm-8">
 			<div class="container1 p-3 my-3 ">
+
+			<form id="commonRequestForm" method="post">
 				<div class="navbar" style="background-color:gray">	
 					<h5>Add new request </h5>
 					<div class="justify-content-end">
 						<button type="submit" class="btn btn-light">Publish</button>
 					</div>
 				</div>
-				<form method="post">
+
+				
 				<table id="cart" class="table table-hover table-condensed">
 					<thead>	
 						<tr>
@@ -41,7 +44,7 @@
 								<input name="n95" type="number" min="0" class="form-control text-center" value="0" onchange='autoChg(this)'>
 							</td>
 							<td class="actions" data-th="">
-									<button id="n95" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>						
+								<button id="n95" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>						
 							</td>
 						</tr>
 
@@ -90,7 +93,7 @@
 								<p>Medical Supplies</p>
 							</td>
 							<td data-th="Quantity">
-								<input name='surgery_mask'  id="oxygen_mask" type="number" min="0" class="form-control text-center" value="0">
+								<input name='oxygen_mask'  id="oxygen_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
 									<button id="oxygen_mask" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>

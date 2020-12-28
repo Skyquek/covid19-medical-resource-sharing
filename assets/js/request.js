@@ -17,21 +17,52 @@ for(i = 0; i < inputNumber.length; i++){
 		}
 	}
 }
-/*
-inputNumber[i].onchange = function() {
-	alert(inputNumber[i].value);
-}
-*/	
-// // Listen for input event on inputNumber.
-// inputNumber.addEventListener('input', function(){
-// 	// Let's match only digits.
-//     var num = this.value.match(/^\d+$/);
-//     if (num === null) {
-//         // If we have no match, value will be empty.
-//         this.value = "";
-// 	}
-// 	else {
-// 	}
-// }, false)
 
 
+$("#commonRequestForm").submit(function(e) {
+	e.preventDefault();
+	var quantity = document.getElementsByTagName('input');
+	
+	var quantity_array = [];
+	var sum = 0;
+
+	for (i = 0; i < quantity.length-1; i++){
+		quantity_array.push(quantity[i].value);
+		sum += quantity[i].value;
+	}
+
+	//alert(quantity_array);
+
+	if(sum <=0){
+		alert('Please select at least one items or make your own request item.');
+	}
+	else{
+		$.ajax({
+			url: "../../Controller/RequestController.php",
+			type: "POST",
+			data: {
+				action: 'commonCreate',
+				q: JSON.stringify(quantity_array),
+			},
+			dataType: "json",
+			success: function(data) {
+				if(data.status == 'success')
+				{
+					alert(data.message);
+					window.location.replace('../agent');
+				}
+				else
+				{
+					alert(data.message);
+				}
+			},
+			error: function (data) {
+				console.log('An error occurred.');
+				console.log(data);
+			}
+		});
+	}
+	
+	
+	return false;
+});
