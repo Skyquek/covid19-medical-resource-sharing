@@ -44,7 +44,7 @@
 								<input name="n95" type="number" min="0" class="form-control text-center" value="0" onchange='autoChg(this)'>
 							</td>
 							<td class="actions" data-th="">
-								<button id="n95" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>						
+								<button id="n95" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>						
 							</td>
 						</tr>
 
@@ -70,7 +70,7 @@
 								<input name='surgery_mask' type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id='surgery_mask' class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+									<button id='surgery_mask' type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -96,7 +96,7 @@
 								<input name='oxygen_mask'  id="oxygen_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="oxygen_mask" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+									<button id="oxygen_mask" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -122,7 +122,7 @@
 								<input name="aorosol_mask" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="aorosol_mask" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+									<button id="aorosol_mask" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -149,7 +149,7 @@
 								<input name="hand_sanitizer" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="hand_sanitizer" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+									<button id="hand_sanitizer" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -176,7 +176,7 @@
 								<input name="first_aid_kit" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="first_aid_kit" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+									<button id="first_aid_kit" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -203,7 +203,7 @@
 								<input name="plaster" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-								<button id="plaster" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
+								<button id="plaster" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>
 																	
 							</td>
 						</tr>
@@ -230,7 +230,7 @@
 								<input name="cotton_wool" type="number" min="0" class="form-control text-center" value="0">
 							</td>
 							<td class="actions" data-th="">
-									<button id="cotton_wool" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>								
+									<button id="cotton_wool" type="button" class="btn btn-info btn-sm" onclick="resetting(this);"><i class="fa fa-refresh"></i></button>								
 							</td>
 						</tr>
 
