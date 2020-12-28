@@ -1,12 +1,26 @@
+<style>
+	.form-control{
+		width: 99%;
+		margin: 5px 0 10px 0;
+	display: inline-block;}
+		
+input[type=text], input[type=integer]{
+		width: 75%;
+		padding: 15px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+		}
+</style>
 <div class="row">
 		<div class="col-sm-2"></div>
-
 		<div class="col-sm-8">
-			<div class="container1 p-3 my-3 ">
-				<div class="navbar" style="background-color:gray">	
+			<div class="container1 p-3 my-3">
+				<div class="navbar" style="background-color:gray;height:50px">	
 					<h5>Add new request </h5>
 					<div class="justify-content-end">
-						<button type="submit" class="btn btn-light">Publish</button>
+						<button type="submit" class="btn btn-light" style="height:35px">Publish</button>
 					</div>
 				</div>
 				<form method="post">
@@ -236,11 +250,44 @@
 				</form>
 
 			</div>
+			<div class="container1 p-3 my-3 ">
+				<div class="navbar" style="background-color:gray;height:50px">	
+					<h5>Create own request</h5>
+					<div class="justify-content-end">
+						<button  type="button" class="btn btn-light" style="height:35px" data-toggle="modal" data-target="#newRequest">Request</button>
+					</div>
+				</div>
 		</div>
 
-
+			
 		<div class="col-sm-2"></div>
 	</div>
+</div>
+
+<div class="modal fade" id="newRequest" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Request</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="itemCategory" style="float:left">Category:</label>
+                            <input type="text" class="form-control" id="itemCategory" style="margin-left:5px"><br>
+							<label for="product" style="float:left">Product :</label>
+                            <input type="text" class="form-control" id="product" style="margin-left:10px"><br>
+							<label for="total" style="float:left">Total:</label>
+                            <input type="integer" class="form-control" id="total" style="margin-left:35px"><br>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="float:right">Comfirm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <script src="../../../assets/js/request.js"></script>
