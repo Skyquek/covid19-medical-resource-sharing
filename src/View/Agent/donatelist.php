@@ -67,7 +67,7 @@
 
 <div class="main">
 <div class="container p-3 my-3">
-<h1>Donate List</h1>
+<h1>Donator</h1>
 
 <table id="donatelist"></b>
   <tr>
