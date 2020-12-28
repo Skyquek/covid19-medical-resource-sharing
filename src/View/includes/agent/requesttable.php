@@ -1,18 +1,3 @@
-<style>
-	.form-control{
-		width: 99%;
-		margin: 5px 0 10px 0;
-	display: inline-block;}
-		
-input[type=text], input[type=integer]{
-		width: 75%;
-		padding: 15px;
-		margin: 5px 0 22px 0;
-		display: inline-block;
-		border: none;
-		background: #f1f1f1;
-		}
-</style>
 <div class="row">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
@@ -275,14 +260,26 @@ input[type=text], input[type=integer]{
                 <div class="modal-body">
                     <form method="post">
                         <div class="form-group">
-                            <label for="itemCategory" style="float:left">Category:</label>
-                            <input type="text" class="form-control" id="itemCategory" style="margin-left:5px"><br>
-							<label for="product" style="float:left">Product :</label>
-                            <input type="text" class="form-control" id="product" style="margin-left:10px"><br>
+							<label for="itemCategory" style="float:left">Category:</label>
+							 <div class="form-group">
+								<select class="form-control" id="itemCategory"  required>
+									<option value="">Select Category</option>
+									<option value="medical">Medical Supplies</option>
+									<option value="food">Industry</option>
+									<option value="drink">Drink</option>
+									<option value="shirt">Shirt</option>
+									<option value="services">Service</option>
+								</select>
+								</div>
+								<br>
+							<label for="productName" style="float:left">Product Name</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Enter product name"><br>
+							
 							<label for="total" style="float:left">Total:</label>
-                            <input type="integer" class="form-control" id="total" style="margin-left:35px"><br>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="float:right">Comfirm</button>
+                            <input type="number"  class="form-control"  placeholder="Enter number" id="total"><br>
+							
+                        </div><br>
+                        <button type="submit" class="btn btn-primary">Comfirm</button>
                     </form>
                 </div>
             </div>
