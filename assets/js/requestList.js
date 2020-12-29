@@ -43,7 +43,7 @@ function donate(target) {
 			if(data.status == 'success')
 			{
 				alert(data.status);
-				window.location.replace('../agent');
+				window.location.replace('donatelist.php');
 			}
 			else
 			{

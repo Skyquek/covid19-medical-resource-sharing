@@ -15,7 +15,12 @@ if($action == "donate")
         $_SESSION["user"]["id"], $category_id,  $request_id,
         $product_name, $quantity, date('Y-m-d H:i:s'));
 
-    echo $status;
+
+    $response["status"] = "success";
+    $response["message"] = "New Donation Added!";
+
+    echo json_encode($response);
+    die();
 }
 
 ?>
