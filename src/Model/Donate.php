@@ -56,9 +56,10 @@ class Donate {
         include("connection.php");
 
         if($q == ''){
-             $sql = "SELECT * FROM request 
-                    RIGHT JOIN user ON user.user_id = request.user_id
-                    RIGHT JOIN category ON category.category_id = request.category_id";
+             $sql = "SELECT * FROM donate 
+                    INNER JOIN user ON user.user_id = donate.user_id
+                    RIGHT JOIN request ON request.request_id = donate.request_id
+                    RIGHT JOIN user ON request.user_id = user.user_id";
         }
         else{          
             $sql = "SELECT * FROM request 
@@ -95,6 +96,33 @@ class Donate {
         }
         $connection->close();
         
+        return $result;
+    }
+
+
+    public function donateHistory() {
+        include("connection.php");
+
+        $sql = "SELECT a.product_name AS product_name, a.quantity AS donate_quantity, b.organization_name AS donator_name, b.address AS donator_address, b.postal_code AS donator_postal_code, b.state AS donator_state, d.organization_name AS requester_name, d.address AS requester_address, d.postal_code AS requester_postal_code, d.state AS requester_state 
+        FROM donate a
+                INNER JOIN user b
+                    ON a.user_id = b.user_id
+                INNER JOIN request c
+                    ON a.request_id = c.request_id
+                INNER JOIN user d
+                    ON c.user_id = d.user_id";
+
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+
+        }
+        else {
+
+        }   
+
+        $connection->close();
+
         return $result;
     }
 

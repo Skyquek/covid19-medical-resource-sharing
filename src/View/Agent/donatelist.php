@@ -1,3 +1,15 @@
+<?php
+include('../../Model/Donate.php');
+
+$donate = new Donate();
+$historyquery = $donate->donateHistory();
+
+$contents = array();
+while($row = $historyquery->fetch_object()){
+	array_push($contents, $row);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,18 +90,26 @@
     <th>Receiver</th>
     <th>Receiver Address</th>
 	<th></th>
-	
   </tr>
+
+<?php
+foreach($contents as $content)
+{
+?>
   <tr>
-    <td>Dr. Mellisa</td>
-    <td>HOSPITAL SUNGAI BULOH, Jalan Hospital, 47000 Sungai Buloh, Selangor</td>
-    <td>PPE</td>
-    <td>25pcs</td>
-    <td>Dr. Albert</td>
-    <td>HOSPITAL QUEEN ELIZABETH, 13a, Jalan Penampang, 88200 Kota Kinabalu, Sabah</td>
+    <td><?php echo $content->donator_name; ?></td>
+    <td><?php echo $content->donator_address. $content->donator_postal_code . " " . $content->donator_state; ?></td>
+    <td><?php echo $content->product_name; ?></td>
+    <td><?php echo $content->donate_quantity; ?></td>
+    <td><?php echo $content->requester_name; ?></td>
+    <td><?php echo $content->requester_address . $content->requester_postal_code . " " . $content->requester_state; ?></td>
 	<td><a href="requestlist.php" >View</a></td>
   </tr>
+
+<?php } ?>
+
 </table>
+
 </div>
 </body>
 </html>
