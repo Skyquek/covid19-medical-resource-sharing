@@ -5,7 +5,7 @@
 	}
 	body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
-	input[type=text], input[type=phone], input[type=address],input[type=mail] {
+	input[type=text], input[type=phone], input[type=address],input[type=email] {
 		width: 70%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -21,7 +21,7 @@
 		border: none;
 		background: #f1f1f1;
 		}
-	input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=mail]:focus {
+	input[type=text]:focus, input[type=password]:focus,input[type=phone]:focus, input[type=address]:focus ,input[type=email]:focus {
 		background-color: #ddd;
 		outline: none;
 		}
@@ -83,8 +83,8 @@
     <p>Please fill in this form to find back password.</p>
     <hr>
 			
-			<label for="mail"><b>Mail</b></label><br>
-			<input type="mail" placeholder="Enter Mail" name="mail" required>
+			<label for="email"><b>Mail</b></label><br>
+			<input type="email" placeholder="Enter Mail" name="mail" required>
 		<br>
 
     <div class="clearfix">
