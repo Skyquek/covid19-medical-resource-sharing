@@ -4,7 +4,6 @@ var loginPass = document.getElementById("loginPass");
 errorBox.style.display = "none";
 
 
-
 $(function() {
 
     $("form#loginForm").submit(function() {
@@ -14,7 +13,7 @@ $(function() {
             alert("Please insert email!");
         }
 
-        if(loginPassword.value == "")
+        if(loginPass.value == "")
         {
             alert("Please insert password!");
         }

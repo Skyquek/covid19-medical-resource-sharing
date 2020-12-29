@@ -98,6 +98,43 @@ $("#registerForm").submit(function(e) {
     errorBox.style.display = "none";
     e.preventDefault();
 
+    if(document.getElementsByName("org_type")[0].value  == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("organization_name")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("email")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("phone")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("address")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("state")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("postal_code")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("psw")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+    else if(document.getElementsByName("psw_repeat")[0].value == "")
+    {
+      alert("Please make sure all the form is filled!");
+    }
+
     // Check if password is strong enough
     if(password.value.match(lowerCaseLetters) && password.value.match(upperCaseLetters) && password.value.match(numbers) && password.value.length >= 8)
     {
