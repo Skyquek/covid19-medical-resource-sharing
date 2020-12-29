@@ -6,7 +6,7 @@ function autoChg(target){
 	if(target.value.length == 0)target.value = 0;
 }
 
-var inputNumber = document.getElementsByTagName('input');
+var inputNumber = $(':input[type=number]');
 
 for(i = 0; i < inputNumber.length; i++){
 	inputNumber[i].onkeydown = function(e) {
@@ -43,6 +43,49 @@ $("#commonRequestForm").submit(function(e) {
 			data: {
 				action: 'commonCreate',
 				q: JSON.stringify(quantity_array),
+			},
+			dataType: "json",
+			success: function(data) {
+				if(data.status == 'success')
+				{
+					alert(data.message);
+					window.location.replace('../agent');
+				}
+				else
+				{
+					alert(data.message);
+				}
+			},
+			error: function (data) {
+				console.log('An error occurred.');
+				console.log(data);
+			}
+		});
+	}
+	
+	
+	return false;
+});
+
+
+$("#newUniqueRequest").submit(function(e) {
+	e.preventDefault();
+
+	//alert(quantity_array);
+
+
+	if(sum <=0){
+		alert('Please select at least one items or make your own request item.');
+	}
+	else{
+		$.ajax({
+			url: "../../Controller/RequestController.php",
+			type: "POST",
+			data: {
+				action: 'commonCreate',
+				productCategory: $("#itemCategory").val(),
+				productName: $("#productName").val(),
+				product_total: $("#productTotal").val()
 			},
 			dataType: "json",
 			success: function(data) {

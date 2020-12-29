@@ -26,6 +26,16 @@ class Category {
 
     }
 
+    public function showAllCategory(){
+        include("connection.php");
+
+        $sql = "SELECT * FROM category";
+        $result = $connection->query($sql);
+        $connection->close();
+
+        return $result;
+    }
+
     
 }
 
