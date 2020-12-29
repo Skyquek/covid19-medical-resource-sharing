@@ -1,4 +1,0 @@
-img = cv2.imread("Resource/OMR-Sheet-90-Questions (1).png")
-
-cv2.imshow("Output",img)
-cv2.waitKey(0)
