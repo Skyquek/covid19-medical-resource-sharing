@@ -1,9 +1,13 @@
 <?php 
 
 include('../../Model/Request.php');
+include('../../Model/Donate.php');
+
 
 $request = new Request();
 $data = $request->read();
+
+# $donate = new Donate();
 
 $contents = array();
 while($row = $data->fetch_object()){
@@ -68,34 +72,62 @@ while($row = $data->fetch_object()){
 <div class="main">
 <div class="container p-3 my-3 ">
 
+<form id="donateForm">
 <table id="donatelist"></b>
   <tr>
     <th>Organization Name</th>
     <th>Address</th>
     <th>Category Name</th>
 	<th>Product Name</th>
-	<th>Total Request</th>
+	<th>Organization Request</th>
+	<th>Past Donation</th>
 	<th>Donate Quantity</th>
 	<th>Action</th>
   </tr>
 
-<?php foreach($contents as $content)
+<?php 
+$n = 0;
+
+foreach($contents as $content)
 {
-	echo "<tr><td>".$content->organization_name."</td>";
-    echo "<td>".$content->address . $content->state ."</td>";
-	echo "<td>".$content->category_name."</td>";
-    echo "<td>".$content->product_name."</td>";
-	echo "<td>".$content->total."</td>";
-	?>
-		<td><input type="number" id="quantity" name="quantity" min="1" value="0" max="50000" onchange="autoChg(this)"></td>
-		<td><a href = "#" ><button class="button" onclick="alert("Are you sure to donate?")">Donate</button>
-			<a href = "donatelist.php" ><button class="button button1">Cancel</button> </a>
+	$donate = new Donate();
+	$donation = 0;
+	$respond = $donate->totalDonation($content->request_id);
+	if($row = $respond->fetch_object()){
+		$donation = $row->sum;
+	}
+
+	if($donation <= $content->total){
+		$remain = $content->total-$donation;
+		echo "<tr><td>".$content->organization_name."</td>";
+		echo "<td>".$content->address . $content->state ."</td>";
+		echo "<td>".$content->category_name."</td>";
+		echo "<td>".$content->product_name."</td>";
+		echo "<td>".$content->total."</td>";	
+		echo "<td>".$donation."</td>";
+		?>
+		<input hidden name="category_id"  value="<?php echo $content->category_id; ?>"/>
+		<input hidden name="request_id"   value="<?php echo $content->request_id; ?>"/>
+		<input hidden name="product_name" value="<?php echo $content->product_name; ?>"/>
+
+		<td><input type="number" id="quantity" name="quantity" min="0" value="0" max=<?php echo $remain;?> onchange="autoChg(this)"></td>
+		<td>
+			<button class="button" id='<?php echo $n;?>' type="button" onclick="donate(this);">Donate</button>
+			<a href="home.php" class="button button1" style="text-decoration: none; color:white;">Cancel</a>
 		</td>
 	</tr>
-<?php } ?>
+		<?php
+$n += 1;
+	} }
+	
+	
+?>
+		
 
 
 </table>
+</form>
+
 </div>
 </body>
 <script src="../../../assets/js/requestList.js"></script>
