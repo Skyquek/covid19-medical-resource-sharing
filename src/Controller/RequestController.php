@@ -50,6 +50,32 @@ if($action == "commonCreate")
         die();
     }
 }
+else if($action == "uniqueCreate") 
+{
+    $productCategory = $_POST['productCategory'];
+    $productName = $_POST['productName'];
+    $product_total = $_POST['product_total'];
+
+    $request = new Request();
+    $query = $request->create($_SESSION["user"]["id"], $productCategory, $productName, $product_total, "ongoing", date('Y-m-d H:i:s'));
+
+    if($query)
+    {
+        $response["status"] = "success";
+        $response["message"] = "New Request Added!";
+
+        echo json_encode($response);
+        die();
+    }
+    else 
+    {
+        $response["status"] = "fail";
+        $response["message"] = "Add Request Fail!";
+
+        echo json_encode($response);
+        die();
+    }
+}
 
 
 

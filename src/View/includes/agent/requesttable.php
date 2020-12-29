@@ -284,7 +284,6 @@
 									<?php foreach ($data as $row) { ?>
 										<option value="<?php echo $row["category_id"]; ?>"><?php echo $row["category_name"]; ?></option>
 									<?php }?>
-
 								</select>
 
 
@@ -293,11 +292,13 @@
 							<label for="productName" style="float:left">Product Name</label>
                             <input type="text" class="form-control" id="productName" placeholder="Enter product name"><br>
 							
-							<label for="product_total" style="float:left">Total:</label>
+							<label for="product_total" style="float:left">Total</label>
                             <input type="number"  class="form-control"  min="0" placeholder="Enter number" id="product_total"><br>
 							
                         </div><br>
-                        <button type="submit" class="btn btn-primary">Confirm</button>
+
+                        <button type="submit" class="btn btn-primary">Create</button>
+
                     </form>
                 </div>
             </div>

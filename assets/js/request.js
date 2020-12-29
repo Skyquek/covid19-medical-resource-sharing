@@ -71,41 +71,31 @@ $("#commonRequestForm").submit(function(e) {
 $("#newUniqueRequest").submit(function(e) {
 	e.preventDefault();
 
-	//alert(quantity_array);
-
-
-	if(sum <=0){
-		alert('Please select at least one items or make your own request item.');
-	}
-	else{
-		$.ajax({
-			url: "../../Controller/RequestController.php",
-			type: "POST",
-			data: {
-				action: 'commonCreate',
-				productCategory: $("#itemCategory").val(),
-				productName: $("#productName").val(),
-				product_total: $("#productTotal").val()
-			},
-			dataType: "json",
-			success: function(data) {
-				if(data.status == 'success')
-				{
-					alert(data.message);
-					window.location.replace('../agent');
-				}
-				else
-				{
-					alert(data.message);
-				}
-			},
-			error: function (data) {
-				console.log('An error occurred.');
-				console.log(data);
+	$.ajax({
+		url: "../../Controller/RequestController.php",
+		type: "POST",
+		data: {
+			action: 'uniqueCreate',
+			productCategory: document.getElementById('itemCategory').value,
+			productName: document.getElementById('productName').value, 
+			product_total: document.getElementById('product_total').value,
+		},
+		dataType: "json",
+		success: function(data) {
+			if(data.status == 'success')
+			{
+				alert(data.message);
+				window.location.replace('../agent/myrequest.php');
 			}
-		});
-	}
+			else
+			{
+				alert(data.message);
+			}
+		},
+		error: function (data) {
+			console.log('An error occurred.');
+			console.log(data);
+		}
+	});
 	
-	
-	return false;
 });
