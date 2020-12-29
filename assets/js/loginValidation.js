@@ -3,9 +3,21 @@ var email = document.getElementById("loginID");
 var loginPass = document.getElementById("loginPass");
 errorBox.style.display = "none";
 
+
+
 $(function() {
-    
+
     $("form#loginForm").submit(function() {
+
+        if(email.value == "")
+        {
+            alert("Please insert email!");
+        }
+
+        if(loginPassword.value == "")
+        {
+            alert("Please insert password!");
+        }
 
         // Validate Email
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))
