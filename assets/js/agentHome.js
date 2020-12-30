@@ -37,7 +37,7 @@ var myChart = new Chart(ctx, {
         labels: arrCategory, // ['Medical Supplies', 'Foods', 'Drinks', 'Stationery', 'Personal Care', 'Paper Products'],
         datasets: [{
             label: 'Requestment and Donation',
-            data: [12,9],//[12, 19, 3, 5, 2, 3],
+            data: arrCategoryCount,//[12, 19, 3, 5, 2, 3],
             backgroundColor: palette('tol', arrCategory.length).map(function(hex) {
                 return '#' + hex;
               }),

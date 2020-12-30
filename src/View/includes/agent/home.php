@@ -229,9 +229,23 @@ while($row = $donate_num_result->fetch_object()){
 
 $allcategory = array();
 $categoryData = $categoryQuery->showAllCategory();
+
+
+$categoryValueCount = array();
 while($row = $categoryData->fetch_object()){
+  $sum = 0;
   array_push($allcategory, $row->category_name);
+
+  $rowVal = $categoryQuery->countCategoryItems($row->category_id);
+  while($row = $rowVal->fetch_object())
+  {
+    $sum += $row->sum;
+  }
+
+  array_push($categoryValueCount, $sum);
 }
+
+
 
 $arrCategory = "";
 foreach($allcategory as $category)
@@ -239,6 +253,14 @@ foreach($allcategory as $category)
   $arrCategory .= "'" . $category . "'" . ",";
 }
 $arrCategory = rtrim($arrCategory, ",");
+
+$arrCategoryCount = "";
+foreach($categoryValueCount as $rowCount)
+{
+  $arrCategoryCount .= "'" . $rowCount . "'" . ",";
+}
+
+$arrCategoryCount = rtrim($arrCategoryCount, ",");
 
 
 $requestJS = array();
@@ -257,12 +279,14 @@ $donationCMD = rtrim($donationCMD, ',');
 $requestCMD = "[" . $requestCMD . "]";
 $donationCMD = "[" . $donationCMD . "]";
 $arrCategory = "[" . $arrCategory . "]";
+$arrCategoryCount = "[" . $arrCategoryCount . "]";
 ?>
 
 <script>
 var donation_record = <?php echo $donationCMD; ?>;
 var request_record = <?php echo $requestCMD; ?>;
 var arrCategory = <?php echo $arrCategory; ?>;
+var arrCategoryCount = <?php echo $arrCategoryCount; ?>;
 
 </script>
 <script src="../../../assets/js/palette.js"></script>

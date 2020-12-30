@@ -36,7 +36,16 @@ class Category {
         return $result;
     }
 
-    
+    public function countCategoryItems($id) {
+        include("connection.php");
+        $sql = "SELECT category_id, product_name, COUNT(product_name) as sum FROM request WHERE category_id=$id GROUP BY product_name;";
+
+        $result = $connection->query($sql);
+        $connection->close();
+
+        return $result;
+    }
+
 }
 
 ?>
