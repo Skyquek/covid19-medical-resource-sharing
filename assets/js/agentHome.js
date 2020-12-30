@@ -4,13 +4,13 @@ var mixedChart = new Chart(ctxHistory, {
     data: {
         datasets: [{
             label: 'Request',
-            data: [20, 10, 5,4, 6, 30, 67, 45, 10, 40, 12, 43],
+            data: request_record,//[20, 10, 5,4, 6, 30, 67, 45, 10, 40, 12, 43],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
             borderWidth: 1
         }, {
             label: 'Donation',
-            data: [43, 5, 65, 4, 6, 70, 21, 20, 9, 4, 21, 32],
+            data: donation_record,//[43, 5, 65, 4, 6, 70, 21, 20, 9, 4, 21, 32],
             backgroundColor: 'rgba(132, 99, 255, 0.2)',
             borderColor: 'rgba(132, 99, 255, 1)',
             borderWidth: 1

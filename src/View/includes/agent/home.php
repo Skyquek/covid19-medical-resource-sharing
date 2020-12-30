@@ -1,3 +1,19 @@
+<?php 
+include('../../Model/Request.php');
+include('../../Model/Donate.php');
+
+$requestQuery = new Request();
+$donateQuery = new Donate();
+
+$requestData = $requestQuery->AllRequest();
+$donateData = $donateQuery->AllDonate();
+
+$total_request = mysqli_fetch_assoc($requestData)['total_request'];
+$total_donate = mysqli_fetch_assoc($donateData)['total_donate'];
+
+
+?>
+
 <head>
 <style>
 .card-header p {
@@ -32,12 +48,12 @@ a:hover p{
   <div class="col-sm-2">
     <div class="card-body border" style="height:180px;width:230px;margin-top:50px">
         <h4>Total Donation</h4>
-        <h3>60</h3>
+        <h3><?php echo $total_donate; ?></h3>
     </div>
 
     <div class="card-body border" style="height:180px;width:230px;margin-top:30px">
       <h4>Total Request</h4>
-        <h3>40</h3>
+        <h3><?php echo $total_request; ?></h3>
     </div>
   </div>
 		
@@ -114,7 +130,7 @@ a:hover p{
 
 </div>
 </div>
-<br>
+<br> 
 
 <h3 style="text-align:center; font-weight: bold;">My Request Progress</h3><br>
 <div class="container3" style="height:200px">
@@ -154,9 +170,66 @@ a:hover p{
 
 
 </div>
-</div>
+</div> 
 
 </div>
 
+<?php
+
+$request = new Request();
+$request_num_result = $request->getRequestNumber();
+
+$donate = new Donate();
+$donate_num_result = $donate->getDonateNumber();
+
+$record = array(
+  "January"   => array("request" => "0", "donation" => "0"),
+  "February"  => array("request" => "0", "donation" => "0"),
+  "March"     => array("request" => "0", "donation" => "0"),
+  "April"     => array("request" => "0", "donation" => "0"),
+  "May"       => array("request" => "0", "donation" => "0"),
+  "June"      => array("request" => "0", "donation" => "0"),
+  "July"      => array("request" => "0", "donation" => "0"),
+  "August"    => array("request" => "0", "donation" => "0"),
+  "September" => array("request" => "0", "donation" => "0"),
+  "October"   => array("request" => "0", "donation" => "0"),
+  "November"  => array("request" => "0", "donation" => "0"),
+  "December"  => array("request" => "0", "donation" => "0")
+);
+
+
+while($row = $request_num_result->fetch_object()){
+    $record[$row->month]["request"] = $row->num;
+}
+while($row = $donate_num_result->fetch_object()){
+  $record[$row->month]["donation"] = $row->num;
+}
+
+$requestJS = array();
+$cmd = "[";
+$requestCMD = "";
+$donationCMD = "";
+
+foreach($record as $key => $value) {
+  // echo $key . " : " . $value["request"] . "<br>";
+  $requestCMD .= $value["request"] . ","; 
+  $donationCMD .= $value["donation"] . ",";   
+}
+
+
+
+$requestCMD = rtrim($requestCMD, ',');
+$donationCMD = rtrim($donationCMD, ',');
+
+$requestCMD = "[" . $requestCMD . "]";
+$donationCMD = "[" . $donationCMD . "]";
+
+?>
+
+<script>
+var donation_record = <?php echo $donationCMD;?>;
+var request_record = <?php echo $requestCMD;?>;
+
+</script>
 
 <script src="../../../assets/js/agentHome.js"></script>

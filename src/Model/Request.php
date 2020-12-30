@@ -80,6 +80,7 @@ class Request {
 
     }
 
+    // Get who respond to trhe request
     public function totalDonation($request_id) {
         include("connection.php");
 
@@ -93,6 +94,33 @@ class Request {
         else {
             // echo "Error: " . $sql . "<br>" . $connection->error;
         }
+        $connection->close();
+        
+        return $result;
+    }
+
+    public function AllRequest() {
+        include("connection.php");
+        $sql = "SELECT COUNT(*) as total_request FROM request";
+
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
+    }
+    public function getRequestNumber(){
+        include("connection.php");
+        $sql = 'SELECT MONTHNAME(date_time) AS month, COUNT(request_id) as num FROM request GROUP BY month(date_time);';
+
+        $result = $connection->query($sql);
+        
         $connection->close();
         
         return $result;

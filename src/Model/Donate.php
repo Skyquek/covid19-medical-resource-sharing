@@ -126,6 +126,36 @@ class Donate {
         return $result;
     }
 
+
+    public function AllDonate() {
+        include("connection.php");
+
+        $sql = "SELECT COUNT(*) as total_donate FROM donate";
+        
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
+    }
+
+    public function getDonateNumber(){
+        include("connection.php");
+        $sql = 'SELECT MONTHNAME(date_time) AS month, COUNT(donate_id) as num FROM donate GROUP BY month(date_time);';
+
+        $result = $connection->query($sql);
+        
+        $connection->close();
+        
+        return $result;
+    }
+
     
 }
 
