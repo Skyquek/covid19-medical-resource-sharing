@@ -63,8 +63,16 @@ while($row = $data->fetch_object()){
 			</div>
 		</div>
 
+		<?php 
+			$request_id = $content->request_id;
+		?>
+
 		<br>
-			<a href="../Agent/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
+		<?php echo'
+			<a href="../Agent/view.php?id='.$request_id.'&progress='.$percentage.'">
+				<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
+			</a>'
+		?>
 		<br>
 	</div>   
 	</div>

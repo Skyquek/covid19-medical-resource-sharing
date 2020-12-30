@@ -1,9 +1,11 @@
 <?php 
 include('../../Model/Request.php');
 include('../../Model/Donate.php');
+include('../../Model/Category.php');
 
 $requestQuery = new Request();
 $donateQuery = new Donate();
+$categoryQuery = new Category();
 
 $requestData = $requestQuery->AllRequest();
 $donateData = $donateQuery->AllDonate();
@@ -75,49 +77,41 @@ a:hover p{
 <br>
 <br>
 
-<h3 style="text-align:center; font-weight:bold;">Request List</h3><br>
+<h3 style="text-align:center; font-weight:bold;">System Recent Request List</h3><br>
+
 <div class="container3" style="height:200px">
 <div class="row">
-		<div class="col-md-3">
-      <div class="card card-primary" style="height:180px">
-        <div class="card-header">
-          <h3 class="card-title">Surgical Mask etc</h3>
-          <p>Senior Garden Elderly Care Centre<p>
-        </div>
-        <div class="card-body" style="display: block;">
-          <a href="donatelist.php" >see more</a>
-        </div>
-      </div>
-    </div>
 		
-		<div class="col-md-3">
-      <div class="card card-primary" style="height:180px">
-        <div class="card-header">
-          <h3 class="card-title">Hand Sanitizer etc</h3>
-          <p>SMK Simpang Bekoh<p>
+        <?php 
+        $allRequest = $requestQuery->read("", $order="DESC");
+
+        $x = 0;
+        while($row = $allRequest->fetch_object()){
+          ?>
+          <div class="col-md-3">
+            <div class="card card-primary" style="height:180px">
+              <div class="card-header">
+                    <h3 class='card-title'><?php echo $row->product_name; ?></h3>
+                    <p><?php echo $row->organization_name; ?> <p>
+                </div>
+              <div class="card-body" style="display: block;">
+                <a href="requestlist.php" >see more</a>
+              </div>
+            </div>
           </div>
-        <div class="card-body" style="display: block;">
-          <a href="donatelist.php" >see more</a>
-        </div>
-      </div>
-    </div>
-		
-		
+
+          <?php
+          $x = $x+1;
+          if($x == 3)
+          {
+            break;
+          }
+        }
+
+        ?>
+
 		<div class="col-md-3">
-      <div class="card card-primary" style="height:180px">
-        <div class="card-header">
-          <h3 class="card-title">N95 Face Mask</h3>
-          <p>Jabatan Hal Ehwal Kesatuan Sekerja Melaka<p>
-          </div>
-        <div class="card-body" style="display: block;">
-          <a href="donatelist.php" >see more</a>
-        </div>
-      </div>
-    </div>
-		
-		
-		<div class="col-md-3">
-      <a href="donatelist.php" style="color:black;">
+      <a href="requestlist.php" style="color:black;">
       <div class="card card-primary">
         <div class="card-header" style="height:180px">
           <h6 class="card-title" style="margin-top:70px">
@@ -141,18 +135,46 @@ a:hover p{
             <h5 class="card-title" style="text-align:left">Recent Request Progress</h5>
           </div>
 
+          <?php 
+            // 1. Get this user recent request limit to 1
+            $myRecentQuery = $requestQuery->read("", $order="DESC", $limit=1);
+            $result = mysqli_fetch_assoc($myRecentQuery);
+            $request_id = $result['request_id'];
+            $product_name = $result['product_name'];
+            $total = $result['total'];
+            
+            // 3. Get the total donation he want
+            $ttlRespondQuery = $requestQuery->totalDonation($request_id);
+            if($ttlRespondQuery->num_rows > 0)
+            {
+              $resultRespond = mysqli_fetch_assoc($ttlRespondQuery);
+              $respond = $resultRespond['sum'];
+
+              $progressWidth = ($respond / $total) * 100;
+              $progressWidth = $progressWidth . "%";
+            }
+            else {
+              $progressWidth = "0%";
+            }
+
+          ?>
+
           <div class="card-body" style="display: block;">
             <div class="row">
             </div>
             <div class="card-body">
               <div class="progress">
-                <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                <div class="progress-bar bg-primary progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progressWidth; ?>">
+                  <p><?php echo $product_name; ?></p>
+                  
                   <span class="sr-only">40% </span>
                 </div>
               </div>
               <a href="view.php" style="margin-top:20px;float:right">view</a>
             </div>
           </div>
+
+
       </div>
     </div>
 		
@@ -205,8 +227,21 @@ while($row = $donate_num_result->fetch_object()){
   $record[$row->month]["donation"] = $row->num;
 }
 
+$allcategory = array();
+$categoryData = $categoryQuery->showAllCategory();
+while($row = $categoryData->fetch_object()){
+  array_push($allcategory, $row->category_name);
+}
+
+$arrCategory = "";
+foreach($allcategory as $category)
+{
+  $arrCategory .= "'" . $category . "'" . ",";
+}
+$arrCategory = rtrim($arrCategory, ",");
+
+
 $requestJS = array();
-$cmd = "[";
 $requestCMD = "";
 $donationCMD = "";
 
@@ -216,20 +251,19 @@ foreach($record as $key => $value) {
   $donationCMD .= $value["donation"] . ",";   
 }
 
-
-
 $requestCMD = rtrim($requestCMD, ',');
 $donationCMD = rtrim($donationCMD, ',');
 
 $requestCMD = "[" . $requestCMD . "]";
 $donationCMD = "[" . $donationCMD . "]";
-
+$arrCategory = "[" . $arrCategory . "]";
 ?>
 
 <script>
-var donation_record = <?php echo $donationCMD;?>;
-var request_record = <?php echo $requestCMD;?>;
+var donation_record = <?php echo $donationCMD; ?>;
+var request_record = <?php echo $requestCMD; ?>;
+var arrCategory = <?php echo $arrCategory; ?>;
 
 </script>
-
+<script src="../../../assets/js/palette.js"></script>
 <script src="../../../assets/js/agentHome.js"></script>

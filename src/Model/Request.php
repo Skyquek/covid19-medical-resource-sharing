@@ -52,21 +52,57 @@ class Request {
 
     }
 
-    public function read($q="") {
+    public function getByRequestID($id) {
+        include("connection.php");
+        $sql = "SELECT * FROM request 
+                        INNER JOIN user ON user.user_id = request.user_id
+                        INNER JOIN category ON category.category_id = request.category_id 
+                        WHERE request.request_id = $id";
+
+        $result = $connection->query($sql);
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+
+        return $result;
+
+    }
+
+    public function read($q="", $order="ASC", $limit="") {
         include("connection.php");
 
-        if($q == ''){
-             $sql = "SELECT * FROM request 
-                    RIGHT JOIN user ON user.user_id = request.user_id
-                    RIGHT JOIN category ON category.category_id = request.category_id";
+        if($limit == "")
+        {
+            if($q == ''){
+                 $sql = "SELECT * FROM request 
+                        INNER JOIN user ON user.user_id = request.user_id
+                        INNER JOIN category ON category.category_id = request.category_id ORDER BY request_id $order";
+            }
+            else{          
+                $sql = "SELECT * FROM request 
+                        INNER JOIN user ON user.user_id = request.user_id
+                        INNER JOIN category ON category.category_id = request.category_id
+                        WHERE request.user_id=$q ORDER BY request_id $order";
+            }
         }
-        else{          
-            $sql = "SELECT * FROM request 
-                    RIGHT JOIN user ON user.user_id = request.user_id
-                    RIGHT JOIN category ON category.category_id = request.category_id
-                    WHERE request.user_id=$q";
+        else {
+            if($q == ''){
+                $sql = "SELECT * FROM request 
+                       INNER JOIN user ON user.user_id = request.user_id
+                       INNER JOIN category ON category.category_id = request.category_id ORDER BY request_id $order LIMIT $limit";
+           }
+           else{          
+               $sql = "SELECT * FROM request 
+                       INNER JOIN user ON user.user_id = request.user_id
+                       INNER JOIN category ON category.category_id = request.category_id
+                       WHERE request.user_id=$q ORDER BY request_id $order LIMIT $limit";
+           }
         }
-        
+
         $result = $connection->query($sql);
         if($result === TRUE) {
             // echo "New Record created successfully";
@@ -115,10 +151,10 @@ class Request {
         
         return $result;
     }
+
     public function getRequestNumber(){
         include("connection.php");
         $sql = 'SELECT MONTHNAME(date_time) AS month, COUNT(request_id) as num FROM request GROUP BY month(date_time);';
-
         $result = $connection->query($sql);
         
         $connection->close();
