@@ -19,7 +19,8 @@ if($sum != null)
 {
     $sum = $sum["sum"];
 }
-else {
+else 
+{
     $sum = 0;
 }
 

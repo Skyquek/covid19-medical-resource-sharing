@@ -4,7 +4,7 @@ include('../../Model/Request.php');
 
 $categoryQuery = Request::viewAllRequest();
 
-$contents = array();
+$contents = array();$x=0;
 while($row = $categoryQuery->fetch_object())
 {
 	array_push($contents, $row);
@@ -33,6 +33,7 @@ while($row = $categoryQuery->fetch_object())
 <!---->
 
 <?php 
+
 foreach($contents as $content){
 
 	$respond = Request::totalDonation($content->request_id);
