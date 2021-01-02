@@ -1,3 +1,16 @@
+<?php 
+session_start();
+include('../../Model/Request.php');
+
+$categoryQuery = Request::viewAllRequest();
+
+$contents = array();
+while($row = $categoryQuery->fetch_object())
+{
+	array_push($contents, $row);
+}
+?>
+
 <style>
 /* Pagination links */
 .pagination a {
@@ -17,108 +30,55 @@
 /* Add a grey background color on mouse-over */
 .pagination a:hover:not(.active) {background-color: #ddd;}
 </style>
+<!---->
+
+<?php 
+foreach($contents as $content){
+
+	$respond = Request::totalDonation($content->request_id);
+	
+	$sum = $respond->fetch_assoc();
+	if($sum != null)
+	{
+		$sum = $sum["sum"];
+	}
+	else {
+		$sum = 0;
+	}
+
+	$progressbar = ($sum / $content->total) * 100;
+	$progressbar = number_format((float)$progressbar, 2, '.', '');
+	$progressbar = $progressbar . '%';
+	$request_id = $content->request_id;
+?>
 
 <div class="row" style="width:1700px">
-<div class="col-sm-3"></div>
-<div class="col-sm-8">
-<div class="card-body border" style="height:300px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>	
-		<div class="col-sm-3"><p style="text-align:right">Date</p></div>
-		</div>
-        <div class="progress" style="margin-top:90px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a>
-		<br>
-</div>   
+	<div class="col-sm-3">
+	</div>
+	<div class="col-sm-8">
+		<div class="card-body border" style="height:300px">
+			<p>Organization: <?php echo $content->organization_name; ?></p>
+			<div class="row">
+				<div class="col-sm-8"><p>Item request: <?php echo $content->product_name; ?> </p></div>	
+				<div class="col-sm-3"><p style="text-align:right">Date: <?php echo $content->date_time; ?></p></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p>Quantity: <?php echo $content->total;?></p>
+					<p>Respond: <?php echo $sum; ?></p>
+				</div>
+			</div>
+			<div class="progress" style="margin-top:90px">
+				<div class="progress-bar" style="<?php echo 'width:'.$progressbar;?>"><?php echo $progressbar; ?></div>
+			</div><br>
+
+			<a href=<?php echo "../Admin/requestedit.php?id=$request_id" ?>>
+				<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Modify</button>
+			</a>
+			
+			<br>
+		</div>   
+	</div>
 </div>
-</div>
-<br>
-<div class="row" style="width:1700px">
-<div class="col-sm-3"></div>
-<div class="col-sm-8">
-<div class="card-body border" style="height:300px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>	
-		<div class="col-sm-3"><p style="text-align:right">Date</p></div>
-		</div>
-        <div class="progress" style="margin-top:90px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a>
-		<br>
-</div>   
-</div>
-</div>
-<br>
-<div class="row" style="width:1700px">
-<div class="col-sm-3"></div>
-<div class="col-sm-8">
-<div class="card-body border" style="height:300px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>	
-		<div class="col-sm-3"><p style="text-align:right">Date</p></div>
-		</div>
-        <div class="progress" style="margin-top:90px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
-</div>   
-</div>
-</div>
-<br>
-<div class="row" style="width:1700px">
-<div class="col-sm-3"></div>
-<div class="col-sm-8">
-<div class="card-body border" style="height:300px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>	
-		<div class="col-sm-3"><p style="text-align:right">Date</p></div>
-		</div>
-        <div class="progress" style="margin-top:90px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
-</div>   
-</div>
-</div>
-<br>
-<div class="row" style="width:1700px">
-<div class="col-sm-3"></div>
-<div class="col-sm-8">
-<div class="card-body border" style="height:300px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>	
-		<div class="col-sm-3"><p style="text-align:right">Date</p></div>
-		</div>
-        <div class="progress" style="margin-top:90px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div><br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button></a>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button></a><br>
-</div>   
-</div>
-</div>
-<br>
-<br>
-<div class="pagination" style="margin-left:770px">
-  <a href="#">&laquo;</a>
-  <a class="active"href="#">1</a>
-  <a  href="#">2</a>
-  <a href="#">3</a>
-  <a href="#">4</a>
-  <a href="#">5</a>
-  <a href="#">6</a>
-  <a href="#">&raquo;</a>
-</div>
-<br>
+<?php } ?>
+<!---->

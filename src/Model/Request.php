@@ -19,36 +19,39 @@ class Request {
         $connection->close();
     }
 
-    public function update($userid, $org_name, $password, $email, $org_type, $address, $state, $postal_code, $class, $phone) {
+    public function update($request_id, $category_id, $product_name, $total, $status) {
         include("connection.php");
 
-        // $sql = "UPDATE user SET organization_name = '$org_name', password='$password', email='$email', org_type='$org_type', 
-        // address='$address', state='$state', postal_code='$postal_code', class='$class', phone='$phone' WHERE user_id=$userid";
+        $sql = "UPDATE request SET 
+        category_id = '$category_id', product_name = '$product_name', total = '$total', status = '$status'
+        WHERE 
+        request_id=$request_id";
         
-        // if($connection->query($sql) === TRUE) {
-        //     return True;
-        // }
-        // else {
-        //     echo "Error: " . $sql . "<br>" . $connection->error;
-        //     return False;
-        // }
+        if($connection->query($sql) === TRUE) {
+            return True;
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $connection->error;
+            return False;
+        }
 
-        // $connection->close();
+        $connection->close();
 
     }
 
-    public function delete() {
+    public function delete($request_id) {
         include("connection.php");
         
-        // $sql = "INSERT INTO user (organization_name, password, email, org_type, address, state, postal_code, class) VALUES ('$org_name', '$password', '$email', '$org_type', '$address', '$state', '$postal_code', '$class')";
-        // if($connection->query($sql) === TRUE) {
-        //     echo "New Record created successfully";
-        // }
-        // else {
-        //     echo "Error: " . $sql . "<br>" . $connection->error;
-        // }
+        $sql = "DELETE FROM request WHERE request_id=$request_id";
 
-        // $connection->close();
+        if($connection->query($sql) === TRUE) {
+            return True;
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+
+        $connection->close();
 
     }
 
@@ -155,6 +158,16 @@ class Request {
     public function getRequestNumber(){
         include("connection.php");
         $sql = 'SELECT MONTHNAME(date_time) AS month, COUNT(request_id) as num FROM request GROUP BY month(date_time);';
+        $result = $connection->query($sql);
+        
+        $connection->close();
+        
+        return $result;
+    }
+
+    public function viewAllRequest(){
+        include("connection.php");
+        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = request.user_id";
         $result = $connection->query($sql);
         
         $connection->close();

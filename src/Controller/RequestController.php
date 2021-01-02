@@ -3,6 +3,7 @@ session_start();
 include('../Model/Request.php');
 
 $action = $_POST["action"];
+
 if($action == "commonCreate")
 {   
     $quantity = json_decode( $_POST['q'], true);
@@ -75,6 +76,32 @@ else if($action == "uniqueCreate")
         echo json_encode($response);
         die();
     }
+}
+else if($action == "update")
+{
+    $request_id = $_POST["request_id"];
+    $category_id    = $_POST["category_id"];
+    $product_name    = $_POST["product_name"];
+    $total = $_POST["total"];
+    $status = $_POST["status"];
+
+    $request = new Request();
+    $request->update($request_id, $category_id, $product_name, $total, $status);
+
+    header('Location: http://localhost/covid19-medical-resource-sharing/src/View/Admin/requestedit.php?id='.$request_id);
+    exit();
+
+}
+
+else if($action == "delete")
+{
+    $request_id = $_POST['request_id'];
+    
+    $request = new Request();
+    $request->delete($request_id);
+
+    header('Location: http://localhost/covid19-medical-resource-sharing/src/View/Admin/requestment.php');
+    exit();
 }
 
 
