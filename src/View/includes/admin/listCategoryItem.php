@@ -1,3 +1,19 @@
+<?php
+session_start();
+include('../../Model/Category.php');
+
+$category_id = $_GET['id'];
+
+$categoryQuery = Category::listCategoryItem($category_id);
+
+$contents = array();
+while($row = $categoryQuery->fetch_object())
+{
+	array_push($contents, $row);
+}
+
+?>
+
 <style>
 /* Pagination links */
 .pagination a {
@@ -37,19 +53,14 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>Face Mask</td>
-            </tr>
-
-
-            <tr>
-                <td>Hand Sanitizer</td>
-            </tr>
-
-
-            <tr>
-                <td>N95 Face Mask</td>
-            </tr>
+            <?php 
+            foreach($contents as $content){
+            ?>
+                <tr>
+                    <td><?php echo $content->product_name; ?></td>
+                </tr>
+            
+            <?php } ?>
 
         </tbody>
     </table>

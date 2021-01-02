@@ -1,3 +1,16 @@
+<?php
+session_start();
+include('../../Model/Category.php');
+
+$categoryQuery = Category::showAllCategory();
+
+$contents = array();
+while($row = $categoryQuery->fetch_object())
+{
+	array_push($contents, $row);
+}
+?>
+
 <style>
 /* Pagination links */
 .pagination a {
@@ -41,59 +54,24 @@
         </thead>
 
         <tbody>
+            <?php 
+
+            foreach($contents as $content){
+            ?>
+            
             <tr>
-                <td>1</td>
-                <td>Medical Supplies</td>
+                <td><?php echo $content->category_id; ?></td>
+                <td><?php echo $content->category_name; ?></td>
                 <td>
-                    <button class="btn btn-primary update_modal" id="Medical_Supplies" data-toggle="modal" data-target="#updateCategory" onclick="chgName(this)">Update</button> 
-                    <button class="btn btn-success" value="Medical Supplies" onclick="listItems(this)"> View Product</button>
-                    <button class="btn btn-danger" name="Medical Supplies" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
+                    <button class="btn btn-primary update_modal" id="<?php echo $content->category_name; ?>" name="<?php echo $content->category_id; ?>" data-toggle="modal" data-target="#updateCategory" onclick="chgName(this)">Update</button> 
+                    <button class="btn btn-success" value="<?php echo $content->category_id; ?>" onclick="listItems(this)"> View Product</button>
+                    <button class="btn btn-danger" id="<?php echo $content->category_id; ?>" name="<?php echo $content->category_name; ?>" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
                 </td>   
             </tr>
-
-
-            <tr>
-                <td>2</td>
-                <td>Food</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Food" data-toggle="modal" data-target="#updateCategory">Update</button> 
-                    <button type='button' class="btn btn-success"> View Product</button>
-                    <button type='submit' class="btn btn-danger" name="Food" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>3</td>
-                <td>Drinks</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Drinks" onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
-                    <button class="btn btn-success"> View Product</button>
-                    <button class="btn btn-danger" name="Drinks" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>4</td>
-                <td>Shirts</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Shirts"  onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
-                    <button class="btn btn-success"> View Product</button>
-                    <button class="btn btn-danger" name="Shirts" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>5</td>
-                <td>Services</td>
-                <td>
-                    <button class="btn btn-primary"  id='Services' onclick="chgName(this)" data-toggle="modal" data-target="#updateCategory">Update</button> 
-                    <button class="btn btn-success"> View Product</button>
-                    <button class="btn btn-danger" name="Services" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteCategory">Delete</button>
-                </td>   
-            </tr>
+            
+            <?php
+            }
+            ?>
         </tbody>
     </table>
 
@@ -107,10 +85,11 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="post">
+                    <form action="../../Controller/CategoryController.php" method="post" id="addCategoryForm">
                         <div class="form-group">
+                            <input hidden type="text" value="add" name="action">
                             <label for="categoryName">Category Name</label>
-                            <input type="text" class="form-control" id="categoryName">
+                            <input type="text" class="form-control" id="categoryName" name="category_name">
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>
@@ -132,10 +111,12 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="post">
+                    <form action="../../Controller/CategoryController.php" method="post">
                         <div class="form-group">
                             <label for="categoryName">Category Name</label>
-                            <input id="updateCategoryName" type="text" class="form-control" >
+                            <input hidden type="text" value="update" name="action">
+                            <input hidden id="updateCategoryID" type="text" class="form-control" name="category_id">
+                            <input id="updateCategoryName" type="text" class="form-control" name="category_name">
                         </div>
                         <button type="submit" class="btn btn-primary">Update</button>
                     </form>
@@ -158,9 +139,11 @@
                 </div>
 
                 <div class="modal-body">
-                    <form method="post">
+                    <form action="../../Controller/CategoryController.php" method="post">
                         <div class="form-group">
+                            <input hidden type="text" value="delete" name="action">
                             <input id="deleteCategoryName" type="text" class="form-control" readonly>
+                            <input id="deleteCategoryID" hidden type="text" name="category_id">
                         </div>
                         <button type="submit" class="btn btn-danger">Delete Category</button>
                     </form>
