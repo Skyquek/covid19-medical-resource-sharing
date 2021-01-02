@@ -25,7 +25,7 @@ if($action == "commonCreate")
     {
         if($item["total"] != 0)
         {
-            $query = $request->create($_SESSION["user"]["id"], $item["category_id"], $item["product_name"], $item["total"], "ongoing", date('Y-m-d H:i:s'));
+            $query = $request->create($_SESSION["user"]["id"], $item["category_id"], $item["product_name"], $item["total"], "pending", date('Y-m-d H:i:s'));
 
             if($query != True)
             {
@@ -58,7 +58,7 @@ else if($action == "uniqueCreate")
     $product_total = $_POST['product_total'];
 
     $request = new Request();
-    $query = $request->create($_SESSION["user"]["id"], $productCategory, $productName, $product_total, "ongoing", date('Y-m-d H:i:s'));
+    $query = $request->create($_SESSION["user"]["id"], $productCategory, $productName, $product_total, "pending", date('Y-m-d H:i:s'));
 
     if($query)
     {
@@ -96,7 +96,7 @@ else if($action == "update")
 else if($action == "delete")
 {
     $request_id = $_POST['request_id'];
-    
+
     $request = new Request();
     $request->delete($request_id);
 

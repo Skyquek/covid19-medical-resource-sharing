@@ -167,7 +167,17 @@ class Request {
 
     public function viewAllRequest(){
         include("connection.php");
-        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = request.user_id";
+        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = user.user_id";
+        $result = $connection->query($sql);
+        
+        $connection->close();
+        
+        return $result;
+    }
+
+    public function viewCompletedRequest(){
+        include("connection.php");
+        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = user.user_id WHERE status='complete'";
         $result = $connection->query($sql);
         
         $connection->close();
