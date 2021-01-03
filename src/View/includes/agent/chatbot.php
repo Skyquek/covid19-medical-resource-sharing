@@ -92,41 +92,64 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+.on-float {
+    align-items: center;
+    margin-left: 35%;
+    margin-right: auto;
+    z-index: -1;
+    margin-top: 30px;
+    position: fixed;
+    transition: opacity 0.6s linear;
+}
+
+.position_btn {
+    bottom: 10px;
+    right: 10px;
+    opacity: 1;
+    z-index: 10;
+}
+
+.position_msg_box {
+    bottom: 60px;
+    right: 10px;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    z-index: 10;
+}
+
+.show-btn {
+    width: 500px;
+    height: 60px;
+}
 </style>
 
+<link rel="stylesheet" href="./css/chatbot.css">
 
-<button class="open-button" onclick="openForm()">Ask Me Question <i class='fas fa-comment'></i></button>
-
-<div class="chat-popup " id="myForm">
-  <form action="/action_page.php" class="form-container border">
-    <div class="card ">
-			  <div class="card-header" style="height:40px;margin-top:0px">
-				<h6 class="card-title" style="float:left">AI Chatbot</h6>
-                 <i class='far fa-window-minimize'onclick="closeForm()" style="float:right"></i>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body" style="display: block;">
-                <!-- Conversations are loaded here -->
-                <div class="direct-chat-messages">
-
-                </div>
-           
-           
-              </div>
-              <div class="card-footer" style="display: block;margin-bottom:-510px">
-                <form action="#" method="post">
-                  <div class="input-group">
-                    <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                    <span class="input-group-append">
-                      <button type="submit" class="btn btn-warning">Send</button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-
-     </div>
-
-   
-   
-  </form>
+<div id='chatbot' class = 'on-float position_msg_box'>
+  <iframe
+      allow="microphone;"
+      width="500"
+      height="630"
+      src="https://console.dialogflow.com/api-client/demo/embedded/0cfffa21-37a2-483a-af99-b28e5bceef30">
+  </iframe>
 </div>
+
+<div class='on-float position_btn'>
+    <button class='btn btn-primary show-btn'type='button' id='btn'>Ask Me Questions</button>
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+<script>
+var btn = document.getElementById('btn');
+var chatbot = document.getElementById('chatbot');
+
+btn.addEventListener('click', evt => {
+  chatbot.classList.toggle('show')
+})
+
+</script>
