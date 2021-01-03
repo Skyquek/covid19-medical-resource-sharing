@@ -177,7 +177,7 @@ class Request {
 
     public function viewCompletedRequest(){
         include("connection.php");
-        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = user.user_id WHERE status='complete'";
+        $sql = "SELECT * FROM request INNER JOIN user ON request.user_id = user.user_id WHERE request.status='complete'";
         $result = $connection->query($sql);
         
         $connection->close();
