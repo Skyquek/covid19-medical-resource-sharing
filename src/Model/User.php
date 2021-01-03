@@ -97,7 +97,42 @@ class User {
 
         $connection->close();
     }
+
+    public function countAllUser()
+    {
+        include("connection.php");
+        $sql = "SELECT COUNT(*) as total_user FROM user";
+
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
+    }
     
+    public function countUserByState() 
+    {
+        include("connection.php");
+        $sql = "SELECT COUNT(*) as ttl_state_user, state FROM user GROUP BY state";
+
+        $result = $connection->query($sql);
+
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
+    }
 }
 
 ?>

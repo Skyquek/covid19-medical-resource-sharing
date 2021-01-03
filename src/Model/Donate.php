@@ -183,6 +183,24 @@ class Donate {
         return $result;
     }
 
+    public function getDonateState(){
+        include("connection.php");
+        $sql = 'SELECT 
+            state AS state, 
+            COUNT(donate_id) as num 
+            FROM donate 
+            INNER JOIN user
+            ON donate.user_id = user.user_id
+            GROUP BY state
+            ';
+
+        $result = $connection->query($sql);
+        
+        $connection->close();
+        
+        return $result;
+    }
+
     
 }
 

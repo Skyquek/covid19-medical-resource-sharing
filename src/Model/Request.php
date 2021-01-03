@@ -185,6 +185,24 @@ class Request {
         return $result;
     }
 
+    public function getRequestState(){
+        include("connection.php");
+        $sql = 'SELECT 
+            state AS state, 
+            COUNT(request_id) as num 
+            FROM request 
+            INNER JOIN user
+            ON request.user_id = user.user_id
+            GROUP BY state
+            ';
+
+        $result = $connection->query($sql);
+        
+        $connection->close();
+        
+        return $result;
+    }
+
     
 }
 

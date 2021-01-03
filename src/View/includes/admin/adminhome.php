@@ -1,131 +1,258 @@
+<?php 
+include('../../Model/Request.php');
+include('../../Model/Donate.php');
+include('../../Model/Category.php');
+include('../../Model/User.php');
+
+$requestQuery = new Request();
+$donateQuery = new Donate();
+$categoryQuery = new Category();
+$userQuery = new User();
+
+$requestData = $requestQuery->AllRequest();
+$donateData = $donateQuery->AllDonate();
+$countUserData = $userQuery->countAllUser();
+
+
+$total_request = mysqli_fetch_assoc($requestData)['total_request'];
+$total_donate = mysqli_fetch_assoc($donateData)['total_donate'];
+$total_user = mysqli_fetch_assoc($countUserData)['total_user'];
+
+?>
+
 <div class="main">
-	<div class="container p-3 my-4 border" style="height:400px">
-	<h2 style="text-align:center">Overview</h2>
-	<div class="row">
-	<div class="card-body">
-	<p><code>Mask</code></p>
-                <div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-				<br>
-	<p><code>Mask</code></p>
-				<div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div><br>
-				
-	<p><code>Mask</code></p>
-                <div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-				<br>
-				
-	<p><code>Mask</code></p>
-				<div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-	</div>
-	<div class="card-body">
-	<p><code>Mask</code></p>
-                <div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-				<br>
-	<p><code>Mask</code></p>
-				<div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div><br>
-				
-	<p><code>Mask</code></p>
-                <div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-				<br>
-				
-	<p><code>Mask</code></p>
-				<div class="progress progress-xs">
-                  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-	</div>
-	</div>
-	</div>
-	
-	
-	<div class="container p-3 my-4 border"  style="height:400px">
-	<h5 style="text-align:center">Request</h5>
-	<div class="row">
-	<div class="col-sm-6">
-		<div class="card-body border" style="height:320px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>		
-		<div class="col-sm-4"><p>Amount Needed</p></div>
-		</div>
-        <div class="progress" style="margin-top:130px">
-			<div class="progress-bar" style="width:70%">70%</div>
-		</div>
-		<br>
-		<a href="../Admin/view.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
-		<a href="../Admin/requestedit.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Edit</button>
-        </div>       
-    </div>
-	<div class="col-sm-6">
-		<div class="card-body border" style="height:320px">
-		<a href="requestment.php" class="text-dark"><center style="margin-top:120px">+See all Request</center></a>
-        </div>       
-    </div>
-	</div>
-	</div>
-	
-	<div class="container p-3 my-4 border"  style="height:400px">
-	<h5 style="text-align:center">Completed Task</h5>
-	<div class="row">
-	<div class="col-sm-6">
-		<div class="card-body border" style="height:320px">
-		<p>Organization</p>
-		<div class="row">
-		<div class="col-sm-8"><p>Item request</p></div>		
-		<div class="col-sm-4"><p>Amount Needed</p></div>
-		</div>
-        <div class="progress" style="margin-top:130px">
-			<div class="progress-bar" style="width:100%">100%</div>
-		</div>
-		<br>
-				<a href="../Admin/viewcom.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:right"" >View</button></a>
-        </div>       
-    </div>
-	<div class="col-sm-6">
-		<div class="card-body border" style="height:320px">
-		<a href="completed.php" class="text-dark"><center style="margin-top:120px">+See all Completed Task</center></a>
-        </div>       
-    </div>
-	</div>
-	</div>
-	
 	<div class="container p-3 my-4 border">
-	<h2>Data</h2>
+	<h2 style="text-align:center">Overview</h2>
+
 	<div class="row">
-	<div class="card-body">
-     <div id="bar-chart" style="height: 300px; padding: 0px; position: relative;"><canvas class="flot-base" width="501" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 501.5px; height: 300px;"></canvas><canvas class="flot-overlay" width="501" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 501.5px; height: 300px;"></canvas><div class="flot-svg" style="position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; pointer-events: none;"><svg style="width: 100%; height: 100%;"><g class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;"><text x="102.25142045454544" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">February</text><text x="190.3103693181818" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">March</text><text x="274.9083806818182" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">April</text><text x="356.0376420454545" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">May</text><text x="26.504971590909093" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">January</text><text x="434.0653409090909" y="293.75" class="flot-tick-label tickLabel" style="position: absolute; text-align: center;">June</text></g><g class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;"><text x="10" y="268.25" class="flot-tick-label tickLabel" style="position: absolute; text-align: right;">0</text><text x="10" y="205.25" class="flot-tick-label tickLabel" style="position: absolute; text-align: right;">5</text><text x="1" y="16.25" class="flot-tick-label tickLabel" style="position: absolute; text-align: right;">20</text><text x="1" y="142.25" class="flot-tick-label tickLabel" style="position: absolute; text-align: right;">10</text><text x="1" y="79.25" class="flot-tick-label tickLabel" style="position: absolute; text-align: right;">15</text></g></svg></div></div>
-     </div>
-	 <div class="card-body">
-       <div id="donut-chart" style="height: 300px;font-color:black; padding: 0px; position: relative;"><canvas class="flot-base" width="501" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 501.5px; height: 300px;"></canvas><canvas class="flot-overlay" width="501" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 501.5px; height: 300px;"></canvas><span class="pieLabel" id="pieLabel0" style="position: absolute; top: 70px; left: 308.789px;"><div style="font-size:13px; text-align:center; padding:2px; color: black font-weight: 600;">Series2<br>30%</div></span><span class="pieLabel" id="pieLabel1" style="position: absolute; top: 210px; left: 286.789px;"><div style="font-size:13px; text-align:center; padding:2px; color: black; font-weight: 600;">Series3<br>20%</div></span><span class="pieLabel" id="pieLabel2" style="position: absolute; top: 129px; left: 127.648px;"><div style="font-size:13px; text-align:center; padding:2px; color: black; font-weight: 600;">Series4<br>50%</div></span></div>
-              </div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card-body border">
+						Total User: <?php echo $total_user; ?>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card-body border">
+						Total Request: <?php echo $total_request; ?>
+					</div>
+				</div>
+
+				<div class="col-sm-4">
+					<div class="card-body border">
+						Total Donate: <?php echo $total_donate; ?>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="card-body border">
+						<canvas id="historyChart"></canvas>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="card-body border">
+						<canvas id="categoryChart"></canvas>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card-body border">
+						<canvas id="userStateChart"></canvas>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card-body border">
+						<canvas id="requestStateChart"></canvas>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		
 	</div>
-	</div>
+
+	
+	
+	
+	
 </div>
+
+<?php
+
+$request = new Request();
+$request_num_result = $request->getRequestNumber();
+$request_state_result = $request->getRequestState();
+
+$donate = new Donate();
+$donate_num_result = $donate->getDonateNumber();
+$donate_state_result = $donate->getDonateState();
+
+$user = new User();
+$user_count_query = $user->countUserByState();
+
+$user_state_count_array = array();
+
+$record = array(
+  "January"   => array("request" => "0", "donation" => "0"),
+  "February"  => array("request" => "0", "donation" => "0"),
+  "March"     => array("request" => "0", "donation" => "0"),
+  "April"     => array("request" => "0", "donation" => "0"),
+  "May"       => array("request" => "0", "donation" => "0"),
+  "June"      => array("request" => "0", "donation" => "0"),
+  "July"      => array("request" => "0", "donation" => "0"),
+  "August"    => array("request" => "0", "donation" => "0"),
+  "September" => array("request" => "0", "donation" => "0"),
+  "October"   => array("request" => "0", "donation" => "0"),
+  "November"  => array("request" => "0", "donation" => "0"),
+  "December"  => array("request" => "0", "donation" => "0")
+);
+
+$malaysia_state_array = array(
+	"Perlis"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Kedah"				=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Penang"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Perak"				=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Selangor"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Negeri Sembilan"	=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Melaka"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Johor"				=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Pahang"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Terengganu"		=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Kelantan"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Sarawak"			=> array("user" => 0, "request" => "0", "donation" => "0"),
+	"Sabah"				=> array("user" => 0, "request" => "0", "donation" => "0"),
+);
+
+
+while($row = $request_num_result->fetch_object()){
+    $record[$row->month]["request"] = $row->num;
+}
+
+while($row = $donate_num_result->fetch_object()){
+  $record[$row->month]["donation"] = $row->num;
+}
+
+//////////////// By state Analysis (update the array result) //////////////////
+// User Registered by state
+while($row = $user_count_query->fetch_object()) {
+	$malaysia_state_array[$row->state]["user"] = $row->ttl_state_user;
+}
+
+// Request by State
+while($row = $request_state_result->fetch_object()) {
+	$malaysia_state_array[$row->state]["request"] = $row->num;
+}
+
+// Donate by State
+while($row = $donate_state_result->fetch_object()) {
+	$malaysia_state_array[$row->state]["donation"] = $row->num;
+}
+
+// user and state
+$userStateCMD = "";
+foreach($malaysia_state_array as $key => $value) {
+	$userStateCMD .= $value["user"] . ","; 
+}
+$userStateCMD = rtrim($userStateCMD, ',');
+$userStateCMD = "[" . $userStateCMD . "]";
+
+// request and state
+$requestStateCMD = "";
+foreach($malaysia_state_array as $key => $value) {
+	$requestStateCMD .= $value["request"] . ","; 
+}
+$requestStateCMD = rtrim($requestStateCMD, ',');
+$requestStateCMD = "[" . $requestStateCMD . "]";
+
+
+// donate and state
+$donateStateCMD = "";
+foreach($malaysia_state_array as $key => $value) {
+	$donateStateCMD .= $value["donation"] . ","; 
+}
+$donateStateCMD = rtrim($donateStateCMD, ',');
+$donateStateCMD = "[" . $donateStateCMD . "]";
+
+
+/////////////////////////////////////////////
+
+
+$allcategory = array();
+$categoryData = $categoryQuery->showAllCategory();
+
+
+$categoryValueCount = array();
+while($row = $categoryData->fetch_object()){
+  $sum = 0;
+  array_push($allcategory, $row->category_name);
+
+  $rowVal = $categoryQuery->countCategoryItems($row->category_id);
+  while($row = $rowVal->fetch_object())
+  {
+    $sum += $row->sum;
+  }
+
+  array_push($categoryValueCount, $sum);
+}
+
+
+
+$arrCategory = "";
+foreach($allcategory as $category)
+{
+  $arrCategory .= "'" . $category . "'" . ",";
+}
+$arrCategory = rtrim($arrCategory, ",");
+
+$arrCategoryCount = "";
+foreach($categoryValueCount as $rowCount)
+{
+  $arrCategoryCount .= "'" . $rowCount . "'" . ",";
+}
+
+$arrCategoryCount = rtrim($arrCategoryCount, ",");
+
+
+$requestJS = array();
+$requestCMD = "";
+$donationCMD = "";
+
+foreach($record as $key => $value) {
+  // echo $key . " : " . $value["request"] . "<br>";
+  $requestCMD .= $value["request"] . ","; 
+  $donationCMD .= $value["donation"] . ",";   
+}
+
+$requestCMD = rtrim($requestCMD, ',');
+$donationCMD = rtrim($donationCMD, ',');
+
+$requestCMD = "[" . $requestCMD . "]";
+$donationCMD = "[" . $donationCMD . "]";
+$arrCategory = "[" . $arrCategory . "]";
+$arrCategoryCount = "[" . $arrCategoryCount . "]";
+?>
+
+<script>
+var donation_record = <?php echo $donationCMD; ?>;
+var request_record = <?php echo $requestCMD; ?>;
+var arrCategory = <?php echo $arrCategory; ?>;
+var arrCategoryCount = <?php echo $arrCategoryCount; ?>;
+
+var userStateCMD = <?php echo $userStateCMD; ?>;
+var requestStateCMD = <?php echo $requestStateCMD; ?>;
+var donateStateCMD = <?php echo $donateStateCMD; ?>;
+</script>
+
+<script src="../../../assets/js/palette.js"></script>
+<script src="../../../assets/js/adminHome.js"></script>
