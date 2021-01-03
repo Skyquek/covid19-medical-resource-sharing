@@ -1,3 +1,23 @@
+<?php 
+session_start();
+include('../../Model/User.php');
+
+
+if(isset($_POST['update'])){
+    $act = User::updateStatus($_POST['userID'], $_POST['status']);
+}
+
+
+$userQuery = User::viewAllUser();
+$contents = array();
+
+while($row = $userQuery->fetch_object())
+{
+	array_push($contents, $row);
+}
+
+
+?>
 <style>
 /* Pagination links */
 .pagination a {
@@ -24,88 +44,67 @@
 
 
 <div class="container" style="width:1300px;height:780px">
-
-    <p>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#newOrganization">
-        <i class="fa fa-plus" aria-hidden="true"></i> Add Organization
-        </button>
-    </p>
     
-    <table class="table table-hover table-condensed">
-        <thead>
-            <tr>
-                <th>Organization ID</th>
-                <th>Organization Type</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        <table class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Organization Name</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Address</th>
+                    <th>State</th>
+                    <th>Postal Code</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>NGO</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="NGO" data-toggle="modal" data-target="#updateOrganization" onclick="chgName(this)">Update</button> 
-                    <button class="btn btn-success" value="NGO" onclick="listAgent(this)"> View Agent list</button>
-                    <button class="btn btn-danger" name="NGO" onclick="deleteOrganization(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
+            <tbody>
+                <?php foreach($contents as $content) { ?>
 
-
-            <tr>
-                <td>2</td>
-                <td>Industry</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Industry" data-toggle="modal" data-target="#updateOrganization">Update</button> 
-                    <button type='button' class="btn btn-success"> View Agent list</button>
-                    <button type='submit' class="btn btn-danger" name="Industry" onclick="deleteOrganization(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>3</td>
-                <td>Goverment</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Goverment" onclick="chgName(this)" data-toggle="modal" data-target="#updateOrganization">Update</button> 
-                    <button class="btn btn-success">View Agent list</button>
-                    <button class="btn btn-danger" name="Goverment" onclick="deleteOrganization(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>4</td>
-                <td>Medical Agency</td>
-                <td>
-                    <button class="btn btn-primary update_modal" id="Medical"  onclick="chgName(this)" data-toggle="modal" data-target="#updateOrganization">Update</button> 
-                    <button class="btn btn-success">View Agent list</button>
-                    <button class="btn btn-danger" name="Medical" onclick="deleteCategory(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
-
-
-            <tr>
-                <td>5</td>
-                <td>Individual</td>
-                <td>
-                    <button class="btn btn-primary"  id='Individual' onclick="chgName(this)" data-toggle="modal" data-target="#updateOrganization">Update</button> 
-                    <button class="btn btn-success">View Agent list</button>
-                    <button class="btn btn-danger" name="Individual" onclick="deleteOrganization(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
-
-			<tr>
-                <td>6</td>
-                <td>Educationals</td>
-                <td>
-                    <button class="btn btn-primary"  id='Educationals' onclick="chgName(this)" data-toggle="modal" data-target="#updateOrganization">Update</button> 
-                    <button class="btn btn-success">View Agent list</button>
-                    <button class="btn btn-danger" name="Educationals" onclick="deleteOrganization(this)" data-toggle="modal" data-target="#deleteOrganization">Delete</button>
-                </td>   
-            </tr>
-        </tbody>
-    </table>
+                <form method='post' action="">
+                <tr>
+                    <td><?php echo $content->user_id; ?></td>
+                    <td><?php echo $content->organization_name; ?></td>
+                    <td><?php echo $content->email; ?></td>
+                    <td><?php echo $content->org_type; ?></td>
+                    <td><?php echo $content->address; ?></td>
+                    <td><?php echo $content->state; ?></td>
+                    <td><?php echo $content->postal_code; ?></td>
+                    <td><?php echo $content->class; ?></td>
+                    <td>
+                    <select name='status'>
+                    <?php 
+                        if($content->status == 'active')
+                        {
+                            echo "<option value='active' selected>active</option>";
+                            echo "<option value='suspend'>suspend</option>";
+                        }
+                        else
+                        {
+                            //echo "<input hidden type='text' name='status' value='active'/>";
+                            echo "<option value='active'>active</option>";
+                            echo "<option value='suspend' selected>suspend</option>";
+                        }
+                        
+                    ?>
+                    </selected>
+                    </td>
+                    <td><?php echo $content->phone; ?></td>
+                    <td>
+                        <input hidden type='text' name='userID' value='<?php echo $content->user_id; ?>'/>
+                        <button type="submit" class="btn btn-primary" name='update'>Update</button> 
+                    </td>   
+                </tr>
+                </form>
+                <?php } ?>
+            </tbody>
+        </table>
+    
+    
 
 
     <div class="modal fade" id="newOrganization" role="dialog">

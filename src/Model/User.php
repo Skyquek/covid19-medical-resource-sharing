@@ -65,6 +65,38 @@ class User {
         return $result;
 
     }
+
+    public function viewAllUser() {
+        include("connection.php");
+
+        $sql = "SELECT * FROM user";
+        $result = $connection->query($sql);
+        if($result === TRUE) {
+            // echo "New Record created successfully";
+        }
+        else {
+            // echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        $connection->close();
+        
+        return $result;
+    }
+
+    public function updateStatus($userid, $status) {
+        include("connection.php");
+
+        $sql = "UPDATE user SET status = '$status' WHERE user_id=$userid";
+        
+        if($connection->query($sql) === TRUE) {
+            return True;
+        }
+        else {
+            echo "Error: " . $sql . "<br>" . $connection->error;
+            return False;
+        }
+
+        $connection->close();
+    }
     
 }
 
