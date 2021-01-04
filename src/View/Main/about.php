@@ -14,50 +14,7 @@
 
 <?php include("../includes/main/navigation.php");?>
 <?php include("../includes/main/header.php");?><br>
-<div class="text-center"> <h1 style="color:white">About Us</h1><p style="color:white">Our Team is formed by 4 student who <p>
-
-<img src="../../../assets/img/logo.png" class="rounded" alt="Cinque Terre">
-<div class="container">
-	<div class="row">
-		<div class="col-lg-6" style="margin-left:140px">
-			<div class="card" style="width:400px">
-			<div class="card-body">
-				<h4 class="card-title">Quak Yao Jing</h4>
-				<p class="card-text">Our Team Leader,  who develop backend of this website</p>
-				<a href="#" class="btn btn-primary">See Profile</a>
-			</div>
-			</div>
-		<br>
-			<div class="card" style="width:400px">
-			<div class="card-body">
-				<h4 class="card-title">John Doe</h4>
-				<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-				<a href="#" class="btn btn-primary">See Profile</a>
-			</div>
-			</div>
-		</div>
-	<br>
-		<div class="col-lg-6" style="margin-left:-150px">
-			<div class="card" style="width:400px">
-			<div class="card-body">
-	<h4 class="card-title">John Doe</h4>
-	<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-	<a href="#" class="btn btn-primary">See Profile</a>
-	</div>
-</div>
-<br>
-<div class="card" style="width:400px">
-	<div class="card-body">
-	<h4 class="card-title">John Doe</h4>
-	<p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-	<a href="#" class="btn btn-primary">See Profile</a>
-	</div>
-</div>
-	</div>
-	</div>
-</div>
-
-</div>
+<?php include("../includes/main/aboutus.php");?><br>
 
 <?php include("../includes/main/footer.php");?>
 

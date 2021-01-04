@@ -10,14 +10,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../../../assets/css/includeagent.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 </head>
 <body>
  <?php include("../includes/agent/navigationagent.php");?>
 
 <div class="main">
-<div class="container p-3 my-3 border">
-<h1>CORONA VIRUS DISEASE 19</h1>
-<h1>(COVID-19)</h1>
-
+<div class="container p-3 my-3">
+<h1>Dashboard</h1>
+<h4>(Covid-19 Resources Donation and Requestment)</h4>
+<?php include("../includes/agent/home.php");?>
+<?php include("../includes/agent/chatbot.php");?>
 </div>
  </body></html>

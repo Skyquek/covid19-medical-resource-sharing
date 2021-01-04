@@ -1,27 +1,83 @@
+<style>
+.dropbtn {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width:100px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: lightgray;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
 <nav class="navbar navbar-light sticky-top ">
   <a class="navbar-brand" style="margin:center;" href="home.php">
-    <img src="logo.png" alt="Logo" style="width:120px;">
+    <img src="../../../assets/img/logo.png" alt="Logo" style="width:120px;">
 	</a>
-  <button class ="navbar-toggler" type ="button" style="background-color:white" data-toggle ="collapse" data-target ="#colNav">
-<span class ="navbar-toggler-icon"></span>
-</button>
-<div class ="collapse navbar-collapse"  id ="colNav">
-<ul class ="navbar-nav">
-<li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href="account.php"> Account </a>
-</li>
-<li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href ="notification.php"> Notification</a>
-</li>
-<li class ="nav-item">
-<a class ="nav-link"  style="color:white;float:right;" href ="donatelist.php"> Donation </a>
-</li>
-<li class ="nav-item">
-<a class ="nav-link"   style="color:white;float:right;"href ="request.php"> Request </a>
-</li>
-<li class ="nav-item">
-<a class ="nav-link"   style="color:white;float:right;"href ="#"> Logout </a>
-</li>
-</ul>
-</div>
+	<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars fa-lg"></i></button>
+	<div id="myDropdown" class="dropdown-content">
+    <a href ="home.php"> Home</a>
+    <a href="account.php"> Account </a>
+    <a href="myrequest.php">My request</a>
+	<a href ="donatelist.php"> Donation </a>
+	<a href ="request.php"> Request </a>
+	<a href ="../includes/agent/logout.php"> Logout </a>
+	</div>
+	</div>
 </nav>
+

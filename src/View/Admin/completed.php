@@ -12,7 +12,8 @@
 <body>
 <?php include("../includes/admin/navigationadmin.php");?>
 <div class="main">
-	<h1>Completed Task</h1>
+	<h1 style="text-align:center">Completed Task</h1><br>
+	<?php include("../includes/admin/completedlist.php");?>
 </div>
 </body>
 </html>

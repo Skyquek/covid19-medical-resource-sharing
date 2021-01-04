@@ -176,27 +176,28 @@ span.psw {
     <div class="container">
 		<div class="row" style="margin-left:100px">
 			<div class="col-lg-6">
-				<label for="organization"><b>Agent</b></label><br>
+				<label for="organization"><b>Organization Type</b></label><br>
 				<div class="form-group">
-				<select class="form-control" name="organization">
-				<option value="">Organization</option>
-				<option value="PK">Medical</option>
-				<option value="PH">Ngo</option>
-				<option value="PL">Perlis</option>
-				<option value="SL">Selangor</option>
-				<option value="TR">Terengganu</option>
-				<option value="KT">Kelantan</option>
-				<option value="Lb">Labuan</option>
-				</select>
+					<select class="form-control" name="organization">
+						<option value="ngo">NGO</option>
+						<option value="industry">Industry</option>
+						<option value="government">Government</option>
+						<option value="medical_agency">Medical Agency</option>
+						<option value="individual">Individual</option>
+						<option value="educational">Educational</option>
+					</select>
 				</div>
 				<br>
-				<label for="name"><b>Name</b></label><br>
-				<input type="name" placeholder="Enter Name" name="name" required>
+
+				<label for="name"><b>Organization Name</b></label><br>
+				<input type="text" placeholder="Enter Name" name="name" required>
 				<br>
-				<label for="phone"><b>Contact</b></label><br>
+				
+				<label for="phone"><b>Phone Number</b></label><br>
 				<input type="phone" placeholder="Enter Phone Number" name="phone" required>
 				<br>
-				<label for="mail"><b>Mail</b></label><br>
+				
+				<label for="mail"><b>E-Mail</b></label><br>
 				<input type="mail" placeholder="Enter Mail" name="mail" required>
 				<br>				
 			</div>
@@ -227,21 +228,35 @@ span.psw {
 				<br>
 				<label for="Code"><b>Code</b></label><br>
 				<input type="address" placeholder="Enter Code" name="code" required>
-				</div>
-			<div class="col-lg-6">
-			<label for="psw"><b>Password</b></label><br>
-			<input type="password" placeholder="Enter Password" name="psw" required>
+				<br>
 			</div>
+
 			<div class="col-lg-6">
-			<label for="psw-repeat"><b>Comfirmed Password</b></label><br>
-			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+				<label for="psw"><b>Password</b></label><br>
+				<input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+			</div>
+			
+			<div class="col-lg-6">
+				<label for="psw-repeat"><b>Comfirmed Password</b></label><br>
+				<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+			</div>
+
+			<div class="col-lg-12">
+				<div id="message">
+					<h3>Password must contain the following:</h3>
+					<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+					<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+					<p id="number" class="invalid">A <b>number</b></p>
+					<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<label for="remember">Remember Me</label>
+      			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
 			</div>
 		</div>
-    </div>
-	<label style="text-align:center">
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-    </label>
-	<p style="text-align:center">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+	<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="container container-fluid" style="background-color:#f1f1f1">
     <button class="signupbtn" type="submit" style="margin-left:280px">Sign Up</button>
     </div>

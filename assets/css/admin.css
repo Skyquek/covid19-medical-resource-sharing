@@ -29,7 +29,6 @@ background-color:#2C3539;
 .main {
   margin-left: 180px; /* Same as the width of the sidenav */
   margin-top: 20px; 
-  text-align: center;
 }
 
 @media screen and (max-height: 450px) {
@@ -47,19 +46,12 @@ li a.active {
   color: white;
 }
 
-.container1{
-	height:50px;
-	width:450px;
-	text-align: left;
-}
-.container2{
-	height:720px;
-	width:1080px;
-	text-align: left;
-}
 .container{
-	height:300px;
-	width:1000px;
+	height:400px;
+	width:1200px;
 	text-align: left;
 }
 
+.card-body{
+	height:150px;
+}

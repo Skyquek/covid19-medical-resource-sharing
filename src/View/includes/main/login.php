@@ -5,7 +5,7 @@
 	}
 	body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
-	input[type=text], input[type=phone], input[type=address],input[type=mail] {
+	input[type=text], input[type=phone], input[type=address],input[type=email] {
 		width: 70%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
@@ -87,24 +87,35 @@
 }
   </style>
 
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form id="loginForm" style="border:1px solid #ccc">
   <br><div class="container">
-    <h1>Login with Mail</h1>
-    <p>Please fill in this form to login in.</p>
+    <h1>Login with email</h1>
     <hr>
-			
-			<label for="mail"><b>Mail</b></label><br>
-			<input type="mail" placeholder="Enter Mail" name="mail" required>
-			<br>				
-			<label for="psw"><b>Password</b></label><br>
-			<input type="password" placeholder="Enter Password" name="psw" required><br>
-		<br>
+		<label for="mail"><b>Email</b></label><br>
+		<input id="loginID" type="email" placeholder="Email address" name="mail" required>
+		<br>				
+		
+		<label for="psw"><b>Password</b></label><br>
+		<input id="loginPass" type="password" placeholder="Password" name="psw" required><br>
+		
+		<!-- <br>
+
 		<label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-		</label><br>
-		<span class="psw">Forget <a href="forget.html">Password?</a></span><br>
-    <div class="clearfix">
-      <button type="submit" class="signinbtn">Login</button>
-    </div>
+      		<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+		</label>
+		<br> -->
+
+		<div id="error-box" class="alert alert-danger alert-dismissible"  style="display: none;">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<p>This alert box could indicate a dangerous or potentially negative action.</p>
+		</div>
+
+		<span class="psw">Forget <a href="forget.html">Password?</a></span><br><br>
+
+    	<div class="clearfix">
+      		<button type="submit" class="signinbtn">Login</button>
+    	</div>
   </div><br>
 </form>
+
+<script src="../../../assets/js/loginValidation.js"></script>

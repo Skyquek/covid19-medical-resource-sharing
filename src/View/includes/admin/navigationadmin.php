@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="margin-top:0px" data-spy="affix" >
 	<a class="navbar-brand" href="home.php">
-    <img src="logo.png" alt="Logo" style="width:120px;">
+    <img src="../../../assets/img/logo.png" alt="Logo" style="width:120px;">
 	</a>
 	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon"></span>
@@ -15,9 +15,10 @@
   </div>
 </nav>
 <div class="sidenav">
-  <a href="notification.php">Noticfication</a>
-  <a href="requestment.php">Requestment</a>
+  <a href="home.php">Home</a>
+  <a href="manageCategory.php">Manage Category</a>
+  <a href="manageOrganization.php">Manage Organization</a>
+  <a href="requestment.php">Request History</a>
   <a href="completed.php">Completed Task</a>
-  <a href="data.php">Analysis</a>
-  <a href="#">Log Out</a>
+  <a href="../includes/admin/logout.php">Log Out</a>
 </div>

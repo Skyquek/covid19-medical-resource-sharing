@@ -1,0 +1,318 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+header
+{
+	background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(headerbackground.jpg);
+	height: 300vh;
+	background-size: 100% 100%;
+	position: static;
+
+}
+
+#content-container 
+{
+	float : left;
+	width : 100%;
+	background : repeat-y #FFF;
+}
+
+table td, table td * {
+vertical-align: top;
+}
+
+#wrapper 
+{
+	margin : 0 auto;
+	width : 100%;
+	background : #fff;
+}
+
+.main-nav
+{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.main-nav li
+{
+	display: inline-block;
+}
+
+.main-nav li a
+{
+	color: black;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+}
+
+.main-nav li.active a
+{
+	border: 1px solid #DC7A2F;
+}
+
+.main-nav li a:hover
+{
+	border: 2px solid #DC7A2F;
+}
+
+body
+{
+	font-family: monospace;
+}
+
+.menubar
+{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.bio
+{
+	position: absolute;
+	width: 1500px;
+	margin-left: 30pxpx;
+	margin-top: 0px;
+	color: black;
+}
+
+h1
+{
+	color: white;
+	text-transform: uppercase;
+	font-size: 70px;
+	text-align: center;
+	margin-top: 275px;
+}
+
+.button
+{
+	margin-top: 30px;
+	margin-left: 600px;
+}
+
+.btn
+{
+	border: 1px solid white;
+	padding: 10px 30px;
+	color: black;
+	text-decoration: none;
+	margin-right: 10px;
+	font-size: 13px;
+	text-transform: uppercase;
+
+}
+
+.btn-menubar
+{
+	font-family: "Roboto", sans-serif;
+}
+
+.join
+{
+	width: 100%;
+	padding: 8px 20px;
+	box-sizing: border-box;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	
+}
+
+h1
+{
+	color: #F68E3E;
+}
+
+h4
+{
+	font-size: 15px;
+	padding: 10px;
+	color: black;
+	font-family: "Roboto", sans-serif;
+}
+
+h5
+{
+	color: black;
+}
+
+p
+{
+	color: black;
+	text-transform: uppercase;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 200px;
+	font-family: "Roboto", sans-serif;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  padding: 3px;
+  text-align : center;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: 40%;
+  margin-top: 150px;
+}
+
+h3
+{
+	text-align: center;
+	margin-top: 200px;
+	margin-right: 500px;
+	color: black;
+	font-family: "Roboto", sans-serif;
+}
+
+#footer 
+{
+	height: absolute;
+	background : #D8BFD8;
+	text-align : center;
+	padding : 20px;
+	height : 1%;
+}
+
+.submit
+{
+	cursor: pointer;
+	font-family: "Roboto", sans-serif;
+}
+
+.test
+{
+	width: 100px;
+	height:100px;
+	margin: 0px auto;
+	
+}
+
+.testt
+{
+	width: 100px;
+	height:100px;
+	margin: 0px auto;
+	
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ 
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F9AF77;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#div1, #div2 {
+ width: 350px;
+  margin: auto;
+  height: 160px;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+
+.card {
+  box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 30%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+h2
+{
+	font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
