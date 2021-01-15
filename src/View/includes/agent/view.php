@@ -7,11 +7,6 @@ $percentage = $_GET["progress"];
 
 $donate = new Donate();
 $donate_query = $donate->DonateToRequest($request_id);
-
-
-
-
-
 ?>
 
 <br>

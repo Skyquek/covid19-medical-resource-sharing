@@ -1,0 +1,356 @@
+<style>
+body  {
+  #background-image: url("Among-us-free-to-use-ejected-scr.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:black;
+}
+#navigation
+{ float: left; width: 100%; background: #333; }
+#navigation ul
+{ margin: 0; padding: 0; }
+#navigation ul li
+{ list-style-type: none; display: inline; } 
+13
+#navigation li a
+{ display: block; float: left;
+padding: 5px 10px; color: #fff;
+text-decoration: none; border-right:
+1px solid #fff;
+}
+#navigation li a:hover
+{ background: #736F6E; } 
+#mycanvas{border:1px solid white;
+color:grey;
+}
+
+</style>
+<style type="text/css">
+#boxA, #boxB {
+ float:left;padding:10px;margin:10px; -moz-user-select:none;
+}
+#boxA { background-color: #6633FF; width:75px; height:75px; }
+#boxB { background-color: #FF6699; width:150px; height:150px; }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	
+		function showResult()
+			{
+				x = document.forms["myform"]["newinput"].value;
+				document.forms["myform"]["result"].value=x;
+			}
+			
+		function dragStart(ev) {
+			ev.dataTransfer.effectAllowed='move';
+			ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+			ev.dataTransfer.setDragImage(ev.target,0,0);
+			return true;
+			}
+		function dragOver(ev) {
+
+			return false;
+			}
+		function drawShape(){
+
+     // get the canvas element using the DOM
+     var canvas = document.getElementById('mycanvas1');
+
+     // Make sure we don't execute when canvas isn't supported
+     if (canvas.getContext){
+
+         // use getContext to use the canvas for drawing
+         var ctx = canvas.getContext('2d');
+
+         var sin = Math.sin(Math.PI/6);
+         var cos = Math.cos(Math.PI/6);
+
+         ctx.translate(100, 100);
+         var c = 0;
+
+         for (var i=0; i <= 12; i++) {
+             c = Math.floor(255 / 12 * i);
+             ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
+             ctx.fillRect(0, 0, 50, 50);
+             
+             ctx.transform(cos, sin, -sin, cos, 0, 0);
+        }
+            
+         ctx.setTransform(-1, 0, 0, 1, 100, 100);
+         ctx.fillStyle = "rgba(100, 100, 255, 0.5)";
+         ctx.fillRect(25, 25, 50, 50);
+    }
+
+     else {
+        alert('You need Safari or Firefox 1.5+ to see this demo.');
+     }
+     var canvas = document.getElementById('mycanvas2');
+
+     // Make sure we don't execute when canvas isn't supported
+     if (canvas.getContext){
+
+         // use getContext to use the canvas for drawing
+         var ctx = canvas.getContext('2d');
+
+         var sin = Math.sin(Math.PI/6);
+         var cos = Math.cos(Math.PI/6);
+
+         ctx.translate(50, 50);
+         var c = 0;
+
+         for (var i=0; i <= 12; i++) {
+             c = Math.floor(255 / 12 * i);
+             ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
+             ctx.fillRect(0, 0, 25, 25);
+             
+             ctx.transform(cos, sin, -sin, cos, 0, 0);
+        }
+            
+         ctx.setTransform(-1, 0, 0, 1, 50, 50);
+         ctx.fillStyle = "rgba(100, 100, 255, 0.5)";
+         ctx.fillRect(12, 12, 25, 25);
+    }
+
+     else {
+        alert('You need Safari or Firefox 1.5+ to see this demo.');
+     }
+     var canvas = document.getElementById('mycanvas3');
+
+     // Make sure we don't execute when canvas isn't supported
+     if (canvas.getContext){
+
+         // use getContext to use the canvas for drawing
+         var ctx = canvas.getContext('2d');
+
+         var sin = Math.sin(Math.PI/6);
+         var cos = Math.cos(Math.PI/6);
+
+         ctx.translate(25, 25);
+         var c = 0;
+
+         for (var i=0; i <= 12; i++) {
+             c = Math.floor(255 / 12 * i);
+             ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
+             ctx.fillRect(0, 0, 12, 12);
+             
+             ctx.transform(cos, sin, -sin, cos, 0, 0);
+        }
+            
+         ctx.setTransform(-1, 0, 0, 1, 25, 25);
+         ctx.fillStyle = "rgba(100, 100, 255, 0.5)";
+         ctx.fillRect(6, 6, 12, 12);
+    }
+
+     else {
+        alert('You need Safari or Firefox 1.5+ to see this demo.');
+     }
+ }
+		function myPrompt(){
+		var num1, num2, result;
+		num1 = parseInt(window.prompt("Enter the your favourite number","0"));
+		num2 = parseInt(window.prompt("Enter the second favourite number","0"));
+		result = num1 + num2;
+		document.write('The sum of ' + num1 + ' and ' + num2 + ' is ' +result);
+		} 
+
+function DisplayX()
+{ alert(document.myform1.x.value); }
+
+function DisplayY()
+{ var thisY = document.getElementById("y");
+ alert(thisY.value); }
+
+
+function testbutton (form){
+chosen = "";
+len = document.testform.rad.length;
+	for (i = 0; i <len; i++)
+		{ if (document.testform.rad[i].checked)
+			{ chosen = document.testform.rad[i].value; }
+		}
+		if ((testform.rad[0].checked==false)&&(testform.rad[1].checked==false))
+			{ 
+			alert("No gender is chosen"); 
+			}
+		else { alert(chosen); 
+		}
+}
+function myFunction() {
+          var txt;
+          if (confirm("Give me a like?")) {
+            alert( "Thanks for your like!");
+          } else {
+           alert("I will make improvemen according")
+          }
+        }
+function Site(val)
+{
+window.location.href = val;
+}		
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("h1").hide();
+  });
+  $("#show").click(function(){
+    $("h1").show();
+  });
+  $("#change").click(function(){
+	$("body").css({"background-color":"blue"});
+	$("h1").css({"color":"white","text-decoration":"underline"});
+  });
+  $("#fade").click(function(){
+    $("h1").fadeToggle();
+	});
+  $("#animate").click(function(){
+    $("div").animate({height:'toggle'});
+	});
+  $("#animate2").click(function(){
+    $(".box1").animate({top:"+=50px",left:"+=50px",width:"+=50px",height:"+=10px",fontSize:"+=5px",});
+	});
+  $("#animate2").click(function(){
+    $(".box1").animate({left:"+=50px",width:"+=50px",height:"+=10px",fontSize:"+=5px",});
+	});
+  $("#animate3").click(function(){
+    var div = $(".box1");
+	div.animate({fontSize:'0.9em'},"slow");
+	div.animate({height:'300px',opacity:'0.4'},"slow");
+	div.animate({width:'300px',opacity:'0.8'},"slow");
+	div.animate({height:'400px',opacity:'0.4'},"slow");
+	div.animate({width:'400px',opacity:'0.8'},"slow");
+	div.animate({left:'500px'},"slow");
+	});
+});
+</script>
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>My first website</title>
+	</head>
+	
+<body style="background:">
+		<header role="banner">
+			<center>
+			<h1 style="color: white; font-family: Arial;margin:40px">Yap Zhong Heng biography</h1>
+			</center>
+		</header>
+		<hr></hr>
+		<h2 style="color: white;margin-left:20px">Who Is Yap Zhong Heng?</h2>
+		<p style="background-color:#C0C0C0; border:1px solid black;
+		color:white; font-size:150%; padding:1em";>Yap Zhong Heng is a chinese adult who live in Ipoh Perak.</p>
+
+		<table style="color: white">
+			<tr>
+			<td><img src="OIP.png" alt="It is secret file!!!"width="170"height="170"/></td>
+				<td>
+						StudentId: B031810178<br>Age: 22<br>Gender: Male<br>Course: BITI<br>Year:3<br>Color: cyan<br>Hobby: sleep<br>Favourite food: Sweet and sour chicken
+				</td>
+			</tr>
+		</table>
+		<br>
+	<nav>
+		<ul>	
+			<p style="color:white; margin:4px">Click <a href="https://www.facebook.com/zhonghengyap
+			">here</a> to go to my facebook</p>
+			<p style="color:white; margin:4px">Click <a href="https://www.youtube.com/watch?v=1yYkjMWs35w
+			">here</a> to go to listen my favourite song</p><br>
+		</ul>
+	<nav>
+	<article>
+		<section>
+			<p style="color:white"> I am a univercity student who study Ai(Artificial Intelligence) couse in year 2018</p>	
+			<button id="hide">Hide</button>
+			<button id="show">Show</button>
+			<button id="change">Change</button>
+			<button id="fade">Fade</button>
+			<button id="animate">Animate</button>
+			<button id="animate2">Animate2</button>
+			<button id="animate3">Animate3</button>
+		</section>
+		<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+		<br>
+	</article>
+	<hr></hr><br>
+	<aside>
+	<center>
+	<div class="box1" style="background:white;height:100px;width:100px;"></div>
+		<h1 style="color:white">My favourite anime op</h1>
+		<video src="TVアニメ「BEASTARS」ノンクレジット OP 1080 x 1920.mp4" width="1020" height="720" controls>
+		Your browser does not support the <video> element.
+		</video>
+	</center>
+	</aside>
+	<hr></hr>
+	<aside>
+		<br>
+		<p style="color:white">My favourite background music </p>
+		<audio src="Coffin Dance (Official Music Video HD) 128 kbps.mp3" controls autoplay>
+		Your browser does not support the <audio> element.
+		</audio>
+	</aside>
+	<br>
+	<hr></hr>
+	<body>
+	<p style="color:white">After visiting this website
+	</p>
+	<p style="color:white">Please fill ur normal information
+	</p>
+		<form action="http://example.com/cgiscript.pl" method="post" style="color:white">
+		<p>
+			<label for="firstname">first name: </label>
+			<input type="text" id="firstname"><br />
+			<label for="lastname">last name : </label>
+			<input type="text" id="lastname"><br />
+			<input type="radio" name="sex" value="male"> Male<br>
+			<input type="radio" name="sex" value="female"> Female<br><br>
+			<input type="submit" value="send"> <input type="reset">
+		</p>
+		</form>
+		<br>
+		<form action="/cgi-bin/html5.cgi" method="get" style="color:white">
+		suggestion for improvement : <input type="text" name="newinput" required/>
+		</form>
+		<br>
+		<form><p style="color:white">Try to submit using Click button</p>
+		<input type="submit" value="click" onClick="myPrompt(); "/>
+		</form>
+		<br>
+		<form><h2 style="color:white">Do you want to give me a like?</h2>
+		<button onclick="myFunction()"> Click me! </button>
+		<form><br><hr>
+		<label style="color:white";>Select site to leave here</label> 
+		<form action = "">
+		<select name = " SiteSelector" size = "1" onChange="Site(this.value)">
+		<option value = "https://www.google.com.my/"> Google </option>
+		<option value = "https://www.youtube.com/"> Youtube</option>
+		<option value = "https://www.facebook.com/"> Facebook </option>
+		</select>
+	</body>
+	<hr></hr>
+		<body>
+			<aside>
+			<svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+			<circle id="redcircle" cx="50" cy="50" r="50" fill="red" />
+			</svg>
+			<svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+			<rect id="redrect" width="300" height="100" fill="red" />
+			</svg>
+			<svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+			<line x1="0" y1="0" x2="200" y2="100" style="stroke:red;stroke-width:2"/>
+			</svg>
+			</aside>
+		</body>
+	<hr></hr>
+	<br>
+	<footer margin: "right">
+	<p style="color:white">Created by Yap Zhong Heng</p>
+	</footer>
+	
+	</body>
+</html>

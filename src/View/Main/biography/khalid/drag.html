@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+<style>
+#div1 {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+  <header>
+    <div class="row">
+      <div class="logo">
+      <img src="logo.PNG"
+      </div>
+          
+  <ul class="main-nav">    
+      <li><a href= "first.page.html">HOME</a></li>
+      <li><a href= "about.html">ABOUT ME</a></li>
+      <li><a href= "my.hobbies.html">MY HOBBIES</a></li>
+      <li><a href= "drag.html">DROP FILE</a></li>
+      <li class="active"><a href= "contact.html">CONTACT US</a></li>
+  </ul>    
+      
+  </div>
+  
+  <svg width="50" height="50">
+      <circle cx="20" cy="20" r="20" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+  
+    
+    <svg width="50" height="50">
+      <circle cx="20" cy="20" r="20" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+  
+    <svg width="50" height="50">
+      <circle cx="20" cy="20" r="20" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+
+    
+<p>Drag the PDF file into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="pdf.PNG" draggable="true" ondragstart="drag(event)" width="64" height="69">
+
+
+
+<ul>
+To Back Please Click <a href="first.page.html">Home</a>
+</ul>
+
+
+</header>>
+</body>
+</html>

@@ -36,8 +36,8 @@ while($row = $categoryQuery->fetch_object())
 }
 ?>
 
-<br>
-<div class="container border" style="height:800px">
+<br><br>
+<div class="container" style="height:800px">
     <a href="requestment.php">
         <button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button>
     </a>
@@ -54,7 +54,7 @@ while($row = $categoryQuery->fetch_object())
 
 <div class="col-sm-12">
 
-<table class="table table-hover table-condensed">
+<table class="table border table-hover table-condensed">
     <form action="../../Controller/RequestController.php" method="post">
         <tbody>
             <tr>
@@ -134,9 +134,7 @@ while($row = $categoryQuery->fetch_object())
 
             <tr>
                 <td colspan="2">
-                    <center>
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </center>
+				<button type="submit" class="btn btn-primary" style="float:right">Update</button>
                 </td>
             </tr>
         </tbody>
@@ -182,3 +180,4 @@ while($row = $categoryQuery->fetch_object())
             </div>
         </div>
     </div>
+</div>

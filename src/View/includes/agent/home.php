@@ -42,10 +42,7 @@ a:hover p{
 }
 </style>
 </head>
-<div class="container1" style="height:600px">
-
-<hr/>
-
+<div class="container1" style="height:800px">
 <div class="row">
   <div class="col-sm-2">
     <div class="card-body border" style="height:180px;width:230px;margin-top:50px">
@@ -60,23 +57,23 @@ a:hover p{
   </div>
 		
   <div class="col-sm-6">
-    <div class="card-body border" style="height:390px;margin-top:50px">
+    <div class="card-body border" style="height:500px;margin-top:50px">
         <canvas id="historyChart"></canvas>
     </div>
   </div>
 
   <div class="col-sm-4">
-    <div class="card-body border" style="height:300px; margin-top:50px">
+    <div class="card-body border" style="height:400px; margin-top:50px">
         <canvas id="categoryChart"></canvas>
     </div>
   </div>
 </div>
-
+<br>
+<br>
 <hr />
 
-<br>
-<br>
 
+<br>
 <h3 style="text-align:center; font-weight:bold;">System Recent Request List</h3><br>
 
 <div class="container3" style="height:200px">
@@ -90,9 +87,9 @@ a:hover p{
           ?>
           <div class="col-md-3">
             <div class="card card-primary" style="height:180px">
-              <div class="card-header">
+              <div class="card-header" style="text-align:center">
                     <h3 class='card-title'><?php echo $row->product_name; ?></h3>
-                    <p><?php echo $row->organization_name; ?> <p>
+                    <h6><?php echo $row->organization_name; ?> </h6>
                 </div>
               <div class="card-body" style="display: block;">
                 <a href="requestlist.php" >see more</a>
@@ -115,7 +112,7 @@ a:hover p{
       <div class="card card-primary">
         <div class="card-header" style="height:180px">
           <h6 class="card-title" style="margin-top:70px">
-            <p>View all Request</p>
+            <h6>View all Request</h6>
           </h6>
         </div>
       </div>
@@ -183,7 +180,7 @@ a:hover p{
       <div class="card card-primary">
         <div class="card-header" style="height:180px">
           <h6 class="card-title" style="margin-top:70px">
-          <p>View My Request</p>
+          <h6>View My Request</h6>
           </h6>
         </div>
       </div>
@@ -229,23 +226,9 @@ while($row = $donate_num_result->fetch_object()){
 
 $allcategory = array();
 $categoryData = $categoryQuery->showAllCategory();
-
-
-$categoryValueCount = array();
 while($row = $categoryData->fetch_object()){
-  $sum = 0;
   array_push($allcategory, $row->category_name);
-
-  $rowVal = $categoryQuery->countCategoryItems($row->category_id);
-  while($row = $rowVal->fetch_object())
-  {
-    $sum += $row->sum;
-  }
-
-  array_push($categoryValueCount, $sum);
 }
-
-
 
 $arrCategory = "";
 foreach($allcategory as $category)
@@ -253,14 +236,6 @@ foreach($allcategory as $category)
   $arrCategory .= "'" . $category . "'" . ",";
 }
 $arrCategory = rtrim($arrCategory, ",");
-
-$arrCategoryCount = "";
-foreach($categoryValueCount as $rowCount)
-{
-  $arrCategoryCount .= "'" . $rowCount . "'" . ",";
-}
-
-$arrCategoryCount = rtrim($arrCategoryCount, ",");
 
 
 $requestJS = array();
@@ -279,14 +254,12 @@ $donationCMD = rtrim($donationCMD, ',');
 $requestCMD = "[" . $requestCMD . "]";
 $donationCMD = "[" . $donationCMD . "]";
 $arrCategory = "[" . $arrCategory . "]";
-$arrCategoryCount = "[" . $arrCategoryCount . "]";
 ?>
 
 <script>
 var donation_record = <?php echo $donationCMD; ?>;
 var request_record = <?php echo $requestCMD; ?>;
 var arrCategory = <?php echo $arrCategory; ?>;
-var arrCategoryCount = <?php echo $arrCategoryCount; ?>;
 
 </script>
 <script src="../../../assets/js/palette.js"></script>

@@ -1,0 +1,141 @@
+<html>
+	<head>
+	<title>Blind Test</title>
+			<link href="stylelab3.css" rel="stylesheet" type="text/css">
+	</head>
+	<header>
+	<script>
+		function goBack() 
+		{
+		  window.history.back()
+		}
+	</script>
+	<input type="button" value="Back" onclick="goBack()">
+	<div class="menubar">
+		<ul class="main-nav">
+			<li><a href="home.html"> HOME </a></li>
+			<li><a href="aboutme.html"> ABOUT </a></li>
+			<li><a href="edu.html"> EDUCATION </a></li>
+			<li class="dropdown">
+			<a href="" class="dropbtn"> ACTIVITY </a>
+			<div class="dropdown-content">
+			<a href="form.html">Form</a>
+			<a href="blindtest.html">SVG & Canvas</a>
+			<a href="activity.html">Drag & Drop</a>
+			<a href="quiz.html">Quiz</a>
+			</div></li>
+			<li><a href="contact.html"> CONTACT </a></li>
+		</ul>
+	</div>
+		
+	<div class="join">
+		
+		<h4><form>
+			<p>Please do this test</p></br>
+			<svg width="100" height="100">
+				<circle cx="50" cy="50" r="50" stroke="yellow" stroke-width="1" fill="yellow" /></br>
+				<input type="radio" id="green" name="abc" value="green"> Green<br>
+				<input type="radio" id="yellow" name="abc" value="yellow"> Yellow<br>
+				<input type="radio" id="red" name="abc" value="red"> Red<br></br>
+			</svg>
+			
+		</form></h4>	
+		<h4><form>
+			<svg id="svgelem" height="100">
+				<ellipse cx="150" cy="50" rx="100" ry="50" fill="green" /></br>
+				<input type="radio" id="green" name="def" value="green"> Green<br>
+				<input type="radio" id="yellow" name="def" value="yellow"> Yellow<br>
+				<input type="radio" id="red" name="def" value="red"> Red<br></br>
+			</svg>
+		</form></h4>
+		<h4><form>
+			<svg id="svgelem" height="100">
+				<rect id="redrect" width="300" height="100" fill="red" /></br>
+				<input type="radio" id="green" name="ghi" value="green"> Green<br>
+				<input type="radio" id="yellow" name="ghi" value="yellow"> Yellow<br>
+				<input type="radio" id="red" name="ghi" value="red"> Red<br></br>
+			</svg>
+		</form></h4>
+		<h4><form>
+		<script type="text/javascript">
+
+			function drawShape()
+		{
+				var canvas = document.getElementById('mycanvastwo');
+				if (canvas.getContext){
+				var ctx = canvas.getContext('2d');
+				ctx.translate(100,100);
+			for (i=1; i<7; i++)
+		{
+				ctx.save();
+				ctx.fillStyle = 'rgb('+(51*i)+','+(200-51*i)+',0)';
+				for (j=0; j < i*6; j++)
+		{
+				ctx.rotate(Math.PI*2/(i*6));
+				ctx.beginPath();
+				ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
+				ctx.fill();
+		}
+				ctx.restore();
+		}
+		}
+	else 
+		{
+			alert('You need Safari or Firefox 1.5+ to see this demo.');
+		}
+		}
+		
+		</script type="text/javascript">
+		<p>Please choose the correct answer according to the image given</p></br>
+				<input type="checkbox" id="purple" name="purple" value="purple">Purple<br>
+				<input type="checkbox" id="yellow" name="yellow" value="yellow"> Yellow<br>
+				<input type="checkbox" id="maroon" name="maroon" value="maroon"> Maroon<br>
+				<input type="checkbox" id="red" name="red" value="red"> Red<br>
+				<input type="checkbox" id="green" name="green" value="green"> Green<br>
+	<body id="test" onload="drawShape();">
+		<canvas id="mycanvastwo" width="200" height="200"></canvas>
+	</body>
+		</form></h4>
+		<h4><form>
+		<canvas id="myCanvas1" width="200" height="100"></canvas>
+	
+		<script>
+			var c = document.getElementById("myCanvas1");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.arc(95,50,40,0,2*Math.PI);
+			ctx.stroke();
+		</script> 
+			<form action="">
+				</br><input type="radio" name="jkl" value="c">Circle<br>
+				<input type="radio" name="jkl" value="p">Pentagon<br>
+				<input type="radio" name="jkl" value="r">Rectangle<br>
+				<input type="radio" name="jkl" value="s">Square<br>
+			</form>	
+		</form></h4>
+		
+		<h4><form>
+	
+		<canvas id="myCanvas" width="200" height="100"></canvas>
+
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.font = "30px Arial";
+			ctx.strokeText("Thank you!",0,80);
+		</script>
+
+		</form></h4>
+			
+			<button id="mysubBtn">Submit</button>
+
+		<script>
+		document.getElementById("mysubBtn").addEventListener("click", function() 
+		{
+		  alert("Thank you!");
+		});
+		</script>
+	</div>
+	</header>
+	
+</html

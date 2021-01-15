@@ -1,5 +1,4 @@
 <?php
-
 class User {
 
     public function create($org_name, $password, $email, $org_type, $address, $state, $postal_code, $class, $phone) {    

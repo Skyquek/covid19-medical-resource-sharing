@@ -16,11 +16,9 @@
 </nav>
 <div class="sidenav">
   <a href="home.php">Home</a>
-  <a href="notification.php">Notification</a>
   <a href="manageCategory.php">Manage Category</a>
   <a href="manageOrganization.php">Manage Organization</a>
   <a href="requestment.php">Request History</a>
   <a href="completed.php">Completed Task</a>
-  <a href="data.php">Analysis</a>
-  <a href="#">Log Out</a>
+  <a href="../includes/admin/logout.php">Log Out</a>
 </div>

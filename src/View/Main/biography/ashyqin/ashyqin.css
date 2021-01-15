@@ -1,0 +1,141 @@
+#wrapper {
+margin : 0 auto;
+width : 100%;
+background : #fff;
+}
+#header {
+background-image: url(headerbackground.jpg);
+background-size: 100% 100%;
+padding : 150px;
+
+}
+#header h1 {
+margin : 0;
+text-align: center;
+}
+
+.main-nav
+{
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+	
+}
+
+.main-nav li
+{
+	display: inline-block;
+}
+
+.main-nav li a
+{
+	color: black;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+}
+
+.main-nav li.active a
+{
+	border: 1px solid#DC7A2F;
+}
+
+.main-nav li a:hover
+{
+	border: 2px solid #DC7A2F;
+}
+
+.menubar
+{
+	max-width: 1200px;
+	margin: auto;
+}
+
+#content-container 
+{
+float : left;
+width : 100%;
+background : repeat-y #FFF;
+}
+
+table td, table td * {
+vertical-align: top;
+}
+
+#main {
+width : 100%;
+padding : 5px;
+margin : 5px;
+}
+
+#about {
+width : 100%;
+padding : 5px;
+margin : 5px;
+}
+
+#side {
+width : 100%;
+padding : 5px;
+margin : 5px;
+}
+
+#footer {
+height: 200px;
+background : #D8BFD8;
+text-align : center;
+padding : 20px;
+height : 1%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ 
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F9AF77;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+

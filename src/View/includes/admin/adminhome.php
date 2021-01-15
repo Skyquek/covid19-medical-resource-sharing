@@ -4,6 +4,9 @@ include('../../Model/Donate.php');
 include('../../Model/Category.php');
 include('../../Model/User.php');
 
+error_reporting(E_ERROR | E_PARSE);
+
+
 $requestQuery = new Request();
 $donateQuery = new Donate();
 $categoryQuery = new Category();
@@ -21,75 +24,74 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 ?>
 
 <div class="main">
-	<div class="container p-3 my-4 border">
+	<div class="container1" style="width:100%">
 	<h2 style="text-align:center">Overview</h2>
 
-	<div class="row">
-		<div class="card-body">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="card-body border">
-						Total User: <?php echo $total_user; ?>
+		<div class="row" style="width:100%">
+		<div class="col-sm-2"></div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="card-body border bg-warning"style="color:white">
+							Total User:<br>
+							<?php echo $total_user; ?>
+						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-4">
-					<div class="card-body border">
-						Total Request: <?php echo $total_request; ?>
+					<div class="col-sm-3">
+						<div class="card-body border bg-success" style="color:white">
+							Total Request: <br>
+							<?php echo $total_request; ?>
+						</div>
 					</div>
-				</div>
 
-				<div class="col-sm-4">
-					<div class="card-body border">
-						Total Donate: <?php echo $total_donate; ?>
+					<div class="col-sm-3">
+						<div class="card-body border bg-info" style="color:white">
+							Total Donate: <br>
+							<?php echo $total_donate; ?>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="card-body border">
+		</div>
+		<br>
+		<br>
+					<br><br>
+			<div class="row" style="width:100%">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-5">
+					<div class="card-body border"  style="height:400px">
 						<canvas id="historyChart"></canvas>
 					</div>
 				</div>
 
-				<div class="col-sm-6">
-					<div class="card-body border">
+				<div class="col-sm-5">
+					<div class="card-body border" style="height:400px">
 						<canvas id="categoryChart"></canvas>
 					</div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="card-body border">
+			<br><br><br><br>
+			<div class="row" style="width:100%">
+			<div class="col-sm-1"></div>
+				<div class="col-sm-5">
+					<div class="card-body border"   style="height:400px">
 						<canvas id="userStateChart"></canvas>
 					</div>
 				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="card-body border">
+	
+				<div class="col-sm-5">
+					<div class="card-body border"   style="height:400px">
 						<canvas id="requestStateChart"></canvas>
 					</div>
 				</div>
 			</div>
-
+			</div>
+			<br><br>
 		</div>
 
-		
-	</div>
-
-	
-	
-	
-	
-</div>
 
 <?php
-
 $request = new Request();
 $request_num_result = $request->getRequestNumber();
 $request_state_result = $request->getRequestState();

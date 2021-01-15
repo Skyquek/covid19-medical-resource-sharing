@@ -139,7 +139,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </div>
 
 <div class='on-float position_btn'>
-    <button class='btn btn-primary show-btn'type='button' id='btn'>Ask Me Questions</button>
+    <button class='btn btn-warning show-btn'type='button' id='btn'>Ask Me Questions</button>
 </div>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>

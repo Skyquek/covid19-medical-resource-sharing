@@ -76,7 +76,7 @@ window.onclick = function(event) {
     <a href="myrequest.php">My request</a>
 	<a href ="donatelist.php"> Donation </a>
 	<a href ="request.php"> Request </a>
-	<a href ="#"> Logout </a>
+	<a href ="../includes/agent/logout.php"> Logout </a>
 	</div>
 	</div>
 </nav>
