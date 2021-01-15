@@ -122,18 +122,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .show-btn {
-    width: 500px;
+    width: 350px;
     height: 60px;
 }
 </style>
 
-<link rel="stylesheet" href="./css/chatbot.css">
-
-<div id='chatbot' class = 'on-float position_msg_box'>
-  <iframe
-      allow="microphone;"
-      width="500"
-      height="630"
+<div id='chatbot' class='on-float position_msg_box'>
+  <iframe allow="microphone;"
+      width="350"
+      height="430"
       src="https://console.dialogflow.com/api-client/demo/embedded/0cfffa21-37a2-483a-af99-b28e5bceef30">
   </iframe>
 </div>
