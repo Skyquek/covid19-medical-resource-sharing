@@ -1,3 +1,5 @@
+<?php include("session_checker.php");?>
+
 <?php
 include('../../Model/Donate.php');
 
