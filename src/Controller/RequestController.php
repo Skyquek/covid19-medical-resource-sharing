@@ -10,13 +10,13 @@ if($action == "commonCreate")
 
     $items = array(
         'n95'               => array("category_id"=>"1", "product_name" => 'N95 Mask', "total" => $quantity[0]),
-        'surgery_mask'      => array("category_id"=>"1", "product_name" => 'Oxygen Mask', "total" => $quantity[1]),
-        'oxygen_mask'       => array("category_id"=>"1", "product_name" => 'Aorosol Mask', "total" => $quantity[2]),
-        'aorosol_mask'      => array("category_id"=>"1", "product_name" => 'Hand Sanitizer', "total" => $quantity[3]),
-        'hand_sanitizer'    => array("category_id"=>"1", "product_name" => 'First Aid Kit', "total" => $quantity[4]),
-        'first_aid_kit'     => array("category_id"=>"1", "product_name" => 'Plaster', "total" => $quantity[5]),
-        'plaster'           => array("category_id"=>"1", "product_name" => 'Cotton Wool', "total" => $quantity[6]),
-        'cotton_wool'       => array("category_id"=>"1", "product_name" => 'N95 Mask', "total" => $quantity[0]),
+        'surgery_mask'      => array("category_id"=>"1", "product_name" => 'Surgery Mask', "total" => $quantity[1]),
+        'oxygen_mask'       => array("category_id"=>"1", "product_name" => 'Oxygen Mask', "total" => $quantity[2]),
+        'aorosol_mask'      => array("category_id"=>"1", "product_name" => 'Aorosol Mask', "total" => $quantity[3]),
+        'hand_sanitizer'    => array("category_id"=>"1", "product_name" => 'Hand Sanitizer', "total" => $quantity[4]),
+        'first_aid_kit'     => array("category_id"=>"1", "product_name" => 'First Aid Kit', "total" => $quantity[5]),
+        'plaster'           => array("category_id"=>"1", "product_name" => 'Plaster', "total" => $quantity[6]),
+        'cotton_wool'       => array("category_id"=>"1", "product_name" => 'Cotton Wool', "total" => $quantity[7]),
     );
 
     $request = new Request();

@@ -1,3 +1,7 @@
+<?php 
+include("session_checker.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

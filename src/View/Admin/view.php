@@ -1,3 +1,7 @@
+<?php 
+include("session_checker.php");
+?>
+
 <br>
 <div class="container border" style="height:800px">
 <a href="requestment.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button></a><br><br>
