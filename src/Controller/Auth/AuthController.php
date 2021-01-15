@@ -47,8 +47,10 @@ if($_POST["action"] == "register")
 
             if($auth == True)
             {
+                $checkUser = AuthController::findUser("login", $email);
+                
                 session_start();
-                $_SESSION['user'] = $arrayUser;
+                $_SESSION['user'] = $checkUser;
                 
                 $response["status"] = "success";
                 $response["message"] = "user created!";

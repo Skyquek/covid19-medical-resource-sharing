@@ -17,7 +17,8 @@
 <div class="main">
 <div class="container p-3 my-3">
 <h1 style="text-align:center">Request List</h1>
-<?php include("../includes/agent/requestlist.php");?><?php include("../includes/agent/chatbot.php");?>
+<?php include("../includes/agent/requestlist.php");?>
+<?php include("../includes/agent/chatbot.php");?>
 
 </div>
  </body></html>
