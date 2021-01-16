@@ -1,23 +1,3 @@
-<style>
-/* Pagination links */
-.pagination a {
-  color: black;
-  float: right;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
-}
-
-/* Style the active/current link */
-.pagination a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #ddd;}
-</style>
-
 <?php 
 session_start();
 include('../../Model/Request.php');
@@ -39,11 +19,11 @@ while($row = $data->fetch_object()){
 			$donation = (string)$row->sum;
 		}
 ?>
-	<div class="row" style="width:1600px">
+	<div class="row" style="width:100%">
 	<div class="col-sm-3"></div>
-	<div class="col-sm-8">
-	<!-- <div class="card-body border" style="height:300px"> -->
-		<p style="float:left">Organization : <?php echo $content->product_name;?></p><br><br>
+	<div class="col-sm-6 border p-3 my-3 " style="height:390px">
+	<!-- <div class="card-body border" style="height:200px"> -->
+		<p style="float:left">Organization : <?php echo $content->organization_name;?></p><br><br>
 		<div class="row">
 			<div class="col-sm-8"><p style="float:left">Item request  : <?php echo $content->product_name;?></p></div>
 			<div class="col-sm-8"><p style="float:left">Item Category : <?php echo $content->category_name;?></p></div>		
@@ -57,7 +37,7 @@ while($row = $data->fetch_object()){
 			$percentage = $percentage."%";
 		?>
 
-		<div class="progress" style="margin-top:90px">
+		<div class="progress" style="margin-top:70px">
 			<div class="progress-bar" style="width:<?php echo $percentage; ?>">
 				<?php echo $percentage; ?>
 			</div>
@@ -66,18 +46,15 @@ while($row = $data->fetch_object()){
 		<?php 
 			$request_id = $content->request_id;
 		?>
-
-		<br>
+		
 		<?php echo'
-			<a href="../Agent/view.php?id='.$request_id.'&progress='.$percentage.'">
+			<br><a href="../Agent/view.php?id='.$request_id.'&progress='.$percentage.'">
 				<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
 			</a>'
 		?>
-		<br>
 	</div>   
 	</div>
 	</div>
 	<br>
 
 	<?php	}	?>
-

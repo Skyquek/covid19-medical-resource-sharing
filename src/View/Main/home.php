@@ -19,12 +19,18 @@
 		<p>It is an infectious disease caused by a newly discovered coronavirus</p>
 	</div>
  </div>
-<div style="height:600px;background-color:white;font-size:20px">
+<div style="height:500px;background-color:white;font-size:20px">
 <div class="text-center" style="margin-top:20px">
 <br>
-<h1>Medical Resourse Sharing</h1>
-<p>What is Medical Resourse Sharing?</p>
-<p></p>
+<h1>One-Stop Resources Sharing</h1>
+<h5>What is One-Stop Resources Sharing?</h5><br>
+<p>It is a centralized platform to donate and receive equipment to help out those in needs during covid-19 pandemic.</p>
+<p>Since late 2019, the Coronavirus began to spread around the world, until it entered Malaysia and began to spread</p> 
+<p>throughout Malaysia.Significantly, medical equipment and daily resources is becoming one of the important demands</p>
+<p>in the market as the economy is in recession and unemployability rate increase. Some of the Hospitals, NGO(old folks' home</p>
+<p>, orphanage, animals' adoption center, etc.), Industry, EducationalInstitutions are experiencing shortage of resources</p> 
+<p>and supplies. Therefore, we propose a one-stop resources sharing platform that connect all the parties and organization</p>
+<p>in a single platform to allow resources sharing among all the parties.</p>
 </div>
 </div><br>
 <div class="parallax" style="background-image:url(../../../assets/img/PROD-Hospital.jpg)"></div>
@@ -33,9 +39,9 @@
 <h1>Let share the resources</h1>
 </div>
 </div><br>
-<div class="jumbotron2" style="margin-bottom:-10px;height:200px text-align: right">
-  <h1 style="font-size:130px;color:white;font-weight:bold;margin-left:60px">Get Started</h1>
-  <button class="btn btn-dark btn-block btn-lg" style="color:white"><a href="register.php">Register</a></button>
+<div class="jumbotron2" style="margin-bottom:-10px;height:200px text-align: right"><br>
+  <h1 style="font-size:135px;color:white;font-weight:bold;margin-left:60px">Get Started</h1>
+  <button class="btn btn-dark" style="color:white;margin-left:80px"><a href="register.php" style="color:red;family-weight:bold">Register</a></button>
 </div>
 <?php include("../includes/main/footer.php");?>
 </body>

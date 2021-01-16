@@ -47,8 +47,10 @@ if($_POST["action"] == "register")
 
             if($auth == True)
             {
+                $checkUser = AuthController::findUser("login", $email);
+                
                 session_start();
-                $_SESSION['user'] = $arrayUser;
+                $_SESSION['user'] = $checkUser;
                 
                 $response["status"] = "success";
                 $response["message"] = "user created!";
@@ -84,9 +86,19 @@ else if($_POST["action"] == "login")
         {
             session_start();
             $_SESSION['user'] = $checkUser;
-    
-            $response["status"] = "success";
-            $response["message"] = "Redirect to agent dashboard!";
+			
+			if($checkUser["class"] == 'admin')
+			{
+				$response["status"] = "success";
+				$response["user"]	= "admin";
+				$response["message"] = "Redirect to admin dashboard!";
+			}
+			else
+			{
+				$response["status"] = "success";
+				$response["user"]	= "normal";
+				$response["message"] = "Redirect to agent dashboard!";
+			}
     
             echo json_encode($response);
             die();

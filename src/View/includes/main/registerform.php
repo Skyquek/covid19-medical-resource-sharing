@@ -193,20 +193,21 @@ input[type=submit] {
 				<div class="form-group">
 					<select class="form-control" name="state" required>
 						<option value="">State</option>
-						<option value="PK">Perak</option>
-						<option value="PH">Pahang</option>
-						<option value="PL">Perlis</option>
-						<option value="SL">Selangor</option>
-						<option value="KL">Kuala Lumpur</option>
-						<option value="SR">Sarawak</option>
-						<option value="SB">Sabah</option>
-						<option value="JH">Johor</option>
-						<option value="NS">Negeri Sembilan</option>
-						<option value="KD">Kedah</option>
-						<option value="MK">Melaka</option>
-						<option value="TR">Terengganu</option>
-						<option value="KT">Kelantan</option>
-						<option value="Lb">Labuan</option>
+						<option value="Perak">Perak</option>
+						<option value="Pahang">Pahang</option>
+						<option value="Perlis">Perlis</option>
+						<option value="Penang">Pulau Penang</option>
+						<option value="Selangor">Selangor</option>
+						<option value="Kuala Lumpur">Kuala Lumpur</option>
+						<option value="Sarawak">Sarawak</option>
+						<option value="Sabah">Sabah</option>
+						<option value="Johor">Johor</option>
+						<option value="Negeri">Negeri Sembilan</option>
+						<option value="Kedah">Kedah</option>
+						<option value="Melaka">Melaka</option>
+						<option value="Terengganu">Terengganu</option>
+						<option value="Kelantan">Kelantan</option>
+						<option value="Labuan">Labuan</option>
 					</select>
 				</div>
 				

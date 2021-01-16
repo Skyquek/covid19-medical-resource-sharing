@@ -1,3 +1,6 @@
+
+<?php include("session_checker.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,8 @@
 <div class="main">
 <div class="container p-3 my-3">
 <h1 style="text-align:center">My Request</h1>
-<?php include("../includes/agent/view.php");?><?php include("../includes/agent/chatbot.php");?>
+<?php include("../includes/agent/view.php");?>
+<?php include("../includes/agent/chatbot.php");?>
 
 </div>
  </body></html>

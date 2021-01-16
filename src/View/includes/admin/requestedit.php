@@ -36,8 +36,8 @@ while($row = $categoryQuery->fetch_object())
 }
 ?>
 
-<br>
-<div class="container border" style="height:800px">
+<br><br>
+<div class="container" style="height:800px;margi-left:200px">
     <a href="requestment.php">
         <button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button>
     </a>
@@ -54,9 +54,15 @@ while($row = $categoryQuery->fetch_object())
 
 <div class="col-sm-12">
 
-<table class="table table-hover table-condensed">
+<table class="table border table-hover table-condensed">
     <form action="../../Controller/RequestController.php" method="post">
         <tbody>
+            <!-- <tr>
+                <td>
+                    <?php var_dump($contents[0]); ?>
+                </td>
+            </tr> -->
+
             <tr>
                 <td><b>Request ID</b></td>
                 <td><?php echo $contents[0]->request_id; ?></td>
@@ -74,11 +80,11 @@ while($row = $categoryQuery->fetch_object())
                 <td>
                     <select name="status">
                     <?php 
-                        if($contents[0]->status == 'pending' || $contents[0]->status == '') {
+                        if($contents[0]->req_status == 'pending' || $contents[0]->req_status == '') {
                             echo "<option value='pending' selected>Pending</option>";
                             echo "<option value='complete'>Complete</option>";
                         } 
-                        else if($contents[0]->status == 'complete') {
+                        else if($contents[0]->req_status == 'complete') {
                             echo "<option value='pending'>Pending</option>";
                             echo "<option value='complete' selected>Complete</option>";
                         }
@@ -134,9 +140,7 @@ while($row = $categoryQuery->fetch_object())
 
             <tr>
                 <td colspan="2">
-                    <center>
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </center>
+				<button type="submit" class="btn btn-primary" style="float:right">Update</button>
                 </td>
             </tr>
         </tbody>
@@ -182,3 +186,4 @@ while($row = $categoryQuery->fetch_object())
             </div>
         </div>
     </div>
+</div>

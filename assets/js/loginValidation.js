@@ -17,7 +17,7 @@ $(function() {
         {
             alert("Please insert password!");
         }
-
+		
         // Validate Email
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))
         {
@@ -33,8 +33,15 @@ $(function() {
                 success: function(data) {
                     if(data.status == 'success')
                     {
-                        alert(data.message);
-                        window.location.replace('../agent');
+                        alert(data.user);
+						if(data.user == 'admin')
+						{
+							window.location.replace('../admin');
+						}
+						else
+						{
+							window.location.replace('../agent');
+						}
                     }
                     else
                     {

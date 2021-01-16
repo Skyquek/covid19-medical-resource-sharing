@@ -39,11 +39,8 @@ while($row = $userQuery->fetch_object())
     background-color: #ddd;
 }
 </style>
-
 <br>
-
-
-<div class="container" style="width:1300px;height:780px">
+<div class="container" style="width:70%;margin-left:50px">
     
         <table class="table table-hover table-condensed">
             <thead>
@@ -179,6 +176,6 @@ while($row = $userQuery->fetch_object())
 
 
 </div>
-</div>
+<br><br>
 
 <script src="../../../assets/js/organization.js"></script>

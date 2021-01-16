@@ -1,3 +1,5 @@
+<?php include("session_checker.php");?>
+
 <?php
 include('../../Model/Donate.php');
 
@@ -78,7 +80,7 @@ while($row = $historyquery->fetch_object()){
  <?php include("../includes/agent/navigationagent.php");?><?php include("../includes/agent/chatbot.php");?>
 
 <div class="main">
-<div class="container p-3 my-3">
+<div class="container p-3 my-3" style="width:90%">
 <h1>Donate List</h1>
 
 <table id="donatelist"></b>

@@ -20,7 +20,7 @@ $password = $_SESSION['user']['password'];
 	width: 33.33%;
 	}
 	.form-group{
-	width: 70%;
+		width: 80%;
 		padding: 3px;
 		margin: 5px 0 22px 0;
 		display: inline-block;
@@ -37,7 +37,7 @@ $password = $_SESSION['user']['password'];
 	body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 	input[type=text], input[type=tel], input[type=address],input[type=email]{
-		width: 70%;
+		width: 80%;
 		padding: 15px;
 		margin: 5px 0 22px 0;
 		display: inline-block;
@@ -93,7 +93,7 @@ $password = $_SESSION['user']['password'];
 .container {
   padding: 16px;
   text-align: left;
-  max-width: max-content;
+  max-width: 1200px;
 }
 
 /* Clear floats */
@@ -165,9 +165,9 @@ input[type=submit] {
 }
 </style>
 
-<form id="updateForm" method="post" style="border:1px solid #ccc">
-  <br><div class="container">
-		<div class="row">
+<form id="updateForm" method="post" style="border:1px solid #ccc;width:1200px">
+  <br><div class="container" >
+		<div class="row" style="margin-left:20px">
 			<div class="col-lg-6">
 				<label for="organization"><b>Organization Type</b></label><br>
 				<div class="form-group">
@@ -236,7 +236,7 @@ input[type=submit] {
                 <br>
             </div>
             
-			<div id="chgPsw">
+			<div id="chgPsw" style="width:1000px;margin-left:-580px;margin-top:100px">
                 <div class="col-lg-12">
                     <label for="psw"><b>Old Password</b></label><br>
                     <input id="psw-old" type="password" placeholder="Enter Password" name="old_psw">
@@ -271,7 +271,7 @@ input[type=submit] {
 			</div>
 
 		</div>
-	    
+	    <br>
 	<div class="clearfix">
       <button type="submit" id="registerBtn" class="signupbtn">Update</button>
     </div>

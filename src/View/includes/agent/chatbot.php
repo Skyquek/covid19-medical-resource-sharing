@@ -25,7 +25,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   position: fixed;
   bottom: 0px;
   right: 0px;
-  width: 290px;
+  width: 150px;
 }
 
 .card{
@@ -122,24 +122,21 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .show-btn {
-    width: 500px;
+    width: 350px;
     height: 60px;
 }
 </style>
 
-<link rel="stylesheet" href="./css/chatbot.css">
-
-<div id='chatbot' class = 'on-float position_msg_box'>
-  <iframe
-      allow="microphone;"
-      width="500"
-      height="630"
+<div id='chatbot' class='on-float position_msg_box'>
+  <iframe allow="microphone;"
+      width="350"
+      height="430"
       src="https://console.dialogflow.com/api-client/demo/embedded/0cfffa21-37a2-483a-af99-b28e5bceef30">
   </iframe>
 </div>
 
 <div class='on-float position_btn'>
-    <button class='btn btn-primary show-btn'type='button' id='btn'>Ask Me Questions</button>
+    <button class='btn btn-warning show-btn'type='button' id='btn'>Ask Me Questions</button>
 </div>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>

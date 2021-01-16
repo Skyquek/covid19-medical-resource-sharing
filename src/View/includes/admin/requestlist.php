@@ -53,11 +53,11 @@ foreach($contents as $content){
 	$request_id = $content->request_id;
 ?>
 
-<div class="row" style="width:1700px">
-	<div class="col-sm-3">
+<div class="row" style="width:100%">
+	<div class="col-sm-2">
 	</div>
 	<div class="col-sm-8">
-		<div class="card-body border" style="height:300px">
+		<div class="card-body border" style="height:350px">
 			<p>Organization: <?php echo $content->organization_name; ?></p>
 			<div class="row">
 				<div class="col-sm-8"><p>Item request: <?php echo $content->product_name; ?> </p></div>	
@@ -69,17 +69,19 @@ foreach($contents as $content){
 					<p>Respond: <?php echo $sum; ?></p>
 				</div>
 			</div>
-			<div class="progress" style="margin-top:90px">
+			<div class="progress" style="margin-top:50px">
 				<div class="progress-bar" style="<?php echo 'width:'.$progressbar;?>"><?php echo $progressbar; ?></div>
-			</div><br>
-
+			</div>
+			<br>
 			<a href=<?php echo "../Admin/requestedit.php?id=$request_id" ?>>
 				<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">Modify</button>
 			</a>
 			
 			<br>
-		</div>   
+		</div> 
+			<br>
 	</div>
+	<br>
 </div>
 <?php } ?>
 <!---->

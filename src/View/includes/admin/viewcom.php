@@ -10,11 +10,13 @@ $donate_query = $donate->DonateToRequest($request_id);
 ?>
 
 <br>
+<div class="row" style="width:100%">
+<div class="col-sm-1"></div>
 <div class="container border" style="height:800px">
 <a href="completed.php"><button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button></a><br><br>
 <hr>
-<div class="col-sm-12">
 
+<div class="col-sm-12">
 <?php
 	while($row = $donate_query->fetch_object()){
 ?>
@@ -31,5 +33,6 @@ $donate_query = $donate->DonateToRequest($request_id);
 	}
 ?>
 
+</div>
 </div>
 <br>

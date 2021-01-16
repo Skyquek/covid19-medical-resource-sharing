@@ -31,8 +31,6 @@ $("#commonRequestForm").submit(function(e) {
 		sum += quantity[i].value;
 	}
 
-	//alert(quantity_array);
-
 	if(sum <=0){
 		alert('Please select at least one items or make your own request item.');
 	}

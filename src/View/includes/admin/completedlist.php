@@ -57,11 +57,11 @@ while($row = $completedRequestQuery->fetch_object())
 
 
 <?php foreach($contents as $content) { ?>
-<div class="row" style="width:1700px">
-	<div class="col-sm-3">
+<div class="row" style="width:100%">
+	<div class="col-sm-2">
 	</div>
 	<div class="col-sm-8">
-		<div class="card-body border" style="height:300px">
+		<div class="card-body border" style="height:250px">
 			<div class="ribbon" style="margin-right:20px;margin-top:5px"><span>Completed</span></div>
 				<p>Organization: <?php echo $content->organization_name ?></p>
 				<div class="row">
@@ -69,7 +69,7 @@ while($row = $completedRequestQuery->fetch_object())
 					<div class="col-sm-8"><p>Quantity: <?php echo $content->total ?></p></div>	
 
 					<div class="col-sm-3"><p style="text-align:right">Date: <?php echo $content->date_time ?></p></div>
-				</div>
+				</div><br>
 				<a href="<?php echo "../Admin/viewcom.php?id=" . $content->request_id ?>">
 					<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
 				</a>

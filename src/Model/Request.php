@@ -55,9 +55,10 @@ class Request {
 
     }
 
+     
     public function getByRequestID($id) {
         include("connection.php");
-        $sql = "SELECT * FROM request 
+        $sql = "SELECT * , request.status AS req_status FROM request 
                         INNER JOIN user ON user.user_id = request.user_id
                         INNER JOIN category ON category.category_id = request.category_id 
                         WHERE request.request_id = $id";

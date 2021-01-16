@@ -63,9 +63,9 @@ body {
   }
 }
 </style>
-
+<br>
 <h2 style="text-align:center;color:white">Our Team</h2><br>
-<div class="row">
+<div class="row" style="width:100%">
 <div class="col-sm-1"></div>
   <div class="column">
     <div class="card">
@@ -97,7 +97,7 @@ body {
         <center>
           <h2>Yap Zhong Heng</h2>
           <p class="title">Front-End Designer</p>
-          <p>mike@example.com</p>
+          <p>B031810178@student.utem.edu.my</p>
         </center>
         
         <div class="card-content">
@@ -105,7 +105,7 @@ body {
         </div>
 
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a  href="biography/yap/mysite.html" class="button">Contact Profile</a></p>
         </center>
 
       </div>
@@ -114,13 +114,13 @@ body {
   
   <div class="column">
     <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width: 300px; height: 300px;">
+      <img src="../../../assets/img/ashyqin.jpg" alt="Ashyqin" style="width: 300px; height: 300px;">
       <div class="container">
         <br>
         <center>
-          <h2>Ashiqin</h2>
+          <h2>Ashyqin</h2>
           <p class="title">Data Analyst</p>
-          <p>mike@example.com</p>
+          <p>B031810457@student.utem.edu.my</p>
         </center>
 
         <div class="card-content">
@@ -129,7 +129,7 @@ body {
         </div>
 
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a href="biography/ashyqin/home.html" class="button">Contact Profile</a></p>
         </center>
       </div>
     </div>
@@ -137,13 +137,13 @@ body {
   
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width: 300px; height: 300px;">
+      <img src="../../../assets/img/khalid.JFIF" alt="John" style="width: 300px; height: 300px;">
       <div class="container">
         <br>
         <center>
           <h2>Taufik</h2>
           <p class="title">QA Engineer</p>
-          <p>john@example.com</p>
+          <p>B031810452@student.utem.edu.my</p>
         </center>
 
         <div class="card-content">
@@ -151,7 +151,7 @@ body {
         </div>
         
         <center>
-          <p><a class="button">Contact Profile</a></p>
+          <p><a href="biography/khalid/first.page.html" class="button">Contact Profile</a></p>
         </center>
       </div>
     </div>
