@@ -57,6 +57,12 @@ while($row = $categoryQuery->fetch_object())
 <table class="table border table-hover table-condensed">
     <form action="../../Controller/RequestController.php" method="post">
         <tbody>
+            <!-- <tr>
+                <td>
+                    <?php var_dump($contents[0]); ?>
+                </td>
+            </tr> -->
+
             <tr>
                 <td><b>Request ID</b></td>
                 <td><?php echo $contents[0]->request_id; ?></td>
@@ -74,11 +80,11 @@ while($row = $categoryQuery->fetch_object())
                 <td>
                     <select name="status">
                     <?php 
-                        if($contents[0]->status == 'pending' || $contents[0]->status == '') {
+                        if($contents[0]->req_status == 'pending' || $contents[0]->req_status == '') {
                             echo "<option value='pending' selected>Pending</option>";
                             echo "<option value='complete'>Complete</option>";
                         } 
-                        else if($contents[0]->status == 'complete') {
+                        else if($contents[0]->req_status == 'complete') {
                             echo "<option value='pending'>Pending</option>";
                             echo "<option value='complete' selected>Complete</option>";
                         }
