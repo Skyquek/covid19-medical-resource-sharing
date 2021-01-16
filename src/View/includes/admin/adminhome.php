@@ -60,14 +60,14 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 			<div class="row" style="width:100%">
 				<div class="col-sm-1"></div>
 				<div class="col-sm-5">
-					<div class="card-body border"  style="height:300px">
+					<div class="card-body border"  style="height:auto">
 					<br>
 						<canvas id="historyChart"></canvas>
 					</div>
 				</div>
 
 				<div class="col-sm-5">
-					<div class="card-body border" style="height:300px"><br>
+					<div class="card-body border" style="height:auto"><br>
 						<canvas id="categoryChart"></canvas>
 					</div>
 				</div>
@@ -76,13 +76,13 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 			<div class="row" style="width:100%">
 			<div class="col-sm-1"></div>
 				<div class="col-sm-5">
-					<div class="card-body border"   style="height:300px"><br>
+					<div class="card-body border"   style="height:auto"><br>
 						<canvas id="userStateChart"></canvas>
 					</div>
 				</div>
 	
 				<div class="col-sm-5">
-					<div class="card-body border"   style="height:300px"><br>
+					<div class="card-body border"  style="height:auto"><br>
 						<canvas id="requestStateChart"></canvas>
 					</div>
 				</div>

@@ -42,33 +42,33 @@ a:hover p{
 } 
 </style> 
 </head> 
-<div class="container1" style="height:600px"> 
+<div class="container1" style="height:auto"> 
  
 <hr/> 
  
 <div class="row" style="width:100%"> 
 <div class="col-sm-1"></div> 
   <div class="col-sm-2"> 
-    <div class="card-body border" style="height:180px;width:200px;margin-top:50px"> 
+    <div class="card-body border" style="height:auto;width:200px;margin-top:50px"> 
         <h4>Total Donation</h4> 
         <h3><?php echo $total_donate; ?></h3> 
     </div> 
  
-    <div class="card-body border" style="height:180px;width:200px;margin-top:30px"> 
+    <div class="card-body border" style="height:auto;width:200px;margin-top:30px"> 
       <h4>Total Request</h4> 
         <h3><?php echo $total_request; ?></h3> 
     </div> 
   </div> 
 		 
   <div class="col-sm-5"> 
-    <div class="card-body border" style="height:390px;margin-top:50px"> 
+    <div class="card-body border" style="height:auto;margin-top:50px"> 
 	<br>
         <canvas id="historyChart"></canvas> 
     </div> 
   </div> 
  
   <div class="col-sm-4"> 
-    <div class="card-body border" style="height:400px; margin-top:50px"> 
+    <div class="card-body border" style="height:auto; margin-top:50px"> 
 		<br>
         <canvas id="categoryChart"></canvas> 
     </div> 
