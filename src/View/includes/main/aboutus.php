@@ -63,7 +63,7 @@ body {
   }
 }
 </style>
-
+<br>
 <h2 style="text-align:center;color:white">Our Team</h2><br>
 <div class="row" style="width:100%">
 <div class="col-sm-1"></div>

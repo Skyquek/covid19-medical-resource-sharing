@@ -42,6 +42,7 @@ a:hover p{
 } 
 </style> 
 </head> 
+<<<<<<< HEAD
 <div class="container1" style="height:600px"> 
  
 <hr/> 
@@ -49,38 +50,72 @@ a:hover p{
 <div class="row"> 
   <div class="col-sm-2"> 
     <div class="card-body border" style="height:180px;width:230px;margin-top:50px"> 
+=======
+<div class="container1" style="height:auto"> 
+ 
+<hr/> 
+ 
+<div class="row" style="width:100%"> 
+<div class="col-sm-1"></div> 
+  <div class="col-sm-2"> 
+    <div class="card-body border" style="height:auto;width:200px;margin-top:50px"> 
+>>>>>>> php-code-admin
         <h4>Total Donation</h4> 
         <h3><?php echo $total_donate; ?></h3> 
     </div> 
  
+<<<<<<< HEAD
     <div class="card-body border" style="height:180px;width:230px;margin-top:30px"> 
+=======
+    <div class="card-body border" style="height:auto;width:200px;margin-top:30px"> 
+>>>>>>> php-code-admin
       <h4>Total Request</h4> 
         <h3><?php echo $total_request; ?></h3> 
     </div> 
   </div> 
 		 
+<<<<<<< HEAD
   <div class="col-sm-6"> 
     <div class="card-body border" style="height:390px;margin-top:50px"> 
+=======
+  <div class="col-sm-5"> 
+    <div class="card-body border" style="height:auto;margin-top:50px"> 
+	<br>
+>>>>>>> php-code-admin
         <canvas id="historyChart"></canvas> 
     </div> 
   </div> 
  
   <div class="col-sm-4"> 
+<<<<<<< HEAD
     <div class="card-body border" style="height:300px; margin-top:50px"> 
+=======
+    <div class="card-body border" style="height:auto; margin-top:50px"> 
+		<br>
+>>>>>>> php-code-admin
         <canvas id="categoryChart"></canvas> 
     </div> 
   </div> 
 </div> 
+<<<<<<< HEAD
  
 <hr /> 
  
+=======
+>>>>>>> php-code-admin
 <br> 
 <br> 
  
 <h3 style="text-align:center; font-weight:bold;">System Recent Request List</h3><br> 
+<<<<<<< HEAD
  
 <div class="container3" style="height:200px"> 
 <div class="row"> 
+=======
+<hr>
+<div class="container3" style="height:200px"> 
+<div class="row" style="width:100%"> 
+>>>>>>> php-code-admin
 		 
         <?php  
         $allRequest = $requestQuery->read("", $order="DESC"); 
@@ -128,7 +163,11 @@ a:hover p{
  
 <h3 style="text-align:center; font-weight: bold;">My Request Progress</h3><br> 
 <div class="container3" style="height:200px"> 
+<<<<<<< HEAD
 <div class="row"> 
+=======
+<div class="row" style="width:100%"> 
+>>>>>>> php-code-admin
 		<div class="col-md-9"> 
         <div class="card card-primary" style="height:180px"> 
           <div class="card-header"> 
@@ -170,7 +209,10 @@ a:hover p{
                   <span class="sr-only">40% </span> 
                 </div> 
               </div> 
+<<<<<<< HEAD
               <a href="view.php" style="margin-top:20px;float:right">view</a> 
+=======
+>>>>>>> php-code-admin
             </div> 
           </div> 
  

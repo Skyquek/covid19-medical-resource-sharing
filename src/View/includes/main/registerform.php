@@ -196,6 +196,10 @@ input[type=submit] {
 						<option value="Perak">Perak</option>
 						<option value="Pahang">Pahang</option>
 						<option value="Perlis">Perlis</option>
+<<<<<<< HEAD
+=======
+						<option value="Penang">Pulau Penang</option>
+>>>>>>> php-code-admin
 						<option value="Selangor">Selangor</option>
 						<option value="Kuala Lumpur">Kuala Lumpur</option>
 						<option value="Sarawak">Sarawak</option>

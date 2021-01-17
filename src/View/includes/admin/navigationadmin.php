@@ -14,6 +14,7 @@
     </form>
   </div>
 </nav>
+
 <div class="sidenav">
   <a href="home.php">Home</a>
   <a href="manageCategory.php">Manage Category</a>

@@ -37,7 +37,11 @@ while($row = $categoryQuery->fetch_object())
 ?>
 
 <br><br>
+<<<<<<< HEAD
 <div class="container" style="height:800px">
+=======
+<div class="container" style="height:800px;margi-left:200px">
+>>>>>>> php-code-admin
     <a href="requestment.php">
         <button type="button" class="btn btn-outline-secondary" style="width:100px;float:left;margin-top:10px">Back</button>
     </a>

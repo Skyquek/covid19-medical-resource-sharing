@@ -32,21 +32,33 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 			<div class="card-body">
 				<div class="row">
 					<div class="col-sm-3">
+<<<<<<< HEAD
 						<div class="card-body border bg-warning"style="color:white">
+=======
+						<div class="card-body border bg-warning"style="color:white;font-size:20px">
+>>>>>>> php-code-admin
 							Total User:<br>
 							<?php echo $total_user; ?>
 						</div>
 					</div>
 
 					<div class="col-sm-3">
+<<<<<<< HEAD
 						<div class="card-body border bg-success" style="color:white">
+=======
+						<div class="card-body border bg-success" style="color:white;font-size:20px">
+>>>>>>> php-code-admin
 							Total Request: <br>
 							<?php echo $total_request; ?>
 						</div>
 					</div>
 
 					<div class="col-sm-3">
+<<<<<<< HEAD
 						<div class="card-body border bg-info" style="color:white">
+=======
+						<div class="card-body border bg-info" style="color:white;font-size:20px">
+>>>>>>> php-code-admin
 							Total Donate: <br>
 							<?php echo $total_donate; ?>
 						</div>
@@ -60,13 +72,22 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 			<div class="row" style="width:100%">
 				<div class="col-sm-1"></div>
 				<div class="col-sm-5">
+<<<<<<< HEAD
 					<div class="card-body border"  style="height:400px">
+=======
+					<div class="card-body border"  style="height:auto">
+					<br>
+>>>>>>> php-code-admin
 						<canvas id="historyChart"></canvas>
 					</div>
 				</div>
 
 				<div class="col-sm-5">
+<<<<<<< HEAD
 					<div class="card-body border" style="height:400px">
+=======
+					<div class="card-body border" style="height:auto"><br>
+>>>>>>> php-code-admin
 						<canvas id="categoryChart"></canvas>
 					</div>
 				</div>
@@ -75,13 +96,21 @@ $total_user = mysqli_fetch_assoc($countUserData)['total_user'];
 			<div class="row" style="width:100%">
 			<div class="col-sm-1"></div>
 				<div class="col-sm-5">
+<<<<<<< HEAD
 					<div class="card-body border"   style="height:400px">
+=======
+					<div class="card-body border"   style="height:auto"><br>
+>>>>>>> php-code-admin
 						<canvas id="userStateChart"></canvas>
 					</div>
 				</div>
 	
 				<div class="col-sm-5">
+<<<<<<< HEAD
 					<div class="card-body border"   style="height:400px">
+=======
+					<div class="card-body border"  style="height:auto"><br>
+>>>>>>> php-code-admin
 						<canvas id="requestStateChart"></canvas>
 					</div>
 				</div>

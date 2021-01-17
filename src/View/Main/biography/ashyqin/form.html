@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 	<head>
 		<title>Form Activity</title>
@@ -59,4 +60,67 @@
 		}
 	</script>
 </body>
+=======
+<html>
+	<head>
+		<title>Form Activity</title>
+			<link href="stylelab3.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+	<header>
+	<script>
+		function goBack() 
+		{
+		  window.history.back()
+		}
+	</script>
+	<input type="button" value="Back" onclick="goBack()">
+	<div class="menubar">
+		<ul class="main-nav">
+			<li><a href="home.html"> HOME </a></li>
+			<li><a href="aboutme.html"> ABOUT </a></li>
+			<li><a href="edu.html"> EDUCATION </a></li>
+			<li class="dropdown">
+			<a href="" class="dropbtn"> ACTIVITY </a>
+			<div class="dropdown-content">
+			<a href="form.html">Form</a>
+			<a href="blindtest.html">SVG & Canvas</a>
+			<a href="activity.html">Drag & Drop</a>
+			<a href="quiz.html">Quiz</a>
+			</div></li>
+			<li><a href="contact.html"> CONTACT </a></li>
+		</ul>
+		</div
+	</header>
+	<div class="join">
+		<p>If you wait to join cycling with me, please fill the form below. Thank you:</p><br>
+
+		<form><h4>
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="fname"><br><br>
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lname"><br><br>
+			<label for="sex">Gender</label><br>
+			<input type="radio" id="male" name="sex" value="male"> Male<br>
+			<input type="radio" id="female" name="sex" value="female"> Female<br><br>
+			<label for="phone">Phone Number</label>
+			<input type="number" id="phone" name="phone"><br><br>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email"><br><br>
+			<input type="submit" value="Submit" onClick="myConfirm();">
+		</h4></form>
+	</div>
+		
+	<script type="text/javascript">
+		function myConfirm()
+		{
+		var answer = confirm("Are you sure to join me?");
+		if(answer)
+		{ window.location="file:///D:/WEB%20NUR%20ASHYQIN%20B031810457/WEEK%205/WEEK%205%20-%20BIO/home.html"; } else
+		{ document.write("Received your details. Thank you."); }
+		}
+	</script>
+</body>
+>>>>>>> php-code-admin
 </html>

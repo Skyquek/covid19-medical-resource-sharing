@@ -39,8 +39,13 @@ while($row = $userQuery->fetch_object())
     background-color: #ddd;
 }
 </style>
+<<<<<<< HEAD
 
 <div class="container" style="width:100%;height:900px;margin-left:200px">
+=======
+<br>
+<div class="container" style="width:70%;margin-left:50px">
+>>>>>>> php-code-admin
     
         <table class="table table-hover table-condensed">
             <thead>

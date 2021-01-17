@@ -69,7 +69,11 @@ while($row = $completedRequestQuery->fetch_object())
 					<div class="col-sm-8"><p>Quantity: <?php echo $content->total ?></p></div>	
 
 					<div class="col-sm-3"><p style="text-align:right">Date: <?php echo $content->date_time ?></p></div>
+<<<<<<< HEAD
 				</div><br><br>
+=======
+				</div><br>
+>>>>>>> php-code-admin
 				<a href="<?php echo "../Admin/viewcom.php?id=" . $content->request_id ?>">
 					<button type="button" class="btn btn-outline-secondary" style="width:100px;float:right">View</button>
 				</a>

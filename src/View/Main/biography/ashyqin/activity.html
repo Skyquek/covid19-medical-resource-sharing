@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 	<head>
 		<title>Drag and Drop</title>
@@ -60,4 +61,68 @@
 </body>
 </div>
 </body>
+=======
+<html>
+	<head>
+		<title>Drag and Drop</title>
+			<link href="stylelab3.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+	<header>
+	<script>
+		function goBack() 
+		{
+		  window.history.back()
+		}
+	</script>
+	<input type="button" value="Back" onclick="goBack()">
+	<div class="menubar">
+		<ul class="main-nav">
+			<li><a href="home.html"> HOME </a></li>
+			<li><a href="aboutme.html"> ABOUT </a></li>
+			<li><a href="edu.html"> EDUCATION </a></li>
+			<li class="dropdown">
+			<a href="" class="dropbtn"> ACTIVITY </a>
+			<div class="dropdown-content">
+			<a href="form.html">Form</a>
+			<a href="blindtest.html">SVG & Canvas</a>
+			<a href="activity.html">Drag & Drop</a>
+			<a href="quiz.html">Quiz</a>
+			</div></li>
+			<li><a href="contact.html"> CONTACT </a></li>
+		</ul>
+		</div
+	</header>
+	<div class="join">
+	<script>
+		function allowDrop(ev) {
+		ev.preventDefault();
+		}
+
+		function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+<body>
+
+<p>Drag the image between the two div elements.</p></br>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="giphy.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="300" height="140">
+</div></br>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</div>
+</body>
+>>>>>>> php-code-admin
 </html>

@@ -24,7 +24,7 @@ window.onclick = function(event) {
 
 <?php include("../includes/main/navigation.php");?>
 <?php include("../includes/main/header.php");?>
-
+<br>
 <h1 style="font-weight:bold" class="text-center">Donate to help each other</h1><br>
 <p class="text-center">By making a much needed donation you will join us to confirm and find the solutions we need to our most important environmental issues.
 <br><br>
